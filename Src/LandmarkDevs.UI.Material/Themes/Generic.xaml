@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/NavigationDrawer.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/NavigationDrawerButton.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialStatusBar.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/YcaKite.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/DialogBase.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/AppDialog.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/CellEditPopupBox.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/VerticalSlidePanel.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/HorizontalSlidePanel.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/KanbanBoard.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/KanbanList.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/KanbanItem.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialPanel.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/IdentityCard.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/IdentityCardViewer.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/Card.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/Shadows.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialDesignWindow.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialColorWheel.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/SizingContentControl.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialSettingsPanel.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

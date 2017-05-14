@@ -1,0 +1,555 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:LandmarkDevs.UI.Material.Controls"
+                    xmlns:converters="clr-namespace:LandmarkDevs.UI.Material.Converters"
+                    xmlns:models="clr-namespace:LandmarkDevs.UI.Common.Models"
+                    xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels">
+
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/ApplicationStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>-->
+
+    <converters:CardOrientationConverter x:Key="OrientationConverter" />
+
+    <ControlTemplate x:Key="HorizontalIdentityCardTemplate" TargetType="{x:Type controls:IdentityCard}">
+        <Grid x:Name="PART_CardLayoutRoot">
+            <ContentControl x:Name="PART_EditContentControl"
+                            Panel.ZIndex="-1"
+                            RenderTransformOrigin="0.5,0.5"
+                            Visibility="Collapsed">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+                <ContentControl.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                        <SkewTransform AngleX="0" AngleY="0" />
+                        <RotateTransform Angle="0" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.LayoutTransform>
+                <panels:Card x:Name="PART_EditCard"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch">
+                    <Grid x:Name="PART_EditGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="First Name:" />
+                        <TextBox x:Name="PART_FirstNameTextBox"
+                                 Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FirstName}" />
+                        <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="Last Name:" />
+                        <TextBox x:Name="PART_LastNameTextBox"
+                                 Grid.Row="1"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LastName}" />
+                        <Label Grid.Row="2"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="Username:" />
+                        <TextBox x:Name="PART_UsernameTextBox"
+                                 Grid.Row="2"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Username}" />
+                        <CheckBox x:Name="PART_AdminRoleCheckBox"
+                                  Grid.Row="3"
+                                  Grid.Column="0"
+                                  Grid.ColumnSpan="2"
+                                  Margin="5,0,0,0"
+                                  HorizontalAlignment="Left"
+                                  Content="Administrator"
+                                  IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsAdministrator}" />
+                        <StackPanel Grid.Row="3"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Margin="0,0,20,0"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                            <Button x:Name="PART_CancelButton"
+                                    Margin="0,0,10,0"
+                                    Content="Cancel"
+                                    Style="{DynamicResource MaterialDesignFlatButton}" />
+                            <Button x:Name="PART_SaveButton"
+                                    Margin="10,0,0,0"
+                                    Content="Save"
+                                    Style="{DynamicResource MaterialDesignFlatButton}" />
+                        </StackPanel>
+                        <CheckBox x:Name="PART_ManufacturingRoleCheckBox"
+                                  Grid.Row="4"
+                                  Grid.Column="0"
+                                  Grid.ColumnSpan="2"
+                                  Margin="5,0,0,0"
+                                  HorizontalAlignment="Left"
+                                  Content="User"
+                                  IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsManufacturingUser}" />
+                    </Grid>
+                </panels:Card>
+            </ContentControl>
+            <ContentControl x:Name="PART_ViewContentControl">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+                <panels:Card x:Name="PART_ViewCard"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch">
+                    <Grid x:Name="PART_ViewGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0"
+                                    Grid.RowSpan="4"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Image x:Name="PART_UserThumbnail"
+                                   Width="60"
+                                   Height="60"
+                                   Margin="10,0,0,0"
+                                   Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=UserImage}" />
+                            <Button x:Name="PART_EditButton"
+                                    Margin="0,5,0,0"
+                                    Content="Edit"
+                                    Style="{DynamicResource MaterialDesignFlatButton}" />
+                        </StackPanel>
+                        <Label Grid.Row="0"
+                               Grid.Column="1"
+                               Margin="10,0,0,0"
+                               VerticalAlignment="Center"
+                               Content="First Name:" />
+                        <TextBlock x:Name="PART_FirstNameTextBlock"
+                                   Grid.Row="0"
+                                   Grid.Column="2"
+                                   Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FirstName}" />
+                        <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Margin="10,0,0,0"
+                               VerticalAlignment="Center"
+                               Content="Last Name:" />
+                        <TextBlock x:Name="PART_LastNameTextBlock"
+                                   Grid.Row="1"
+                                   Grid.Column="2"
+                                   Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LastName}" />
+                        <Label Grid.Row="2"
+                               Grid.Column="1"
+                               Margin="10,0,0,0"
+                               VerticalAlignment="Center"
+                               Content="Username:" />
+                        <TextBlock x:Name="PART_UsernameTextBlock"
+                                   Grid.Row="2"
+                                   Grid.Column="2"
+                                   Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Username}" />
+                    </Grid>
+                </panels:Card>
+            </ContentControl>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="UserCardStates">
+                    <VisualStateGroup.Transitions>
+                        <VisualTransition From="ViewCardState" To="EditCardState">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <EasingInt32KeyFrame KeyTime="0" Value="-1" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.1" Value="0" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.2" Value="0" />
+                                </Int32AnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <EasingInt32KeyFrame KeyTime="0" Value="0" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.1" Value="-1" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.2" Value="-1" />
+                                </Int32AnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,1,1"
+                                                          KeyTime="0"
+                                                          Value="1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="-1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="-1" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                        <VisualTransition From="EditCardState" To="ViewCardState">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <SplineInt32KeyFrame KeyTime="0" Value="0" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.1" Value="-1" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.2" Value="-1" />
+                                </Int32AnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <SplineInt32KeyFrame KeyTime="0" Value="-1" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.1" Value="0" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.2" Value="0" />
+                                </Int32AnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="-1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="-1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                    </VisualStateGroup.Transitions>
+                    <VisualState x:Name="ViewCardState" />
+                    <VisualState x:Name="EditCardState">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                <EasingInt32KeyFrame KeyTime="0" Value="0" />
+                            </Int32AnimationUsingKeyFrames>
+                            <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                <EasingInt32KeyFrame KeyTime="0" Value="-1" />
+                            </Int32AnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <SplineDoubleKeyFrame KeySpline="0,0,0.4,1"
+                                                      KeyTime="0"
+                                                      Value="-1" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="-1" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+
+    <ControlTemplate x:Key="VerticalIdentityCardTemplate" TargetType="{x:Type controls:IdentityCard}">
+        <Grid x:Name="PART_CardLayoutRoot" Background="{DynamicResource MaterialDesignPaper}">
+            <ContentControl x:Name="PART_EditContentControl"
+                            Panel.ZIndex="-1"
+                            RenderTransformOrigin="0.5,0.5"
+                            Visibility="Collapsed">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+                <ContentControl.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                        <SkewTransform AngleX="0" AngleY="0" />
+                        <RotateTransform Angle="0" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.LayoutTransform>
+                <panels:Card x:Name="PART_EditCard"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch">
+                    <Grid x:Name="PART_EditGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="First Name:" />
+                        <TextBox x:Name="PART_FirstNameTextBox"
+                                 Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FirstName}" />
+                        <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="Last Name:" />
+                        <TextBox x:Name="PART_LastNameTextBox"
+                                 Grid.Row="1"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LastName}" />
+                        <Label Grid.Row="2"
+                               Grid.Column="0"
+                               Margin="5,0,0,0"
+                               Content="Username:" />
+                        <TextBox x:Name="PART_UsernameTextBox"
+                                 Grid.Row="2"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0"
+                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Username}" />
+                        <StackPanel Grid.Row="4"
+                                    Grid.Column="1"
+                                    Margin="0,0,20,0"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                            <Button x:Name="PART_OkButton"
+                                    Margin="10,0,10,0"
+                                    Content="Ok"
+                                    Style="{DynamicResource MaterialDesignFlatButton}" />
+                        </StackPanel>
+                        <ItemsControl x:Name="PART_RoleItems"
+                                      Grid.Row="3"
+                                      Grid.Column="0"
+                                      Grid.ColumnSpan="2"
+                                      MinHeight="50"
+                                      Margin="5,0,0,0"
+                                      HorizontalAlignment="Stretch"
+                                      ItemsSource="{TemplateBinding Roles}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type models:RoleModel}">
+                                    <CheckBox Content="{Binding RoleName}"
+                                              Foreground="{DynamicResource MaterialDesignBody}"
+                                              IsChecked="{Binding IsSelected}" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </panels:Card>
+            </ContentControl>
+            <ContentControl x:Name="PART_ViewContentControl">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+                <panels:Card x:Name="PART_ViewCard"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch">
+                    <Grid x:Name="PART_ViewGrid">
+                        <StackPanel>
+                            <Image x:Name="PART_UserThumbnail"
+                                   MaxHeight="60"
+                                   Margin="0,15,0,0"
+                                   Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=UserImage}" />
+                            <TextBlock x:Name="PART_FullNameTextBlock"
+                                       Margin="0,10,0,0"
+                                       HorizontalAlignment="Center"
+                                       Foreground="{DynamicResource MaterialDesignBody}"
+                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FullName}" />
+                            <Button x:Name="PART_EditButton"
+                                    Margin="0,5,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Edit"
+                                    Style="{DynamicResource MaterialDesignFlatButton}" />
+                        </StackPanel>
+                    </Grid>
+                </panels:Card>
+            </ContentControl>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="UserCardStates">
+                    <VisualStateGroup.Transitions>
+                        <VisualTransition From="ViewCardState" To="EditCardState">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <EasingInt32KeyFrame KeyTime="0" Value="-1" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.1" Value="0" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.2" Value="0" />
+                                </Int32AnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <EasingInt32KeyFrame KeyTime="0" Value="0" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.1" Value="-1" />
+                                    <EasingInt32KeyFrame KeyTime="0:0:0.2" Value="-1" />
+                                </Int32AnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,1,1"
+                                                          KeyTime="0"
+                                                          Value="1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="-1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="-1" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                        <VisualTransition From="EditCardState" To="ViewCardState">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <SplineInt32KeyFrame KeyTime="0" Value="0" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.1" Value="-1" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.2" Value="-1" />
+                                </Int32AnimationUsingKeyFrames>
+                                <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                    <SplineInt32KeyFrame KeyTime="0" Value="-1" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.1" Value="0" />
+                                    <SplineInt32KeyFrame KeyTime="0:0:0.2" Value="0" />
+                                </Int32AnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="-1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="-1" />
+                                    <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
+                                                          KeyTime="0:0:0.2"
+                                                          Value="1" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                    </VisualStateGroup.Transitions>
+                    <VisualState x:Name="ViewCardState" />
+                    <VisualState x:Name="EditCardState">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                <EasingInt32KeyFrame KeyTime="0" Value="0" />
+                            </Int32AnimationUsingKeyFrames>
+                            <Int32AnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(Panel.ZIndex)">
+                                <EasingInt32KeyFrame KeyTime="0" Value="-1" />
+                            </Int32AnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_EditContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <SplineDoubleKeyFrame KeySpline="0,0,0.4,1"
+                                                      KeyTime="0"
+                                                      Value="-1" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_ViewContentControl" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="-1" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter TargetName="PART_ViewCard" Property="controls:ShadowAssist.Darken" Value="True" />
+                <Setter TargetName="PART_EditCard" Property="controls:ShadowAssist.Darken" Value="True" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="HorizontalUserCard" TargetType="{x:Type controls:IdentityCard}">
+        <Setter Property="Template" Value="{StaticResource HorizontalIdentityCardTemplate}" />
+    </Style>
+
+    <Style x:Key="VerticalIdentityCard" TargetType="{x:Type controls:IdentityCard}">
+        <Setter Property="Template" Value="{StaticResource VerticalIdentityCardTemplate}" />
+    </Style>
+
+    <Style TargetType="{x:Type controls:IdentityCard}">
+        <Setter Property="MinWidth" Value="300" />
+        <Setter Property="MinHeight" Value="140" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="controls:ShadowAssist.ShadowDepth" Value="Depth3" />
+        <Setter Property="Template" Value="{StaticResource VerticalIdentityCardTemplate}" />
+    </Style>
+
+</ResourceDictionary>

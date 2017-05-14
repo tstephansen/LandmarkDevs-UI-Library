@@ -1,0 +1,158 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Yokogawa Colors-->
+    <!--#region CI Colors-->
+    <Color x:Key="YokogawaYellow">#FFEE00</Color>
+    <Color x:Key="YokogawaBlue">#004F9B</Color>
+    <Color x:Key="YokogawaGreen">#00B04D</Color>
+    <SolidColorBrush x:Key="YokogawaYellowBrush" Color="{StaticResource YokogawaYellow}"/>
+    <SolidColorBrush x:Key="YokogawaBlueBrush" Color="{StaticResource YokogawaBlue}"/>
+    <SolidColorBrush x:Key="YokogawaGreenBrush" Color="{StaticResource YokogawaGreen}"/>
+    <!--#endregion-->
+    <!--#region Corporate Communications Colors-->
+    <!--#region 100%-->
+    <Color x:Key="CommBlue100">#00316C</Color>
+    <Color x:Key="CommYellow100">#f1bc1a</Color>
+    <Color x:Key="CommGreen100">#00694c</Color>
+    <Color x:Key="CommOrange100">#CE4E21</Color>
+    <Color x:Key="CommGrey100">#5A707B</Color>
+    <SolidColorBrush x:Key="CommBlue100Brush" Color="{StaticResource CommBlue100}"/>
+    <SolidColorBrush x:Key="CommYellow100Brush" Color="{StaticResource CommYellow100}"/>
+    <SolidColorBrush x:Key="CommGreen100Brush" Color="{StaticResource CommGreen100}"/>
+    <SolidColorBrush x:Key="CommOrange100Brush" Color="{StaticResource CommOrange100}"/>
+    <SolidColorBrush x:Key="CommGrey100Brush" Color="{StaticResource CommGrey100}"/>
+    <!--#endregion-->
+    <!--#region 80%-->
+    <Color x:Key="CommBlue80">#335A8A</Color>
+    <Color x:Key="CommYellow80">#F5C956</Color>
+    <Color x:Key="CommGreen80">#007E65</Color>
+    <Color x:Key="CommOrange80">#D77243</Color>
+    <Color x:Key="CommGrey80">#7A8E99</Color>
+    <SolidColorBrush x:Key="CommBlue80Brush" Color="{StaticResource CommBlue80}"/>
+    <SolidColorBrush x:Key="CommYellow80Brush" Color="{StaticResource CommYellow80}"/>
+    <SolidColorBrush x:Key="CommGreen80Brush" Color="{StaticResource CommGreen80}"/>
+    <SolidColorBrush x:Key="CommOrange80Brush" Color="{StaticResource CommOrange80}"/>
+    <SolidColorBrush x:Key="CommGrey80Brush" Color="{StaticResource CommGrey80}"/>
+    <!--#endregion-->
+    <!--#region 60%-->
+    <Color x:Key="CommBlue60">#6683A7</Color>
+    <Color x:Key="CommYellow60">#F8D785</Color>
+    <Color x:Key="CommGreen60">#5B9985</Color>
+    <Color x:Key="CommOrange60">#FF966C</Color>
+    <Color x:Key="CommGrey60">#9BACB5</Color>
+    <SolidColorBrush x:Key="CommBlue60Brush" Color="{StaticResource CommBlue60}"/>
+    <SolidColorBrush x:Key="CommYellow60Brush" Color="{StaticResource CommYellow60}"/>
+    <SolidColorBrush x:Key="CommGreen60Brush" Color="{StaticResource CommGreen60}"/>
+    <SolidColorBrush x:Key="CommOrange60Brush" Color="{StaticResource CommOrange60}"/>
+    <SolidColorBrush x:Key="CommGrey60Brush" Color="{StaticResource CommGrey60}"/>
+    <!--#endregion-->
+    <!--#region 40%-->
+    <Color x:Key="CommBlue40">#99ACC4</Color>
+    <Color x:Key="CommYellow40">#FBE5B0</Color>
+    <Color x:Key="CommGreen40">#96B9AB</Color>
+    <Color x:Key="CommOrange40">#ECBA9B</Color>
+    <Color x:Key="CommGrey40">#BCC9D0</Color>
+    <SolidColorBrush x:Key="CommBlue40Brush" Color="{StaticResource CommBlue40}"/>
+    <SolidColorBrush x:Key="CommYellow40Brush" Color="{StaticResource CommYellow40}"/>
+    <SolidColorBrush x:Key="CommGreen40Brush" Color="{StaticResource CommGreen40}"/>
+    <SolidColorBrush x:Key="CommOrange40Brush" Color="{StaticResource CommOrange40}"/>
+    <SolidColorBrush x:Key="CommGrey40Brush" Color="{StaticResource CommGrey40}"/>
+    <!--#endregion-->
+    <!--#region 20%-->
+    <Color x:Key="CommBlue20">#CCD6E2</Color>
+    <Color x:Key="CommYellow20">#FDF3D9</Color>
+    <Color x:Key="CommGreen20">#CBDCD5</Color>
+    <Color x:Key="CommOrange20">#F6DECD</Color>
+    <Color x:Key="CommGrey20">#DEE5E9</Color>
+    <SolidColorBrush x:Key="CommBlue20Brush" Color="{StaticResource CommBlue20}"/>
+    <SolidColorBrush x:Key="CommYellow20Brush" Color="{StaticResource CommYellow20}"/>
+    <SolidColorBrush x:Key="CommGreen20Brush" Color="{StaticResource CommGreen20}"/>
+    <SolidColorBrush x:Key="CommOrange20Brush" Color="{StaticResource CommOrange20}"/>
+    <SolidColorBrush x:Key="CommGrey20Brush" Color="{StaticResource CommGrey20}"/>
+    <!--#endregion-->
+    <!--#endregion-->
+    <!--#region Product Colors-->
+    <Color x:Key="CM01">#313538</Color>
+    <Color x:Key="CM02">#52595D</Color>
+    <Color x:Key="CM03">#C0C8CF</Color>
+    <Color x:Key="IA01">#254D48</Color>
+    <Color x:Key="IA02">#427F80</Color>
+    <Color x:Key="TM01">#7694A9</Color>
+    <Color x:Key="FC01">#AD6342</Color>
+    <Color x:Key="FC02">#E19C35</Color>
+    <Color x:Key="FC03">#4278AF</Color>
+    <Color x:Key="FC04">#DCE3E7</Color>
+    <SolidColorBrush x:Key="CM01Brush" Color="{StaticResource CM01}"/>
+    <SolidColorBrush x:Key="CM02Brush" Color="{StaticResource CM02}"/>
+    <SolidColorBrush x:Key="CM03Brush" Color="{StaticResource CM03}"/>
+    <SolidColorBrush x:Key="IA01Brush" Color="{StaticResource IA01}"/>
+    <SolidColorBrush x:Key="IA02Brush" Color="{StaticResource IA02}"/>
+    <SolidColorBrush x:Key="TM01Brush" Color="{StaticResource TM01}"/>
+    <SolidColorBrush x:Key="FC01Brush" Color="{StaticResource FC01}"/>
+    <SolidColorBrush x:Key="FC02Brush" Color="{StaticResource FC02}"/>
+    <SolidColorBrush x:Key="FC03Brush" Color="{StaticResource FC03}"/>
+    <SolidColorBrush x:Key="FC04Brush" Color="{StaticResource FC04}"/>
+    <!--#endregion-->
+    <!--#endregion-->
+
+    <Canvas x:Key="YokogawaDiamond"
+            Width="99.3774"
+            Height="101.041"
+            Clip="F1 M 0,0L 99.3774,0L 99.3774,101.041L 0,101.041L 0,0">
+        <Canvas x:Name="Layer_1"
+                Canvas.Left="0"
+                Canvas.Top="0"
+                Width="99.3774"
+                Height="101.041">
+            <Path Canvas.Left="0"
+                  Canvas.Top="0"
+                  Width="99.3774"
+                  Height="101.041"
+                  Data="F1 M 99.3774,49.672L 49.7053,0L 0,49.6707C 21.2707,61.4133 38.6253,79.3534 49.6827,101.041C 60.736,79.3494 78.1107,61.42 99.3774,49.672 Z "
+                  Fill="#FFEE00"
+                  Stretch="Fill" />
+        </Canvas>
+    </Canvas>
+
+    <Canvas x:Key="YokoBelt"
+            Width="535.001"
+            Height="258"
+            Clip="F1 M 0,0L 535.001,0L 535.001,258L 0,258L 0,0">
+        <Canvas x:Name="Layer1"
+                Canvas.Left="0"
+                Canvas.Top="0"
+                Width="535.001"
+                Height="258">
+            <Image x:Name="Image"
+                   Canvas.Left="0"
+                   Canvas.Top="0"
+                   Width="1896"
+                   Height="950"
+                   Source="../Images/Logos/YokoGridMaster.png">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="0.666701,0,0,0.666701,-130.032,-239.183" />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+    </Canvas>
+
+    <DrawingBrush x:Key="YokoBeltBrush" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup ClipGeometry="F1 M 0,0L 535.001,0L 535.001,258L 0,258L 0,0">
+                <DrawingGroup.Children>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="0.666701,0,0,0.666701,-130.032,-239.183" />
+                        </DrawingGroup.Transform>
+                        <DrawingGroup.Children>
+                            <ImageDrawing ImageSource="../Images/Logos/YokoGridMaster.png" Rect="0,0,1896,950" />
+                        </DrawingGroup.Children>
+                    </DrawingGroup>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+</ResourceDictionary>

@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:LandmarkDevs.UI.Material.Controls"
+                    xmlns:converters="clr-namespace:LandmarkDevs.UI.Material.Converters"
+                    xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels">
+    <!--  **** This was taken from MaterialDesignThemes.Wpf - All Credit goes to James  -->
+
+    <converters:CardClipConverter x:Key="CardClipConverter" />
+
+    <ControlTemplate x:Key="CardTemplate" TargetType="{x:Type panels:Card}">
+        <Grid Margin="{TemplateBinding Margin}" Background="Transparent">
+            <AdornerDecorator CacheMode="{Binding RelativeSource={RelativeSource Self}, Path=(controls:ShadowAssist.CacheMode)}">
+                <Border CornerRadius="{TemplateBinding UniformCornerRadius}" Effect="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(controls:ShadowAssist.ShadowDepth), Converter={x:Static converters:ShadowConverter.Instance}}">
+                    <Border x:Name="PART_ClipBorder"
+                            Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            Clip="{TemplateBinding ContentClip}" />
+                </Border>
+            </AdornerDecorator>
+            <ContentPresenter x:Name="ContentPresenter"
+                              Margin="{TemplateBinding Padding}"
+                              Clip="{TemplateBinding ContentClip}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}" />
+        </Grid>
+    </ControlTemplate>
+    <Style TargetType="{x:Type panels:Card}">
+        <Setter Property="Template" Value="{StaticResource CardTemplate}" />
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignCardBackground}" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="controls:ShadowAssist.ShadowDepth" Value="Depth1" />
+    </Style>
+</ResourceDictionary>

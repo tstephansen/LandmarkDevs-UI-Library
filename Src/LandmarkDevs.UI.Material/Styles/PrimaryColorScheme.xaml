@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.xaml" />-->
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Blue.Named.xaml" />
+        <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Blue.Named.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+    <!--  ReSharper disable Xaml.InvalidResourceType  -->
+    <SolidColorBrush x:Key="Primary50Brush" Color="{StaticResource BluePrimary50}" />
+    <SolidColorBrush x:Key="Primary50ForegroundBrush" Color="{StaticResource BluePrimary50Foreground}" />
+    <SolidColorBrush x:Key="Primary100Brush" Color="{StaticResource BluePrimary100}" />
+    <SolidColorBrush x:Key="Primary100ForegroundBrush" Color="{StaticResource BluePrimary100Foreground}" />
+    <SolidColorBrush x:Key="Primary200Brush" Color="{StaticResource BluePrimary200}" />
+    <SolidColorBrush x:Key="Primary200ForegroundBrush" Color="{StaticResource BluePrimary200Foreground}" />
+    <SolidColorBrush x:Key="Primary300Brush" Color="{StaticResource BluePrimary300}" />
+    <SolidColorBrush x:Key="Primary300ForegroundBrush" Color="{StaticResource BluePrimary300Foreground}" />
+    <SolidColorBrush x:Key="Primary400Brush" Color="{StaticResource BluePrimary400}" />
+    <SolidColorBrush x:Key="Primary400ForegroundBrush" Color="{StaticResource BluePrimary400Foreground}" />
+    <SolidColorBrush x:Key="Primary500Brush" Color="{StaticResource BluePrimary500}" />
+    <SolidColorBrush x:Key="Primary500ForegroundBrush" Color="{StaticResource BluePrimary500Foreground}" />
+    <SolidColorBrush x:Key="Primary600Brush" Color="{StaticResource BluePrimary600}" />
+    <SolidColorBrush x:Key="Primary600ForegroundBrush" Color="{StaticResource BluePrimary600Foreground}" />
+    <SolidColorBrush x:Key="Primary700Brush" Color="{StaticResource BluePrimary700}" />
+    <SolidColorBrush x:Key="Primary700ForegroundBrush" Color="{StaticResource BluePrimary700Foreground}" />
+    <SolidColorBrush x:Key="Primary800Brush" Color="{StaticResource BluePrimary800}" />
+    <SolidColorBrush x:Key="Primary800ForegroundBrush" Color="{StaticResource BluePrimary800Foreground}" />
+    <SolidColorBrush x:Key="Primary900Brush" Color="{StaticResource BluePrimary900}" />
+    <SolidColorBrush x:Key="Primary900ForegroundBrush" Color="{StaticResource BluePrimary900Foreground}" />
+    <SolidColorBrush x:Key="Accent100Brush" Color="{StaticResource BlueAccent100}" />
+    <SolidColorBrush x:Key="Accent100ForegroundBrush" Color="{StaticResource BlueAccent100Foreground}" />
+    <SolidColorBrush x:Key="Accent200Brush" Color="{StaticResource BlueAccent200}" />
+    <SolidColorBrush x:Key="Accent200ForegroundBrush" Color="{StaticResource BlueAccent200Foreground}" />
+    <SolidColorBrush x:Key="Accent400Brush" Color="{StaticResource BlueAccent400}" />
+    <SolidColorBrush x:Key="Accent400ForegroundBrush" Color="{StaticResource BlueAccent400Foreground}" />
+    <SolidColorBrush x:Key="Accent700Brush" Color="{StaticResource BlueAccent700}" />
+    <SolidColorBrush x:Key="Accent700ForegroundBrush" Color="{StaticResource BlueAccent700Foreground}" />
+    <!--  ReSharper restore Xaml.InvalidResourceType  -->
+
+    <!--<SolidColorBrush x:Key="Primary50Brush" Color="{StaticResource Primary50}" />
+    <SolidColorBrush x:Key="Primary50ForegroundBrush" Color="{StaticResource Primary50Foreground}" />
+    <SolidColorBrush x:Key="Primary100Brush" Color="{StaticResource Primary100}" />
+    <SolidColorBrush x:Key="Primary100ForegroundBrush" Color="{StaticResource Primary100Foreground}" />
+    <SolidColorBrush x:Key="Primary200Brush" Color="{StaticResource Primary200}" />
+    <SolidColorBrush x:Key="Primary200ForegroundBrush" Color="{StaticResource Primary200Foreground}" />
+    <SolidColorBrush x:Key="Primary300Brush" Color="{StaticResource Primary300}" />
+    <SolidColorBrush x:Key="Primary300ForegroundBrush" Color="{StaticResource Primary300Foreground}" />
+    <SolidColorBrush x:Key="Primary400Brush" Color="{StaticResource Primary400}" />
+    <SolidColorBrush x:Key="Primary400ForegroundBrush" Color="{StaticResource Primary400Foreground}" />
+    <SolidColorBrush x:Key="Primary500Brush" Color="{StaticResource Primary500}" />
+    <SolidColorBrush x:Key="Primary500ForegroundBrush" Color="{StaticResource Primary500Foreground}" />
+    <SolidColorBrush x:Key="Primary600Brush" Color="{StaticResource Primary600}" />
+    <SolidColorBrush x:Key="Primary600ForegroundBrush" Color="{StaticResource Primary600Foreground}" />
+    <SolidColorBrush x:Key="Primary700Brush" Color="{StaticResource Primary700}" />
+    <SolidColorBrush x:Key="Primary700ForegroundBrush" Color="{StaticResource Primary700Foreground}" />
+    <SolidColorBrush x:Key="Primary800Brush" Color="{StaticResource Primary800}" />
+    <SolidColorBrush x:Key="Primary800ForegroundBrush" Color="{StaticResource Primary800Foreground}" />
+    <SolidColorBrush x:Key="Primary900Brush" Color="{StaticResource Primary900}" />
+    <SolidColorBrush x:Key="Primary900ForegroundBrush" Color="{StaticResource Primary900Foreground}" />
+    <SolidColorBrush x:Key="Accent100Brush" Color="{StaticResource Accent100}" />
+    <SolidColorBrush x:Key="Accent100ForegroundBrush" Color="{StaticResource Accent100Foreground}" />
+    <SolidColorBrush x:Key="Accent200Brush" Color="{StaticResource Accent200}" />
+    <SolidColorBrush x:Key="Accent200ForegroundBrush" Color="{StaticResource Accent200Foreground}" />
+    <SolidColorBrush x:Key="Accent400Brush" Color="{StaticResource Accent400}" />
+    <SolidColorBrush x:Key="Accent400ForegroundBrush" Color="{StaticResource Accent400Foreground}" />
+    <SolidColorBrush x:Key="Accent700Brush" Color="{StaticResource Accent700}" />
+    <SolidColorBrush x:Key="Accent700ForegroundBrush" Color="{StaticResource Accent700Foreground}" />-->
+
+</ResourceDictionary>

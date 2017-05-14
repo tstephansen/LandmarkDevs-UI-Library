@@ -1,0 +1,1943 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Yellow.xaml" />
+        <ResourceDictionary Source="PrimaryColorScheme.xaml" />
+        <ResourceDictionary Source="SecondaryColorScheme.xaml" />
+    </ResourceDictionary.MergedDictionaries>-->
+
+    <Canvas x:Key="ScrabbleP" Width="76" Height="76" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+        <Path Width="42" Height="42" Canvas.Left="17" Canvas.Top="17" Stretch="Fill" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" Data="F1 M 22,17L 54,17C 56.6233,17 59,19.3767 59,22L 59,54C 59,56.6234 56.6233,59 54,59L 22,59C 19.3766,59 17,56.6234 17,54L 17,22C 17,19.3767 19.3766,17 22,17 Z M 32.3492,49.0833L 35.2403,49.0833L 35.2403,41.1033L 37.3963,41.1033C 39.3812,41.1033 40.7802,40.8925 41.5934,40.4707C 42.4065,40.0489 43.0841,39.3154 43.6262,38.2702C 44.1683,37.2249 44.4393,35.9311 44.4393,34.3887C 44.4393,32.6892 44.1354,31.3 43.5276,30.2209C 42.9198,29.1418 42.1478,28.4376 41.2114,28.1081C 40.6228,27.9049 39.3757,27.8033 37.4702,27.8033L 32.3492,27.8033L 32.3492,49.0833 Z M 35.2403,31.35L 36.9774,31.35C 38.4723,31.35 39.4503,31.4347 39.9117,31.604C 40.373,31.7733 40.7611,32.1066 41.0759,32.6038C 41.3908,33.101 41.5482,33.7129 41.5482,34.4395C 41.5482,35.1538 41.3956,35.7572 41.0903,36.2498C 40.785,36.7424 40.3942,37.0833 39.9178,37.2727C 39.4414,37.462 38.5407,37.5567 37.2156,37.5567L 35.2403,37.5567L 35.2403,31.35 Z M 50.6667,50.6667L 50.6667,52.25L 52.25,52.25C 52.25,52.7778 52.25,53.3056 51.7222,53.5694C 51.1944,53.8333 50.1389,53.8333 49.0833,53.8333C 49.0833,54.3611 49.0833,54.8889 49.6111,55.1528C 50.1389,55.4167 51.1944,55.4167 52.25,55.4167C 52.7778,55.4167 53.3056,55.4167 53.5694,54.8889C 53.8333,54.3611 53.8333,53.3056 53.8333,52.25L 53.8333,50.6667C 53.8333,49.6111 53.8333,48.5556 53.5694,48.0278C 53.3056,47.5 52.7778,47.5 52.25,47.5C 51.1944,47.5 50.1389,47.5 49.6111,47.7639C 49.0833,48.0278 49.0833,48.5556 49.0833,49.0833C 50.1389,49.0833 51.1944,49.0833 51.7222,49.3472C 52.25,49.6111 52.25,50.1389 52.25,50.6667L 50.6667,50.6667 Z "/>
+    </Canvas>
+
+    <Canvas x:Key="ScrabbleI" Width="76" Height="76" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+        <Path Width="42" Height="42" Canvas.Left="17" Canvas.Top="17" Stretch="Fill" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" Data="F1 M 22,17L 54,17C 56.6233,17 59,19.3767 59,22L 59,54C 59,56.6234 56.6233,59 54,59L 22,59C 19.3766,59 17,56.6234 17,54L 17,22C 17,19.3767 19.3766,17 22,17 Z M 51.4583,47.5L 49.0833,49.0833L 49.0833,49.875L 50.6667,49.875L 50.6667,55.4167L 52.25,55.4167L 52.25,48.2917C 52.25,47.8544 51.8956,47.5 51.4583,47.5 Z M 36.5544,49.0833L 39.4456,49.0833L 39.4456,27.8033L 36.5544,27.8033L 36.5544,49.0833 Z "/>
+    </Canvas>
+
+    <Canvas x:Key="ChevronDown" Width="76" Height="76" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+        <Path Width="28.5" Height="25.3333" Canvas.Left="23.6016" Canvas.Top="24.9375" Stretch="Fill" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" Data="F1 M 37.8516,39.5833L 52.1016,24.9375L 52.1016,35.2292L 37.8516,50.2708L 23.6016,35.2292L 23.6016,24.9375L 37.8516,39.5833 Z "/>
+    </Canvas>
+
+    <Canvas x:Key="MaterialOpenFolderBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialOpenFolderDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialOpenFolderWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleOutlineBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleOutlineDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialAddCircleOutlineWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleOutlineBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleOutlineDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialRemoveCircleOutlineWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialDividerBlack"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="24"
+            Height="24">
+        <Rectangle Canvas.Left="10"
+                   Canvas.Top="1.33514e-005"
+                   Width="4"
+                   Height="24"
+                   Fill="#FF000000"
+                   Stretch="Fill" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialFirstPageBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialFirstPageDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialForwardSlashBlack"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="24"
+            Height="24">
+        <Path Canvas.Left="0.332733"
+              Canvas.Top="0.332743"
+              Width="23.3345"
+              Height="23.3345"
+              Data="F1 M 0.332733,21.5459L 2.45405,23.6673L 23.6673,2.45406L 21.5459,0.332743L 0.332733,21.5459 Z "
+              Fill="#FF000000"
+              Stretch="Fill" />
+    </Canvas>
+
+
+    <Canvas x:Key="MaterialFirstPageWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialLastPageBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialLastPageDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialLastPageWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialPreviousPageBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M 15.9505,16.898L 11.0547,12.0033L 15.9505,7.10734L 14.4506,5.602L 8.0495,12.0033L 14.4506,18.398" FillRule="Nonzero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialPreviousPageDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M 15.9505,16.898L 11.0547,12.0033L 15.9505,7.10734L 14.4506,5.602L 8.0495,12.0033L 14.4506,18.398" FillRule="Nonzero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialPreviousPageWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M 15.9505,16.898L 11.0547,12.0033L 15.9505,7.10734L 14.4506,5.602L 8.0495,12.0033L 14.4506,18.398" FillRule="Nonzero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialNextPageBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M 8.0495,16.898L 12.9453,12.0033L 8.0495,7.10733L 9.54944,5.602L 15.9505,12.0033L 9.54944,18.398" FillRule="Nonzero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialNextPageDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#56000000">
+            <Path.Data>
+                <PathGeometry Figures="M 8.0495,16.898L 12.9453,12.0033L 8.0495,7.10733L 9.54944,5.602L 15.9505,12.0033L 9.54944,18.398" FillRule="Nonzero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialNextPageWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M 8.0495,16.898L 12.9453,12.0033L 8.0495,7.10733L 9.54944,5.602L 15.9505,12.0033L 9.54944,18.398" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialSaveBlack"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialSaveDisabled"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FF000000">
+            <Path.Data>
+                <PathGeometry Figures="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialSaveWhite"
+            Width="24"
+            Height="24">
+        <Canvas.RenderTransform>
+            <TranslateTransform X="0" Y="0" />
+        </Canvas.RenderTransform>
+        <Canvas.Resources />
+        <Path>
+            <Path.Data>
+                <PathGeometry Figures="M0 0h24v24H0z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+        <Path Fill="#FFFFFFFF">
+            <Path.Data>
+                <PathGeometry Figures="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" FillRule="NonZero" />
+            </Path.Data>
+        </Path>
+    </Canvas>
+
+    <Canvas x:Key="MaterialFitToPageWidth"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="24"
+            Height="24">
+        <Rectangle Canvas.Left="0.5"
+                   Canvas.Top="0.5"
+                   Width="23"
+                   Height="23"
+                   Stretch="Fill"
+                   Stroke="#FF000000"
+                   StrokeLineJoin="Round" />
+        <Path Canvas.Left="2"
+              Canvas.Top="8.14318"
+              Width="20"
+              Height="7.71364"
+              Data="F1 M 18.6853,11.0909L 17.1023,9.42879L 18.3267,8.14318L 20.7756,10.7144L 21.1342,11.0909L 22,12L 21.1342,12.9091L 20.7756,13.2856L 18.3267,15.8568L 17.1023,14.5712L 18.6853,12.9091L 5.31466,12.9091L 6.89771,14.5712L 5.67328,15.8568L 3.22443,13.2856L 2,12L 3.22443,10.7144L 5.67328,8.14318L 6.89771,9.42878L 5.31465,11.0909L 18.6853,11.0909 Z "
+              Fill="#FF000000"
+              Stretch="Fill" />
+    </Canvas>
+
+
+    <Canvas x:Key="MaterialFitToPage"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="24"
+            Height="24">
+        <Rectangle Canvas.Left="0.5"
+                   Canvas.Top="0.5"
+                   Width="23"
+                   Height="23"
+                   Stretch="Fill"
+                   Stroke="#FF000000"
+                   StrokeLineJoin="Round" />
+        <Path Canvas.Left="2"
+              Canvas.Top="2"
+              Width="20"
+              Height="20"
+              Data="F1 M 10.7144,20.7756L 8.14319,18.3267L 9.42879,17.1023L 11.0909,18.6853L 11.0909,12.909L 5.31466,12.909L 6.89771,14.5712L 5.67329,15.8568L 3.22443,13.2856L 2.8658,12.909L 2,12L 2.8658,11.0909L 3.22443,10.7144L 5.67328,8.14318L 6.89771,9.42878L 5.31466,11.0909L 11.0909,11.0909L 11.0909,5.31465L 9.42879,6.89771L 8.14319,5.67328L 10.7144,3.22442L 11.0909,2.8658L 12,2L 12.9091,2.8658L 13.2856,3.22442L 15.8568,5.67328L 14.5712,6.8977L 12.9091,5.31465L 12.9091,11.0909L 18.6853,11.0909L 17.1023,9.42879L 18.3267,8.14319L 20.7756,10.7144L 22,12L 20.7756,13.2856L 18.3267,15.8568L 17.1023,14.5712L 18.6854,12.909L 12.9091,12.909L 12.9091,18.6853L 14.5712,17.1023L 15.8568,18.3267L 13.2856,20.7756L 12,22L 10.7144,20.7756 Z "
+              Fill="#FF000000"
+              Stretch="Fill" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialFilter"
+            Width="24"
+            Height="24">
+        <Path Data="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z" Fill="#FF757575" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialMagnify"
+            Width="24"
+            Height="24">
+        <Path Data="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" Fill="#FF757575" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialClose"
+            Width="24"
+            Height="24">
+        <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Fill="#FF757575" />
+    </Canvas>
+
+    <Canvas x:Key="HamburgerIcon"
+            Width="24"
+            Height="24">
+        <Path Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" Fill="#FFFFFFFF" />
+    </Canvas>
+
+    <Storyboard x:Key="GridStoryboard">
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <!--#region Level 2-->
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <!--#endregion-->
+        <!--#region Level 3-->
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C2R3" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C2R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C2R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C2R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C2R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C8R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C8R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C8R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C8R7" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C8R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C7R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C3R8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0" Value="White" />
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <!--#endregion-->
+        <!--#region Level 4-->
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C1R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C1R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C1R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C9R4" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C9R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C9R6" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R1" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C4R9" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R9" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C6R9" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <!--#endregion-->
+        <!--#region Level 5-->
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C0R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <SplineColorKeyFrame KeySpline="1,0,0,0"
+                                 KeyTime="0:0:0.6"
+                                 Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C10R5" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <SplineColorKeyFrame KeySpline="1,0,0,0"
+                                 KeyTime="0:0:0.6"
+                                 Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R0" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <SplineColorKeyFrame KeySpline="1,0,0,0"
+                                 KeyTime="0:0:0.6"
+                                 Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetName="C5R10" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+            <SplineColorKeyFrame KeySpline="1,0,0,0"
+                                 KeyTime="0:0:0.6"
+                                 Value="#FF2196F3" />
+        </ColorAnimationUsingKeyFrames>
+        <!--#endregion-->
+    </Storyboard>
+
+    <Canvas x:Key="BrillianceGridCanvas" Width="220" Height="220">
+        <Canvas x:Name="LeftGrid">
+            <!--#region Column 0-->
+            <Rectangle x:Name="C0R5"
+                       Canvas.Left="0"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 1-->
+            <Rectangle x:Name="C1R4"
+                       Canvas.Left="20"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C1R5"
+                       Canvas.Left="20"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C1R6"
+                       Canvas.Left="20"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 2-->
+            <Rectangle x:Name="C2R4"
+                       Canvas.Left="40"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C2R3"
+                       Canvas.Left="40"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C2R5"
+                       Canvas.Left="40"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C2R6"
+                       Canvas.Left="40"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C2R7"
+                       Canvas.Left="40"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 3-->
+            <Rectangle x:Name="C3R2"
+                       Canvas.Left="60"
+                       Canvas.Top="40"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R3"
+                       Canvas.Left="60"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R4"
+                       Canvas.Left="60"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R5"
+                       Canvas.Left="60"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R6"
+                       Canvas.Left="60"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R7"
+                       Canvas.Left="60"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C3R8"
+                       Canvas.Left="60"
+                       Canvas.Top="160"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 4-->
+            <Rectangle x:Name="C4R1"
+                       Canvas.Left="80"
+                       Canvas.Top="20"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R2"
+                       Canvas.Left="80"
+                       Canvas.Top="40"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R3"
+                       Canvas.Left="80"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R4"
+                       Canvas.Left="80"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R5"
+                       Canvas.Left="80"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R6"
+                       Canvas.Left="80"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R7"
+                       Canvas.Left="80"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R8"
+                       Canvas.Left="80"
+                       Canvas.Top="160"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C4R9"
+                       Canvas.Left="80"
+                       Canvas.Top="180"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+        </Canvas>
+        <Canvas x:Name="RightGrid">
+            <!--#region Column 5-->
+            <Rectangle x:Name="C5R0"
+                       Canvas.Left="100"
+                       Canvas.Top="0"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R1"
+                       Canvas.Left="100"
+                       Canvas.Top="20"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R2"
+                       Canvas.Left="100"
+                       Canvas.Top="40"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R3"
+                       Canvas.Left="100"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R4"
+                       Canvas.Left="100"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R5"
+                       Canvas.Left="100"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FFFFF100"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R6"
+                       Canvas.Left="100"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R7"
+                       Canvas.Left="100"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R8"
+                       Canvas.Left="100"
+                       Canvas.Top="160"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R9"
+                       Canvas.Left="100"
+                       Canvas.Top="180"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C5R10"
+                       Canvas.Left="100"
+                       Canvas.Top="200"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 6-->
+            <Rectangle x:Name="C6R1"
+                       Canvas.Left="120"
+                       Canvas.Top="20"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R2"
+                       Canvas.Left="120"
+                       Canvas.Top="40"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R3"
+                       Canvas.Left="120"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R4"
+                       Canvas.Left="120"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R5"
+                       Canvas.Left="120"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R6"
+                       Canvas.Left="120"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R7"
+                       Canvas.Left="120"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R8"
+                       Canvas.Left="120"
+                       Canvas.Top="160"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C6R9"
+                       Canvas.Left="120"
+                       Canvas.Top="180"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 7-->
+            <Rectangle x:Name="C7R2"
+                       Canvas.Left="140"
+                       Canvas.Top="40"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R3"
+                       Canvas.Left="140"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R4"
+                       Canvas.Left="140"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R5"
+                       Canvas.Left="140"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R6"
+                       Canvas.Left="140"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R7"
+                       Canvas.Left="140"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C7R8"
+                       Canvas.Left="140"
+                       Canvas.Top="160"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 8-->
+            <Rectangle x:Name="C8R4"
+                       Canvas.Left="160"
+                       Canvas.Top="60"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C8R5"
+                       Canvas.Left="160"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C8R6"
+                       Canvas.Left="160"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C8R7"
+                       Canvas.Left="160"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C8R8"
+                       Canvas.Left="160"
+                       Canvas.Top="140"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 9-->
+            <Rectangle x:Name="C9R4"
+                       Canvas.Left="180"
+                       Canvas.Top="80"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C9R5"
+                       Canvas.Left="180"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <Rectangle x:Name="C9R6"
+                       Canvas.Left="180"
+                       Canvas.Top="120"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+
+            <!--#region Column 10-->
+            <Rectangle x:Name="C10R5"
+                       Canvas.Left="200"
+                       Canvas.Top="100"
+                       Width="20"
+                       Height="20"
+                       Fill="#FF000000"
+                       Stretch="Fill" />
+            <!--#endregion-->
+        </Canvas>
+    </Canvas>
+
+    <Storyboard x:Key="KiteFillToYellowAnimation">
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R5">
+            <EasingColorKeyFrame KeyTime="0" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C2R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C2R3">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C2R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C2R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C2R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R2">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C3R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R2">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R2">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R2">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R2">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C7R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C8R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C8R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C8R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C8R7">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C8R8">
+            <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C1R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C1R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C1R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R1">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C4R9">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R1">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R9">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R1">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C6R9">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C9R4">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C9R5">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C9R6">
+            <EasingColorKeyFrame KeyTime="0:0:0.8" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C0R5">
+            <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R0">
+            <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C5R10">
+            <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="C10R5">
+            <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFFAFAFA"/>
+            <SplineColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFF100" KeySpline="0.4,0,0.6,1"/>
+        </ColorAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Canvas x:Key="RestoreDynamic"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.717828"
+              Canvas.Top="0.731614"
+              Width="8.56434"
+              Height="8.62402"
+              Data="F1 M 2.71057,1.01734L 8.99645,1.01734L 8.99645,7.30322L 7.28943,7.30322L 7.28943,9.06991L 1.00355,9.06991L 1.00355,2.78404L 2.71057,2.78404L 2.71057,1.01734 Z "
+              Stretch="Fill"
+              Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+        <Path Canvas.Left="2.42119"
+              Canvas.Top="0.648287"
+              Width="6.85733"
+              Height="6.94304"
+              Data="F1 M 2.70692,2.78642L 7.28578,2.78642L 7.28578,7.3056L 8.9928,7.3056L 8.9928,1.01972L 2.70691,0.934009L 2.70692,2.78642 Z "
+              Stretch="Fill"
+              Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="RestoreWhite"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.717828"
+              Canvas.Top="0.731614"
+              Width="8.56434"
+              Height="8.62402"
+              Data="F1 M 2.71057,1.01734L 8.99645,1.01734L 8.99645,7.30322L 7.28943,7.30322L 7.28943,9.06991L 1.00355,9.06991L 1.00355,2.78404L 2.71057,2.78404L 2.71057,1.01734 Z "
+              Stretch="Fill"
+              Stroke="#FFFFFFFF"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+        <Path Canvas.Left="2.42119"
+              Canvas.Top="0.648287"
+              Width="6.85733"
+              Height="6.94304"
+              Data="F1 M 2.70692,2.78642L 7.28578,2.78642L 7.28578,7.3056L 8.9928,7.3056L 8.9928,1.01972L 2.70691,0.934009L 2.70692,2.78642 Z "
+              Stretch="Fill"
+              Stroke="#FFFFFFFF"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="CloseDynamic"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.598773"
+              Canvas.Top="0.720631"
+              Width="8.57165"
+              Height="8.57165"
+              Data="F1 M 8.8847,9.00656L 0.884495,1.00635"
+              Stretch="Fill"
+              Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+        <Path Canvas.Left="0.829566"
+              Canvas.Top="0.707714"
+              Width="8.57165"
+              Height="8.57165"
+              Data="F1 M 1.11529,8.99364L 9.1155,0.993436"
+              Stretch="Fill"
+              Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="CloseWhite"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.598773"
+              Canvas.Top="0.720631"
+              Width="8.57165"
+              Height="8.57165"
+              Data="F1 M 8.8847,9.00656L 0.884495,1.00635"
+              Stretch="Fill"
+              Stroke="#FFFFFFFF"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+        <Path Canvas.Left="0.829566"
+              Canvas.Top="0.707714"
+              Width="8.57165"
+              Height="8.57165"
+              Data="F1 M 1.11529,8.99364L 9.1155,0.993436"
+              Stretch="Fill"
+              Stroke="#FFFFFFFF"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+    
+    <Canvas x:Key="MaximizeDynamic"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Rectangle Canvas.Left="0.714167"
+                   Canvas.Top="0.714173"
+                   Width="8.57167"
+                   Height="8.57165"
+                   Stretch="Fill"
+                   Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+                   StrokeMiterLimit="2.75"
+                   StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="MaximizeWhite"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Rectangle Canvas.Left="0.714167"
+                   Canvas.Top="0.714173"
+                   Width="8.57167"
+                   Height="8.57165"
+                   Stretch="Fill"
+                   Stroke="#FFFFFFFF"
+                   StrokeMiterLimit="2.75"
+                   StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="MinimizeDynamic"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.428453"
+              Canvas.Top="8.71428"
+              Width="9.1431"
+              Height="0.571443"
+              Data="F1 M 0.714174,5L 9.28583,5"
+              Stretch="Fill"
+              Stroke="{DynamicResource PrimaryHueMidForegroundBrush}"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+    
+    <Canvas x:Key="MinimizeWhite"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="10"
+            Height="10">
+        <Path Canvas.Left="0.428453"
+              Canvas.Top="4.71428"
+              Width="9.1431"
+              Height="0.571443"
+              Data="F1 M 0.714174,5L 9.28583,5"
+              Stretch="Fill"
+              Stroke="#FFFFFFFF"
+              StrokeMiterLimit="2.75"
+              StrokeThickness="0.571444" />
+    </Canvas>
+
+    <Canvas x:Key="HamburgerDynamic"
+            Width="24"
+            Height="24">
+        <Path Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" />
+    </Canvas>
+
+
+    <Canvas x:Key="HamburgerWhite"
+            Width="24"
+            Height="24">
+        <Path Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" Fill="#FFFFFFFF" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialDesignPlusWhite"
+            Width="24"
+            Height="24">
+        <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="#FFFFFFFF" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialDesignPlusBlack"
+            Width="24"
+            Height="24">
+        <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="#FF000000" />
+    </Canvas>
+
+    <Canvas x:Key="MaterialDesignPlusAccent"
+            Width="24"
+            Height="24">
+        <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="{DynamicResource Secondary500Brush}" />
+    </Canvas>
+
+    <Canvas x:Key="CapsLockIcon"
+            Width="58"
+            Height="77.6388">
+        <Path Canvas.Left="0"
+              Canvas.Top="-7.62939e-006"
+              Width="58"
+              Height="77.6388"
+              Data="F1 M 50.7336,70.2415L 50.7336,33.2551L 7.26637,33.2551L 7.26637,70.2415L 50.7336,70.2415M 50.7336,25.8578C 54.7269,25.8578 58,29.1964 58,33.2551L 58,70.2415C 58,74.3002 54.7269,77.6388 50.7336,77.6388L 7.26637,77.6388C 3.20767,77.6388 0,74.3002 0,70.2415L 0,33.2551C 0,29.1309 3.20767,25.8578 7.26637,25.8578L 10.8668,25.8578L 10.8668,18.4605C 10.8668,8.2483 18.9842,-7.62939e-006 29,-7.62939e-006C 39.0158,-7.62939e-006 47.1332,8.2483 47.1332,18.4605L 47.1332,25.8578L 50.7336,25.8578M 29,7.39729C 22.9774,7.39729 18.1332,12.3724 18.1332,18.4605L 18.1332,25.8578L 39.8668,25.8578L 39.8668,18.4605C 39.8668,12.3724 35.0226,7.39729 29,7.39729 Z "
+              Fill="#FF000000"
+              Stretch="Fill" />
+        <Path Canvas.Left="12.2756"
+              Canvas.Top="34.0474"
+              Width="33.762"
+              Height="35.0281"
+              Data="F1 M 12.2756,69.0755L 46.0376,69.0755L 46.0376,63.3782L 12.2756,63.3782M 29.1566,42.0659L 42.0284,54.9377L 46.0376,50.9284L 29.1566,34.0474L 12.2756,50.9284L 16.2848,54.9377L 29.1566,42.0659 Z "
+              Fill="#EB000000"
+              Stretch="Fill" />
+    </Canvas>
+
+    <Viewbox x:Key="SapLogo" Stretch="Uniform" Width="50" Height="25">
+        <Canvas Width="743.36707" Height="368.43945">
+            <Canvas.Resources/>
+            <Canvas>
+                <Canvas.RenderTransform>
+                    <TranslateTransform X="-446.7987" Y="535.9143"/>
+                </Canvas.RenderTransform>
+                <Path Fill="#FF014185">
+                    <Path.Data>
+                        <PathGeometry Figures="M 446.79872 -168.02763 L 822.11906 -168.02763 L 1190.1658 -535.9143 L 446.79872 -535.9143 L 446.79872 -168.02763" FillRule="nonzero"/>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#ffffff">
+                    <Path.Data>
+                        <PathGeometry Figures="M 887.58191 -466.77099 L 814.84541 -466.78553 L 814.84541 -292.77073 L 750.83729 -466.78553 L 688.2839 -466.78553 L 633.00416 -321.25434 C 627.18524 -357.91354 589.36226 -370.58424 558.81293 -380.06908 C 539.90144 -386.4408 518.08049 -395.80926 519.53522 -406.05056 C 519.53522 -414.54618 529.71833 -422.34353 551.53928 -421.17975 C 566.08658 -420.43784 579.17915 -419.23041 605.36429 -406.74883 L 631.54943 -451.07445 C 606.81902 -463.06142 574.81496 -470.64057 548.62982 -470.66966 L 548.62982 -470.66966 C 516.62576 -470.66966 490.44062 -460.60293 474.43859 -443.91718 C 464.25548 -432.30843 456.98183 -417.57202 456.98183 -401.2354 C 456.98183 -378.75982 465.71021 -362.81598 481.71224 -350.11619 C 497.71427 -339.42392 515.17103 -332.45577 532.62779 -327.34966 C 552.99401 -321.05068 568.99604 -315.59544 568.99604 -303.89942 C 568.99604 -299.57887 567.54131 -295.6511 564.63185 -292.49433 C 558.81293 -287.27185 551.53928 -285.29342 539.90144 -285.04611 C 519.53522 -284.66789 504.98792 -287.91193 480.25751 -302.3574 L 456.98183 -257.47898 C 481.71224 -243.57176 510.80684 -235.39618 539.90144 -235.39618 L 544.26563 -235.42527 C 568.99604 -235.89079 590.81699 -243.23717 606.81902 -256.5916 C 608.27375 -257.37715 608.27375 -258.10452 609.72848 -258.83188 L 602.45483 -239.29486 L 669.37241 -239.29486 L 679.55552 -273.16097 C 691.19336 -269.26229 704.28593 -266.99292 718.83323 -266.99292 C 733.38053 -266.99292 745.01837 -269.18956 756.65621 -272.88457 L 768.29405 -239.29486 L 875.94407 -239.29486 L 875.94407 -309.54377 L 900.67448 -309.54377 C 957.40895 -309.54377 990.86774 -338.65292 990.86774 -387.47365 C 990.86774 -441.82237 958.86368 -466.77099 887.58191 -466.77099 z M 718.83323 -317.79209 C 710.10485 -317.79209 702.8312 -319.30501 695.55755 -321.95261 L 718.83323 -395.15463 L 718.83323 -395.15463 L 742.10891 -321.71986 C 734.83526 -319.21772 727.56161 -317.79209 718.83323 -317.79209 z M 891.9461 -359.89197 L 875.94407 -359.89197 L 875.94407 -418.91037 L 891.9461 -418.91037 C 913.76705 -418.91037 931.22381 -411.76765 931.22381 -389.69939 C 931.22381 -367.0056 913.76705 -359.89197 891.9461 -359.89197" FillRule="evenodd"/>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#FF014185">
+                    <Path.Data>
+                        <PathGeometry Figures="M 913.76705 -191.53607 C 913.76705 -202.78113 922.49543 -211.34949 932.67854 -211.34949 C 942.86165 -211.34949 951.59003 -202.78113 951.59003 -191.53607 C 951.59003 -179.86914 942.86165 -171.4608 932.67854 -171.4608 C 922.49543 -171.4608 913.76705 -179.86914 913.76705 -191.53607 z M 932.67854 -167.47484 C 945.77111 -167.47484 957.40895 -177.67249 957.40895 -191.53607 C 957.40895 -205.19599 945.77111 -215.23362 932.67854 -215.23362 C 919.58597 -215.23362 907.94813 -205.19599 907.94813 -191.53607 C 907.94813 -177.67249 919.58597 -167.47484 932.67854 -167.47484 z M 928.31435 -189.54309 L 932.67854 -189.54309 L 939.95219 -177.67249 L 944.31638 -177.67249 L 937.04273 -189.77585 C 939.95219 -190.27046 944.31638 -192.40891 944.31638 -197.2968 C 944.31638 -202.78113 939.95219 -205.19599 934.13327 -205.19599 L 923.95016 -205.19599 L 923.95016 -177.67249 L 928.31435 -177.67249 L 928.31435 -189.54309 z M 928.31435 -193.09263 L 928.31435 -201.69009 L 934.13327 -201.69009 C 935.588 -201.69009 939.95219 -201.02091 939.95219 -197.54411 C 939.95219 -193.36903 935.588 -193.09263 932.67854 -193.09263 L 928.31435 -193.09263" FillRule="nonzero"/>
+                    </Path.Data>
+                </Path>
+            </Canvas>
+        </Canvas>
+    </Viewbox>
+
+    <Viewbox x:Key="SapGradientLogo"  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+        <Canvas Name="svg5220" Width="92.44656" Height="47.09156">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="1.3" Y="1.3"/>
+            </Canvas.RenderTransform>
+            <Canvas.Resources>
+                <LinearGradientBrush xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="linearGradient3048" MappingMode="Absolute" SpreadMethod="Pad" StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF00B8F1" Offset="0"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF1870C5" Offset="0.794312"/>
+                            <GradientStop Color="#FF1D61BC" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                    <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0 -37.1015 37.1015 0 69.9034 70.5065"/>
+                    </LinearGradientBrush.Transform>
+                </LinearGradientBrush>
+                <LinearGradientBrush xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="linearGradient5318" MappingMode="Absolute" SpreadMethod="Pad" StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF00B8F1" Offset="0"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF1870C5" Offset="0.794312"/>
+                            <GradientStop Color="#FF1D61BC" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                    <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0 -37.1015 37.1015 0 69.9034 70.5065"/>
+                    </LinearGradientBrush.Transform>
+                </LinearGradientBrush>
+                <LinearGradientBrush xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="linearGradient5323" MappingMode="Absolute" SpreadMethod="Pad" StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF00B8F1" Offset="0"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF1870C5" Offset="0.794312"/>
+                            <GradientStop Color="#FF1D61BC" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                    <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0 -37.1015 37.1015 0 69.9034 70.5065"/>
+                    </LinearGradientBrush.Transform>
+                </LinearGradientBrush>
+                <LinearGradientBrush xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="linearGradient5331" MappingMode="Absolute" SpreadMethod="Pad" StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF00B8F1" Offset="0"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF1870C5" Offset="0.794312"/>
+                            <GradientStop Color="#FF1D61BC" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                    <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0 -37.1015 37.1015 0 69.9034 70.5065"/>
+                    </LinearGradientBrush.Transform>
+                </LinearGradientBrush>
+                <LinearGradientBrush xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="linearGradient5334" MappingMode="Absolute" SpreadMethod="Pad" StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#FF00B8F1" Offset="0"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF06A5E5" Offset="0.219864"/>
+                            <GradientStop Color="#FF1870C5" Offset="0.794312"/>
+                            <GradientStop Color="#FF1D61BC" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                    <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0 46.3769 46.3769 0 44.859 0.024"/>
+                    </LinearGradientBrush.Transform>
+                </LinearGradientBrush>
+            </Canvas.Resources>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path3060" Fill="{StaticResource linearGradient5334}">
+                <Path.Data>
+                    <PathGeometry Figures="m 0 0 0 44.415 45.371 0 44.41 -44.41 0 0 -89.781 0 z" FillRule="NonZero"/>
+                </Path.Data>
+            </Path>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path5384" Fill="#FF1870C5">
+                <Path.Data>
+                    <PathGeometry Figures="m 57.4688 39.875 0 3.3125 0.5 0 0 -1.4375 0.5624 0 0.9063 1.4375 0.5625 0 -0.9688 -1.4375 c 0.4841 -0.06 0.875 -0.3415 0.875 -0.9375 0 -0.653 -0.3996 -0.9375 -1.1874 -0.9375 l -1.25 0 z m 0.5 0.4375 0.6874 0 c 0.3381 0 0.7188 0.055 0.7188 0.4687 0 0.5171 -0.3855 0.5626 -0.8125 0.5626 l -0.5937 0 0 -1.0313 z m 0.625 -1.6563 c -1.586 0 -2.9376 1.2221 -2.9376 2.875 0 1.665 1.3515 2.9063 2.9376 2.9063 1.564 0 2.875 -1.2411 2.875 -2.9063 0 -1.6529 -1.311 -2.875 -2.875 -2.875 z m 0 0.4688 c 1.2939 0 2.3124 1.0453 2.3124 2.4062 0 1.3842 -1.0185 2.4063 -2.3124 2.4063 -1.3161 0 -2.375 -1.0221 -2.375 -2.4063 0 -1.3609 1.0589 -2.4062 2.375 -2.4062 z" FillRule="nonzero"/>
+                </Path.Data>
+            </Path>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path3100" Fill="#FFFFFFFF">
+                <Path.Data>
+                    <PathGeometry Figures="m 53.797 21.252 -1.946 0 0 -7.117 1.946 0 c 2.598 0 4.666 0.856 4.666 3.513 0 2.744 -2.068 3.604 -4.666 3.604 M 32.852 26.34 c -1.03 0 -1.996 -0.188 -2.831 -0.502 l 2.803 -8.84 0.06 0 2.745 8.864 c -0.827 0.296 -1.768 0.478 -2.774 0.478 m 20.426 -17.987 -8.837 0 0 21.013 -7.72 -21.013 -7.652 0 -6.596 17.568 c -0.697 -4.428 -5.284 -5.961 -8.89 -7.104 -2.377 -0.765 -4.907 -1.889 -4.884 -3.134 0.02 -1.018 1.359 -1.962 4 -1.821 1.78 0.09 3.35 0.234 6.467 1.741 l 3.07 -5.348 C 19.395 8.802 15.454 7.89 12.23 7.883 l -0.02 0 c -3.761 0 -6.895 1.226 -8.839 3.233 -1.351 1.404 -2.082 3.18 -2.115 5.157 -0.05 2.708 0.947 4.63 3.034 6.167 1.766 1.294 4.019 2.127 6.009 2.751 2.455 0.757 4.459 1.418 4.436 2.827 -0.02 0.513 -0.211 0.994 -0.582 1.374 -0.611 0.635 -1.55 0.87 -2.849 0.899 -2.504 0.05 -4.361 -0.34 -7.319 -2.088 l -2.729 5.423 c 2.949 1.679 6.44 2.661 10.003 2.661 l 0.461 0 c 3.1 -0.06 5.604 -0.945 7.605 -2.553 l 0.324 -0.283 -0.884 2.376 8.025 0 1.348 -4.099 c 1.41 0.477 3.016 0.745 4.716 0.745 1.659 0 3.224 -0.25 4.609 -0.706 l 1.296 4.06 13.094 0 0 -8.49 2.857 0 c 6.9 0 10.986 -3.512 10.986 -9.406 0 -6.56 -3.968 -9.569 -12.416 -9.569" FillRule="evenodd"/>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </Viewbox>
+
+    <Viewbox x:Key="MaterialDesignPlusBox" Width="48" Height="48">
+        <Canvas Width="24" Height="24">
+            <Path Data="M17,13H13V17H11V13H7V11H11V7H13V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" Fill="Black" />
+        </Canvas>
+    </Viewbox>
+
+    <Viewbox x:Key="MaterialDesignMinusBox" Width="48" Height="48">
+        <Canvas Width="24" Height="24">
+            <Path Data="M17,13H7V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" Fill="Black" />
+        </Canvas>
+    </Viewbox>
+
+    <Viewbox x:Key="MaterialDesignExcelBoxIcon" Width="48" Height="48">
+        <Canvas Width="24" Height="24">
+            <Path Data="M16.2,17H14.2L12,13.2L9.8,17H7.8L11,12L7.8,7H9.8L12,10.8L14.2,7H16.2L13,12M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" Fill="Black" />
+        </Canvas>
+    </Viewbox>
+
+    <Viewbox x:Key="SapLogoBig" Stretch="Uniform">
+        <Canvas Width="4267" Height="2175">
+            <Path Fill="#E0E0E0">
+                <Path.Data>
+                    <PathGeometry Figures="M 62 1093.5 62 75 2127.2498 75 4192.4996 75 3174 1093.5 2155.5004 2112 1108.7502 2112 62 2112 62 1093.5 Z m 591.45 642.3786 c 0.5225 -0.4832 5.10844 -0.8786 10.19098 -0.8786 5.08254 0 9.5191 -0.45 9.85902 -1 0.33992 -0.55 3.48992 -1 7 -1 3.51008 0 6.66008 -0.45 7 -1 0.33992 -0.55 3.26492 -1 6.5 -1 3.23508 0 6.16008 -0.45 6.5 -1 0.33992 -0.55 3.03992 -1 6 -1 2.96008 0 5.66008 -0.45 6 -1 0.33992 -0.55 3.03992 -1 6 -1 2.96008 0 5.66008 -0.45 6 -1 0.33992 -0.55 2.58992 -1 5 -1 2.41008 0 4.66008 -0.45 5 -1 0.33992 -0.55 2.13992 -1 4 -1 1.86008 0 3.66008 -0.45 4 -1 0.33992 -0.55 2.58992 -1 5 -1 2.41008 0 4.66008 -0.45 5 -1 0.33992 -0.55 1.68992 -1 3 -1 1.31008 0 2.66008 -0.45 3 -1 0.33992 -0.55 2.58992 -1 5 -1 2.41008 0 4.66008 -0.45 5 -1 0.33992 -0.55 1.68992 -1 3 -1 1.31008 0 2.66008 -0.45 3 -1 0.33992 -0.55 1.68992 -1 3 -1 1.31008 0 2.66008 -0.45 3 -1 0.33992 -0.55 2.13992 -1 4 -1 1.86008 0 3.66008 -0.45 4 -1 0.33992 -0.55 1.68992 -1 3 -1 1.31008 0 2.66008 -0.45 3 -1 0.33992 -0.55 1.68992 -1 3 -1 1.31008 0 2.66008 -0.45 3 -1 0.33992 -0.55 1.47779 -1 2.5286 -1 1.05081 0 3.51294 -0.9 5.4714 -2 1.95846 -1.1 4.42059 -2 5.4714 -2 1.05081 0 2.18868 -0.45 2.5286 -1 0.33992 -0.55 1.47779 -1 2.5286 -1 1.05081 0 3.51294 -0.9 5.4714 -2 1.95846 -1.1 4.17645 -2 4.92887 -2 0.75242 0 3.93443 -1.35 7.07113 -3 3.1367 -1.65 6.22847 -3 6.8706 -3 1.52317 0 42.25328 -20.379 44.44743 -22.2389 0.92508 -0.7842 3.35035 -2.1883 5.38949 -3.1202 2.03914 -0.9319 3.97893 -2.1336 4.31065 -2.6703 0.33171 -0.5367 2.52724 -1.8524 4.87895 -2.9237 2.3517 -1.0714 4.85451 -2.6452 5.5618 -3.4974 0.70728 -0.8522 1.83612 -1.5495 2.50854 -1.5495 0.67241 0 2.03705 -0.9 3.03254 -2 0.99549 -1.1 2.34549 -2 3 -2 0.65451 0 2.00451 -0.9 3 -2 0.99549 -1.1 2.34549 -2 3 -2 0.65451 0 2.00451 -0.9 3 -2 0.99549 -1.1 2.34549 -2 3 -2 0.65451 0 2.00451 -0.9 3 -2 0.99549 -1.1 2.33104 -2 2.9679 -2 0.63685 0 2.4513 -1.35 4.0321 -3 1.5808 -1.65 3.37366 -3 3.98414 -3 0.61048 0 2.86762 -1.8 5.01586 -4 2.14824 -2.2 4.40538 -4 5.01586 -4 0.61048 0 2.40334 -1.35 3.98414 -3 1.5808 -1.65 3.23999 -3 3.68709 -3 1.17022 0 1.00433 5.7637 -0.18709 6.5 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 2.1372 -1 3.9939 0 1.8568 -0.42432 4.4919 -0.94293 5.856 l -0.94292 2.4801 8.19292 0.6349 c 4.50611 0.3493 88.24393 0.5 186.08393 0.335 156.9493 -0.2646 177.9739 -0.4765 178.5946 -1.7999 0.387 -0.825 1.2235 -2.5064 1.859 -3.7364 0.6355 -1.2301 1.1554 -3.116 1.1554 -4.191 0 -1.075 0.45 -2.2327 1 -2.5726 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.4778 1 -2.5286 0 -1.0508 0.9 -3.5129 2 -5.4714 1.1 -1.9585 2 -4.4206 2 -5.4714 0 -1.0508 0.45 -2.1887 1 -2.5286 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.638 1 -2.8847 0 -1.2467 1.0676 -3.2697 2.3725 -4.4955 l 2.3725 -2.2289 3.6579 2.0546 c 2.0119 1.13 4.9677 2.0545 6.5685 2.0545 1.6008 0 3.1887 0.45 3.5286 1 0.3399 0.55 1.6899 1 3 1 1.3101 0 2.6601 0.45 3 1 0.3399 0.55 2.1399 1 4 1 1.8601 0 3.6601 0.45 4 1 0.3399 0.55 1.6899 1 3 1 1.3101 0 2.6601 0.45 3 1 0.3399 0.55 2.1399 1 4 1 1.8601 0 3.6601 0.45 4 1 0.3399 0.55 2.5899 1 5 1 2.4101 0 4.6601 0.45 5 1 0.3399 0.55 1.6899 1 3 1 1.3101 0 2.6601 0.45 3 1 0.3399 0.55 3.0399 1 6 1 2.9601 0 5.6601 0.45 6 1 0.3399 0.55 2.5899 1 5 1 2.4101 0 4.6601 0.45 5 1 0.3399 0.55 2.5899 1 5 1 2.4101 0 4.6601 0.45 5 1 0.3399 0.55 3.0399 1 6 1 2.9601 0 5.6601 0.45 6 1 0.3399 0.55 3.4899 1 7 1 3.5101 0 6.6601 0.45 7 1 0.3399 0.55 3.4899 1 7 1 3.5101 0 6.6601 0.45 7 1 0.3527 0.5707 5.4437 1 11.859 1 6.5008 0 11.6827 0.4417 12.2885 1.0475 1.4745 1.4745 113.213 1.492 114.687 0.018 0.6542 -0.6542 6.5624 -1.0655 15.3065 -1.0655 8.4153 0 14.4938 -0.4091 14.859 -1 0.3399 -0.55 3.9399 -1 8 -1 4.0601 0 7.6601 -0.45 8 -1 0.3399 -0.55 3.4899 -1 7 -1 3.5101 0 6.6601 -0.45 7 -1 0.3399 -0.55 3.0399 -1 6 -1 2.9601 0 5.6601 -0.45 6 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 1.6899 -1 3 -1 1.3101 0 2.6601 -0.45 3 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 1.9278 -1 3.5286 -1 1.6008 0 4.552 -0.922 6.5583 -2.0488 3.4505 -1.938 3.7499 -1.9563 5.5379 -0.3383 2.3194 2.0991 4.8752 7.0697 4.8752 9.4817 0 0.9831 0.45 2.0655 1 2.4054 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.9278 1 3.5286 0 1.6008 0.9 4.5129 2 6.4714 1.1 1.9585 2 4.8706 2 6.4714 0 1.6008 0.45 3.1887 1 3.5286 0.55 0.3399 1 1.6647 1 2.944 0 1.3693 1.0148 2.9909 2.4673 3.9426 2.2607 1.4813 27.781 1.5956 304.75 1.365 L 2456.5 1716.5 l 0.2525 -195.75 0.2525 -195.75 89.4385 0 c 58.547 0 89.6519 -0.3454 90.0565 -1 0.3622 -0.5861 6.1574 -1 14 -1 7.8426 0 13.6378 -0.4139 14 -1 0.3399 -0.55 4.3899 -1 9 -1 4.6101 0 8.6601 -0.45 9 -1 0.341 -0.5517 4.824 -1 10 -1 5.176 0 9.659 -0.4483 10 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 3.4899 -1 7 -1 3.5101 0 6.6601 -0.45 7 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.5899 -1 5 -1 2.4101 0 4.6601 -0.45 5 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 1.6899 -1 3 -1 1.3101 0 2.6601 -0.45 3 -1 0.3399 -0.55 1.6899 -1 3 -1 1.3101 0 2.6601 -0.45 3 -1 0.3399 -0.55 2.1399 -1 4 -1 1.8601 0 3.6601 -0.45 4 -1 0.3399 -0.55 1.6899 -1 3 -1 1.3101 0 2.6601 -0.45 3 -1 0.3399 -0.55 1.4778 -1 2.5286 -1 1.0508 0 3.5129 -0.9 5.4714 -2 1.9585 -1.1 4.4206 -2 5.4714 -2 1.0508 0 2.1887 -0.45 2.5286 -1 0.3399 -0.55 1.4778 -1 2.5286 -1 1.0508 0 3.5129 -0.9 5.4714 -2 1.9585 -1.1 4.2085 -2 5 -2 0.7915 0 3.0415 -0.9 5 -2 1.9585 -1.1 4.1175 -2 4.7978 -2 1.5714 0 46.2656 -22.3278 48.5208 -24.2394 0.9248 -0.7839 3.3069 -2.1674 5.2936 -3.0745 1.9868 -0.9071 4.1794 -2.3325 4.8725 -3.1676 0.6931 -0.8352 1.825 -1.5185 2.5153 -1.5185 0.6903 0 1.8338 -0.6973 2.5411 -1.5495 0.7073 -0.8522 3.1249 -2.3886 5.3724 -3.4141 2.2476 -1.0256 5.1774 -3.0283 6.5108 -4.4505 1.3334 -1.4223 2.9511 -2.5859 3.595 -2.5859 0.6439 0 1.9852 -0.9 2.9807 -2 0.9955 -1.1 2.331 -2 2.9679 -2 0.6369 0 2.4513 -1.35 4.0321 -3 1.5808 -1.65 3.3737 -3 3.9841 -3 0.6105 0 2.8677 -1.8 5.0159 -4 2.1482 -2.2 4.3891 -4 4.9798 -4 0.5906 0 4.1997 -3.15 8.0202 -7 3.8205 -3.85 7.3985 -7 7.9511 -7 1.3387 0 16.5489 -15.1628 16.5489 -16.4974 0 -0.5744 4.05 -5.0755 9 -10.0026 4.95 -4.9271 9 -9.446 9 -10.0421 0 -0.596 1.35 -2.3771 3 -3.9579 1.65 -1.5808 3 -3.3808 3 -4 0 -0.6192 1.35 -2.4192 3 -4 1.65 -1.5808 3 -3.3808 3 -4 0 -0.6192 1.35 -2.4192 3 -4 1.65 -1.5808 3 -3.4099 3 -4.0646 0 -0.6548 0.6973 -1.7692 1.5495 -2.4765 0.8522 -0.7073 2.405 -3.1638 3.4505 -5.4589 1.0455 -2.2951 2.5983 -4.7516 3.4505 -5.4589 0.8522 -0.7073 1.5495 -1.8508 1.5495 -2.5411 0 -0.6903 0.6647 -1.8067 1.477 -2.4809 0.8124 -0.6742 2.6895 -3.7668 4.1715 -6.8725 1.4819 -3.1056 3.3394 -6.4092 4.1278 -7.3412 1.8564 -2.1946 8.2237 -14.8443 8.2237 -16.3377 0 -0.6309 2.25 -5.5663 5 -10.9677 2.75 -5.4014 5 -10.622 5 -11.6013 0 -0.9794 0.45 -2.0588 1 -2.3987 0.55 -0.3399 1 -1.4778 1 -2.5286 0 -1.0508 0.9 -3.5129 2 -5.4714 1.1 -1.9585 2 -4.4206 2 -5.4714 0 -1.0508 0.45 -2.1887 1 -2.5286 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -2.5899 1 -5 0 -2.4101 0.45 -4.66008 1 -5 0.55 -0.33992 1 -2.13992 1 -4 0 -1.86008 0.45 -3.66008 1 -4 0.55 -0.33992 1 -3.03992 1 -6 0 -2.96008 0.45 -5.66008 1 -6 0.55 -0.33992 1 -2.58992 1 -5 0 -2.41008 0.45 -4.66008 1 -5 0.5517 -0.34096 1 -4.82405 1 -10 0 -5.17595 0.4483 -9.65904 1 -10 0.5795 -0.35818 1 -5.82405 1 -13 0 -7.17595 0.4205 -12.64182 1 -13 0.6348 -0.39235 1 -12.99071 1 -34.5 0 -21.50929 -0.3652 -34.10765 -1 -34.5 -0.6008 -0.37133 -1 -7.15738 -1 -17 0 -9.84262 -0.3992 -16.62867 -1 -17 -0.55 -0.33992 -1 -3.93992 -1 -8 0 -4.06008 -0.45 -7.66008 -1 -8 -0.55 -0.33992 -1 -3.48992 -1 -7 0 -3.51008 -0.45 -6.66008 -1 -7 -0.55 -0.33992 -1 -3.03992 -1 -6 0 -2.96008 -0.45 -5.66008 -1 -6 -0.55 -0.33992 -1 -2.58992 -1 -5 0 -2.41008 -0.45 -4.66008 -1 -5 -0.55 -0.33992 -1 -2.13992 -1 -4 0 -1.86008 -0.45 -3.66008 -1 -4 -0.55 -0.33992 -1 -2.13992 -1 -4 0 -1.86008 -0.45 -3.66008 -1 -4 -0.55 -0.33992 -1 -2.13992 -1 -4 0 -1.86008 -0.45 -3.66008 -1 -4 -0.55 -0.33992 -1 -2.13992 -1 -4 0 -1.86008 -0.45 -3.66008 -1 -4 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -2.13992 -1 -4 0 -1.86008 -0.45 -3.66008 -1 -4 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.17645 -2 -4.92887 0 -0.75242 -1.35 -3.93443 -3 -7.07113 -1.65 -3.1367 -3 -6.7824 -3 -8.10155 0 -1.31915 -0.45 -2.39845 -1 -2.39845 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -0.59015 -1 -1.31144 0 -0.72129 -0.9 -2.27747 -2 -3.45819 -1.1 -1.18071 -2 -2.84056 -2 -3.68856 0 -0.84799 -0.45 -1.54181 -1 -1.54181 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -0.59015 -1 -1.31144 0 -0.72129 -0.7875 -2.18379 -1.75 -3.25 -0.9625 -1.06621 -2.3885 -3.17606 -3.169 -4.68856 -0.7804 -1.5125 -1.7929 -2.75 -2.25 -2.75 -0.457 0 -0.831 -0.9 -0.831 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1.0021 -0.5625 -1.0046 -1.25 0 -0.6875 -1.2401 -2.6 -2.75 -4.25 -1.51 -1.65 -3.3839 -4.2375 -4.1644 -5.75 -0.7804 -1.5125 -1.7929 -2.75 -2.25 -2.75 -0.457 0 -0.8342 -0.5625 -0.8381 -1.25 0 -0.6875 -1.7819 -3.05 -3.951 -5.25 -2.1691 -2.2 -3.9659 -4.44641 -3.9928 -4.99202 -0.065 -1.30755 -45.235 -46.49349 -46.5409 -46.55704 -0.5545 -0.027 -2.8082 -1.82378 -5.0082 -3.99288 -2.2 -2.1691 -4.3619 -3.94702 -4.8042 -3.95094 -0.4424 -0.004 -2.2424 -1.35504 -4 -3.00249 -1.7577 -1.64746 -3.5521 -2.99746 -3.9876 -3 -0.4355 -0.003 -1.7579 -0.90463 -2.9386 -2.00463 -1.1807 -1.1 -2.7369 -2 -3.4582 -2 -0.7213 0 -1.3114 -0.37396 -1.3114 -0.83102 0 -0.45706 -1.2375 -1.46956 -2.75 -2.25 -1.5125 -0.78044 -3.6224 -2.20648 -4.6886 -3.16898 -1.0662 -0.9625 -2.5287 -1.75 -3.25 -1.75 -0.7213 0 -1.3114 -0.45 -1.3114 -1 0 -0.55 -0.8007 -1 -1.7792 -1 -0.9786 0 -2.428 -0.9 -3.2208 -2 -0.7928 -1.1 -2.2422 -2 -3.2208 -2 -0.9785 0 -1.7792 -0.45 -1.7792 -1 0 -0.55 -0.8007 -1 -1.7792 -1 -0.9786 0 -2.428 -0.9 -3.2208 -2 -0.7928 -1.1 -2.2422 -2 -3.2208 -2 -0.9785 0 -1.7792 -0.45 -1.7792 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.57143 -3 -1 -7 -1 -4 0 -7 -0.42857 -7 -1 0 -0.55556 -2.6667 -1 -6 -1 -3.3333 0 -6 -0.44444 -6 -1 0 -0.58333 -3.3333 -1 -8 -1 -4.6667 0 -8 -0.41667 -8 -1 0 -0.57143 -3 -1 -7 -1 -4 0 -7 -0.42857 -7 -1 0 -0.6 -4 -1 -10 -1 -6 0 -10 -0.4 -10 -1 0 -0.625 -6 -1 -16 -1 -10 0 -16 -0.375 -16 -1 0 -0.63492 -7.6667 -1 -21 -1 -13.3333 0 -21 -0.36508 -21 -1 0 -0.66378 -77.6667 -1 -231 -1 l -231 0 0 459.3 c 0 342.8798 -0.2894 459.5894 -1.1417 460.4417 -0.628 0.628 -1.443 4.428 -1.8112 8.4446 -0.5734 6.2556 -0.4096 7.5816 1.1418 9.2468 1.464 1.5715 1.8111 3.6326 1.8111 10.7555 0 4.8463 -0.192 8.8114 -0.4268 8.8114 -0.7943 0 -3.5732 -6.2951 -3.5732 -8.0946 0 -0.9831 -0.45 -2.0655 -1 -2.4054 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.0508 -0.9 -3.5129 -2 -5.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.4778 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.68992 -1 -3 0 -1.31008 -0.45 -2.66008 -1 -3 -0.55 -0.33992 -1 -1.47779 -1 -2.5286 0 -1.05081 -0.9 -3.51294 -2 -5.4714 -1.1 -1.95846 -2 -4.42059 -2 -5.4714 0 -1.05081 -0.45 -2.18868 -1 -2.5286 -0.55 -0.33992 -1 -1.94148 -1 -3.55902 0 -1.61754 -0.45 -2.94098 -1 -2.94098 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.55 0 -1 -1.35 -1 -3 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.99255 -0.6667 -2 -179 -2 -178.3333 0 -179 0.007 -179 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.32344 -1 2.94098 0 1.61754 -0.45 3.2191 -1 3.55902 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.20846 -2 5 0 0.79154 -0.9 3.04154 -2 5 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.47779 -1 2.5286 0 1.05081 -0.9 3.51294 -2 5.4714 -1.1 1.95846 -2 4.42059 -2 5.4714 0 1.05081 -0.45 2.18868 -1 2.5286 -0.55 0.33992 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4778 -1 2.5286 0 1.0508 -0.9 3.5129 -2 5.4714 -1.1 1.9585 -2 4.4206 -2 5.4714 0 1.0508 -0.45 2.1887 -1 2.5286 -0.55 0.3399 -1 1.4223 -1 2.4054 0 0.983 -0.7875 3.319 -1.75 5.191 l -1.75 3.4036 -0.3269 -3 c -0.1799 -1.65 -0.7424 -3.4275 -1.25 -3.95 -0.5077 -0.5225 -0.9231 -2.4084 -0.9231 -4.191 0 -1.7825 -0.45 -3.5191 -1 -3.859 -0.55 -0.3399 -1 -2.1399 -1 -4 0 -1.8601 -0.45 -3.6601 -1 -4 -0.55 -0.3399 -1 -2.1399 -1 -4 0 -1.8601 -0.45 -3.6601 -1 -4 -0.55 -0.3399 -1 -1.9278 -1 -3.5286 0 -1.6008 -0.9 -4.5129 -2 -6.4714 -1.1 -1.9585 -2 -4.4206 -2 -5.4714 0 -1.0508 -0.45 -2.1887 -1 -2.5286 -0.55 -0.3399 -1 -1.6899 -1 -3 0 -1.3101 -0.45 -2.6601 -1 -3 -0.55 -0.3399 -1 -1.4458 -1 -2.4575 0 -1.0117 -1.35 -4.4058 -3 -7.5425 -1.65 -3.1367 -3 -6.2457 -3 -6.9089 0 -1.538 -6.3287 -14.1562 -8.2237 -16.3965 -0.7884 -0.932 -2.6459 -4.2356 -4.1278 -7.3412 -1.482 -3.1057 -3.3591 -6.1983 -4.1715 -6.8725 -0.8123 -0.6742 -1.477 -1.7759 -1.477 -2.4484 0 -0.6724 -0.9 -2.037 -2 -3.0325 -1.1 -0.9955 -2 -2.3455 -2 -3 0 -0.6545 -0.9 -2.0045 -2 -3 -1.1 -0.9955 -2 -2.3455 -2 -3 0 -0.6545 -0.9 -2.0045 -2 -3 -1.1 -0.9955 -2 -2.331 -2 -2.9679 0 -0.6369 -1.35 -2.4513 -3 -4.0321 -1.65 -1.5808 -3 -3.3694 -3 -3.9747 0 -0.6053 -2.25 -3.3167 -5 -6.0253 -2.75 -2.7086 -5 -5.3863 -5 -5.9503 0 -1.352 -29.1681 -30.5497 -30.5188 -30.5497 -0.57409 0 -3.71563 -2.7 -6.9812 -6 -3.26557 -3.3 -6.42979 -6 -7.03161 -6 -0.60181 0 -2.38759 -1.35 -3.96839 -3 -1.5808 -1.65 -3.3808 -3 -4 -3 -0.6192 0 -2.4192 -1.35 -4 -3 -1.5808 -1.65 -3.3808 -3 -4 -3 -0.6192 0 -2.4192 -1.35 -4 -3 -1.5808 -1.65 -3.39525 -3 -4.0321 -3 -0.63686 0 -1.97241 -0.9 -2.9679 -2 -0.99549 -1.1 -2.34549 -2 -3 -2 -0.65451 0 -2.00451 -0.9 -3 -2 -0.99549 -1.1 -2.36013 -2 -3.03254 -2 -0.67242 0 -1.80126 -0.6973 -2.50854 -1.5495 -0.70729 -0.8522 -3.2101 -2.426 -5.5618 -3.4974 -2.35171 -1.0713 -4.55541 -2.4002 -4.89712 -2.9531 -0.34171 -0.5529 -2.59171 -1.9029 -5 -3 -2.40829 -1.0971 -4.63975 -2.4171 -4.95879 -2.9333 -0.31905 -0.5163 -3.15884 -2.1696 -6.31065 -3.6741 -3.15181 -1.5045 -6.48745 -3.3753 -7.41253 -4.1574 C 911.64957 1015.4019 870.90043 995 869.4072 995 c -0.622 0 -4.63024 -1.8 -8.9072 -4 -4.27696 -2.2 -8.34343 -4 -9.0366 -4 -0.69317 0 -3.8267 -1.35 -6.9634 -3 -3.1367 -1.65 -6.31871 -3 -7.07113 -3 -0.75242 0 -2.97041 -0.9 -4.92887 -2 -1.95846 -1.1 -4.20846 -2 -5 -2 -0.79154 0 -3.04154 -0.9 -5 -2 -1.95846 -1.1 -4.20846 -2 -5 -2 -0.79154 0 -3.04154 -0.9 -5 -2 -1.95846 -1.1 -4.42059 -2 -5.4714 -2 -1.05081 0 -2.18868 -0.45 -2.5286 -1 -0.33992 -0.55 -1.47779 -1 -2.5286 -1 -1.05081 0 -3.51294 -0.9 -5.4714 -2 -1.95846 -1.1 -4.42059 -2 -5.4714 -2 -1.05081 0 -2.18868 -0.45 -2.5286 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.47779 -1 -2.5286 -1 -1.05081 0 -3.51294 -0.9 -5.4714 -2 -1.95846 -1.1 -4.42059 -2 -5.4714 -2 -1.05081 0 -2.18868 -0.45 -2.5286 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -2.13992 -1 -4 -1 -1.86008 0 -3.66008 -0.45 -4 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.47779 -1 -2.5286 -1 -1.05081 0 -3.51294 -0.9 -5.4714 -2 -1.95846 -1.1 -4.42059 -2 -5.4714 -2 -1.05081 0 -2.18868 -0.45 -2.5286 -1 -0.33992 -0.55 -1.47779 -1 -2.5286 -1 -1.05081 0 -3.51294 -0.9 -5.4714 -2 -1.95846 -1.1 -4.20846 -2 -5 -2 -0.79154 0 -3.04154 -0.9 -5 -2 -1.95846 -1.1 -4.20846 -2 -5 -2 -0.79154 0 -3.04154 -0.9 -5 -2 -1.95846 -1.1 -4.17645 -2 -4.92887 -2 -0.75242 0 -3.93443 -1.35 -7.07113 -3 -3.1367 -1.65 -6.22772 -3 -6.86894 -3 -1.51765 0 -46.25039 -22.37637 -48.44962 -24.23564 -0.92479 -0.78184 -4.22242 -2.63399 -7.32806 -4.11591 -3.10564 -1.48191 -6.19824 -3.35905 -6.87244 -4.17142 C 524.30673 857.66466 523.20496 857 522.53254 857 c -0.67241 0 -2.03705 -0.9 -3.03254 -2 -0.99549 -1.1 -2.33104 -2 -2.9679 -2 -0.63685 0 -2.4513 -1.35 -4.0321 -3 -1.5808 -1.65 -3.3808 -3 -4 -3 -0.6192 0 -2.4192 -1.35 -4 -3 -1.5808 -1.65 -3.37486 -3 -3.98679 -3 C 499.15699 841 477 818.71187 477 817.34763 c 0 -0.53378 -0.7875 -1.84286 -1.75 -2.90907 -0.9625 -1.06621 -2.38854 -3.17606 -3.16898 -4.68856 -0.78044 -1.5125 -1.79294 -2.75 -2.25 -2.75 C 469.37396 807 469 805.65 469 804 c 0 -1.65 -0.45 -3 -1 -3 -0.55 0 -1 -0.9 -1 -2 0 -1.1 -0.45 -2 -1 -2 -0.6 0 -1 -4 -1 -10 0 -6 0.4 -10 1 -10 0.55 0 1 -1.35 1 -3 0 -1.65 0.45 -3 1 -3 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1.00497 -0.7875 1.01104 -1.75 0.0128 -2.03615 19.1763 -21.17645 23.23896 -23.21087 1.5125 -0.7574 2.75 -1.75105 2.75 -2.20811 0 -0.45706 0.9 -0.83102 2 -0.83102 1.1 0 2 -0.45 2 -1 0 -0.55 0.59015 -1 1.31144 -1 0.72129 0 2.27747 -0.9 3.45819 -2 1.18071 -1.1 2.84056 -2 3.68856 -2 0.84799 0 1.54181 -0.45 1.54181 -1 0 -0.55 0.9 -1 2 -1 1.1 0 2 -0.45 2 -1 0 -0.55 1.35 -1 3 -1 1.65 0 3 -0.45 3 -1 0 -0.55 0.9 -1 2 -1 1.1 0 2 -0.45 2 -1 0 -0.55 1.35 -1 3 -1 1.65 0 3 -0.45 3 -1 0 -0.55 1.35 -1 3 -1 1.65 0 3 -0.45 3 -1 0 -0.55 1.35 -1 3 -1 1.65 0 3 -0.45 3 -1 0 -0.55 1.8 -1 4 -1 2.2 0 4 -0.45 4 -1 0 -0.55 2.25 -1 5 -1 2.75 0 5 -0.45 5 -1 0 -0.55556 2.66667 -1 6 -1 3.33333 0 6 -0.44444 6 -1 0 -0.59259 3.66667 -1 9 -1 5.33333 0 9 -0.40741 9 -1 0 -0.64516 11 -1 31 -1 20 0 31 0.35484 31 1 0 0.62222 5.66667 1 15 1 9.33333 0 15 0.37778 15 1 0 0.6 4 1 10 1 6 0 10 0.4 10 1 0 0.57143 3 1 7 1 4 0 7 0.42857 7 1 0 0.58333 3.33333 1 8 1 4.66667 0 8 0.41667 8 1 0 0.55 2.25 1 5 1 2.75 0 5 0.45 5 1 0 0.55 2.25 1 5 1 2.75 0 5 0.45 5 1 0 0.55 2.25 1 5 1 2.75 0 5 0.45 5 1 0 0.55 1.8 1 4 1 2.2 0 4 0.45 4 1 0 0.55 1.8 1 4 1 2.2 0 4 0.45 4 1 0 0.55 1.8 1 4 1 2.2 0 4 0.45 4 1 0 0.55 1.8 1 4 1 2.2 0 4 0.45 4 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.8 1 4 1 2.2 0 4 0.45 4 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 0.9 1 2 1 1.1 0 2 0.45 2 1 0 0.55 1.35 1 3 1 1.65 0 3 0.45 3 1 0 1.45798 6.20108 1.1633 8.25 -0.39205 0.9625 -0.73064 1.75 -1.86014 1.75 -2.51001 0 -0.64986 0.9 -2.1476 2 -3.32831 1.1 -1.18072 2 -2.7369 2 -3.45819 0 -0.72129 0.45 -1.31144 1 -1.31144 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.69382 1 -1.54181 0 -0.848 0.9 -2.50785 2 -3.68856 1.1 -1.18072 2 -2.7369 2 -3.45819 0 -0.72129 0.45 -1.31144 1 -1.31144 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.69382 1 -1.54181 0 -0.848 0.9 -2.50785 2 -3.68856 1.1 -1.18072 2 -2.7369 2 -3.45819 0 -0.72129 0.45 -1.31144 1 -1.31144 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.69382 1 -1.54181 0 -0.848 0.9 -2.50785 2 -3.68856 1.1 -1.18072 2 -2.7369 2 -3.45819 0 -0.72129 0.45 -1.31144 1 -1.31144 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.69382 1 -1.54181 0 -0.848 0.9 -2.50785 2 -3.68856 1.1 -1.18072 2 -2.7369 2 -3.45819 0 -0.72129 0.45 -1.31144 1 -1.31144 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 0.55 0 1 -0.9 1 -2 0 -1.1 0.45 -2 1 -2 0.55 0 1 -0.80066 1 -1.77924 0 -0.97858 0.9 -2.42792 2 -3.22076 1.1 -0.79284 2 -2.24218 2 -3.22076 0 -0.97858 0.45 -1.77924 1 -1.77924 1.5345 0 1.1866 -6.95621 -0.4286 -8.57143 -0.7857 -0.78571 -2.1357 -1.42857 -3 -1.42857 -0.8643 0 -1.5714 -0.45 -1.5714 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -0.9 -1 -2 -1 -1.1 0 -2 -0.45 -2 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.35 -1 -3 -1 -1.65 0 -3 -0.45 -3 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -1.8 -1 -4 -1 -2.2 0 -4 -0.45 -4 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.55556 -2.66667 -1 -6 -1 -3.33333 0 -6 -0.44444 -6 -1 0 -0.55556 -2.66667 -1 -6 -1 -3.33333 0 -6 -0.44444 -6 -1 0 -0.55 -2.25 -1 -5 -1 -2.75 0 -5 -0.45 -5 -1 0 -0.57143 -3 -1 -7 -1 -4 0 -7 -0.42857 -7 -1 0 -0.55556 -2.66667 -1 -6 -1 -3.33333 0 -6 -0.44444 -6 -1 0 -0.59259 -3.66667 -1 -9 -1 -5.33333 0 -9 -0.40741 -9 -1 0 -0.58333 -3.33333 -1 -8 -1 -4.66667 0 -8 -0.41667 -8 -1 0 -0.60606 -4.33333 -1 -11 -1 -6.66667 0 -11 -0.39394 -11 -1 0 -0.62222 -5.66667 -1 -15 -1 -9.33333 0 -15 -0.37778 -15 -1 0 -0.65116 -15 -1 -43 -1 -28 0 -43 0.34884 -43 1 0 0.62222 -5.66667 1 -15 1 -9.33333 0 -15 0.37778 -15 1 0 0.60606 -4.33333 1 -11 1 -6.66667 0 -11 0.39394 -11 1 0 0.57143 -3 1 -7 1 -4 0 -7 0.42857 -7 1 0 0.58333 -3.33333 1 -8 1 -4.66667 0 -8 0.41667 -8 1 0 0.55 -2.25 1 -5 1 -2.75 0 -5 0.45 -5 1 0 0.55556 -2.66667 1 -6 1 -3.33333 0 -6 0.44444 -6 1 0 0.55 -2.25 1 -5 1 -2.75 0 -5 0.45 -5 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -1.8 1 -4 1 -2.2 0 -4 0.45 -4 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -1.35 1 -3 1 -1.65 0 -3 0.45 -3 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.80066 1 -1.77924 1 -0.97858 0 -2.42792 0.9 -3.22076 2 -0.79284 1.1 -2.24218 2 -3.22076 2 -0.97858 0 -1.77924 0.45 -1.77924 1 0 0.55 -0.9 1 -2 1 -1.1 0 -2 0.45 -2 1 0 0.55 -0.80066 1 -1.77924 1 -0.97858 0 -2.42792 0.9 -3.22076 2 -0.79284 1.1 -2.24218 2 -3.22076 2 -0.97858 0 -1.77924 0.45 -1.77924 1 0 0.55 -0.80066 1 -1.77924 1 -0.97858 0 -2.42792 0.9 -3.22076 2 -0.79284 1.1 -2.14284 2 -3 2 -0.85716 0 -2.20716 0.9 -3 2 -0.79284 1.1 -2.14284 2 -3 2 -0.85716 0 -2.20716 0.9 -3 2 -0.79284 1.1 -2.06163 2 -2.81955 2 -0.75792 0 -2.63912 1.35 -4.18045 3 -1.54133 1.65 -3.42253 3 -4.18045 3 -0.75792 0 -2.02671 0.9 -2.81955 2 -0.79284 1.1 -2.05246 2 -2.79916 2 -0.7467 0 -3.08708 1.8 -5.20084 4 -2.11376 2.2 -4.36376 4 -5 4 -0.63624 0 -2.88624 1.8 -5 4 -2.11376 2.2 -4.33119 4 -4.92762 4 C 241.66417 547 201 587.65114 201 589.0589 c 0 0.58902 -2.25 3.26252 -5 5.9411 -2.75 2.67858 -5 5.39382 -5 6.03387 0 0.64004 -1.35 2.4248 -3 3.96613 -1.65 1.54133 -3 3.34133 -3 4 0 0.65867 -1.35 2.45867 -3 4 -1.65 1.54133 -3 3.42253 -3 4.18045 0 0.75792 -0.9 2.02671 -2 2.81955 -1.1 0.79284 -2 2.14284 -2 3 0 0.85716 -0.9 2.20716 -2 3 -1.1 0.79284 -2 2.24218 -2 3.22076 0 0.97858 -0.45 1.77924 -1 1.77924 -0.55 0 -1 0.80066 -1 1.77924 0 0.97858 -0.9 2.42792 -2 3.22076 -1.1 0.79284 -2 2.24218 -2 3.22076 0 0.97858 -0.45 1.77924 -1 1.77924 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 0.80066 -1 1.77924 0 0.97858 -0.9 2.42792 -2 3.22076 -1.1 0.79284 -2 2.24218 -2 3.22076 0 0.97858 -0.45 1.77924 -1 1.77924 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 0.9 -1 2 0 1.1 -0.45 2 -1 2 -0.55 0 -1 1.8 -1 4 0 2.2 -0.45 4 -1 4 -0.55 0 -1 1.8 -1 4 0 2.2 -0.45 4 -1 4 -0.55 0 -1 1.35 -1 3 0 1.65 -0.45 3 -1 3 -0.55 0 -1 2.25 -1 5 0 2.75 -0.45 5 -1 5 -0.55 0 -1 2.25 -1 5 0 2.75 -0.45 5 -1 5 -0.55556 0 -1 2.66667 -1 6 0 3.33333 -0.44444 6 -1 6 -0.60606 0 -1 4.33333 -1 11 0 6.66667 -0.39394 11 -1 11 -1.37307 0 -1.37307 76.6514 0 77.5 0.55 0.33992 1 4.38992 1 9 0 4.61008 0.45 8.66008 1 9 0.55 0.33992 1 3.48992 1 7 0 3.51008 0.45 6.66008 1 7 0.55 0.33992 1 2.58992 1 5 0 2.41008 0.45 4.66008 1 5 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 2.58992 1 5 0 2.41008 0.45 4.66008 1 5 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.47779 1 2.5286 0 1.05081 0.9 3.51294 2 5.4714 1.1 1.95846 2 4.42059 2 5.4714 0 1.05081 0.45 2.18868 1 2.5286 0.55 0.33992 1 1.44578 1 2.45747 0 1.01169 1.35 4.40583 3 7.54253 1.65 3.1367 3 6.2457 3 6.90888 0 1.53799 6.32873 14.15626 8.22373 16.39652 0.78839 0.93203 2.66439 4.27335 4.16889 7.42516 1.5045 3.15181 3.15782 5.9916 3.67405 6.31065 0.51623 0.31904 1.81514 2.50419 2.88646 4.85589 1.07133 2.3517 2.64514 4.8545 3.49737 5.5618 0.85222 0.7073 1.5495 1.8217 1.5495 2.4765 0 0.6547 1.35 2.4838 3 4.0646 1.65 1.5808 3 3.3952 3 4.0321 0 0.6369 0.9 1.9724 2 2.9679 1.1 0.9955 2 2.3196 2 2.9426 0 0.6229 2.25 3.3488 5 6.0574 2.75 2.7086 5 5.3876 5 5.9533 0 1.362 39.1759 40.5467 40.53768 40.5467 0.58103 0 2.81408 1.8 4.96232 4 2.14824 2.2 4.39824 4 5 4 0.60176 0 2.85176 1.8 5 4 2.14824 2.2 4.40538 4 5.01586 4 0.61048 0 2.40334 1.35 3.98414 3 1.5808 1.65 3.3808 3 4 3 0.6192 0 2.4192 1.35 4 3 1.5808 1.65 3.39525 3 4.0321 3 0.63686 0 1.97241 0.9 2.9679 2 0.99549 1.1 2.36013 2 3.03254 2 0.67242 0 1.80126 0.6973 2.50854 1.5495 0.70729 0.8522 3.1638 2.405 5.45892 3.4505 2.29512 1.0455 4.75163 2.5983 5.45892 3.4505 0.70728 0.8522 1.85077 1.5495 2.54108 1.5495 0.69031 0 1.8338 0.6973 2.54108 1.5495 0.70729 0.8522 3.2101 2.426 5.5618 3.4974 2.35171 1.0713 4.55541 2.4002 4.89712 2.9531 0.34171 0.5529 2.59171 1.9029 5 3 2.40829 1.0971 4.63141 2.4036 4.94027 2.9034 0.30886 0.4997 4.94865 3.0542 10.31065 5.6766 5.36199 2.6223 10.50972 5.4101 11.4394 6.1949 2.5761 2.1749 18.99942 10.2251 20.86016 10.2251 0.90175 0 2.45403 0.9 3.44952 2 0.99549 1.1 2.56808 2 3.49466 2 0.92658 0 6.10398 2.25 11.50534 5 5.40136 2.75 10.37781 5 11.05878 5 0.68097 0 3.80452 1.35 6.94122 3 3.1367 1.65 6.2867 3 7 3 0.7133 0 3.8633 1.35 7 3 3.1367 1.65 6.31871 3 7.07113 3 0.75242 0 2.97041 0.9 4.92887 2 1.95846 1.1 4.20846 2 5 2 0.79154 0 3.04154 0.9 5 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.44578 1 2.45747 1 1.01169 0 4.40583 1.35 7.54253 3 3.1367 1.65 6.21772 3 6.84671 3 1.8088 0 35.41045 17.0025 36.71997 18.5803 0.64802 0.7809 1.72836 1.4197 2.40078 1.4197 0.67241 0 2.03705 0.9 3.03254 2 0.99549 1.1 2.34549 2 3 2 0.65451 0 2.00451 0.9 3 2 0.99549 1.1 2.29623 2 2.89055 2 1.4512 0 25.60945 24.1612 25.60945 25.6125 0 0.6285 0.65318 1.6847 1.45152 2.3473 1.89594 1.5735 6.54848 10.9358 6.54848 13.1775 0 0.9596 0.45 2.0228 1 2.3627 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 1.30363 0.8057 1.30363 14.1943 0 15 -0.55 0.3399 -1 2.5899 -1 5 0 2.4101 -0.45 4.6601 -1 5 -0.55 0.3399 -1 2.1399 -1 4 0 1.8601 -0.45 3.6601 -1 4 -0.55 0.3399 -1 1.3755 -1 2.3013 0 2.2044 -8.69323 19.6992 -10.5573 21.2463 -0.79348 0.6585 -1.4427 1.6976 -1.4427 2.3092 0 1.4531 -22.12954 23.6432 -23.5787 23.6432 -0.61123 0 -1.92581 0.9 -2.9213 2 -0.99549 1.1 -2.36013 2 -3.03254 2 -0.67242 0 -1.7662 0.655 -2.43064 1.4556 -1.36406 1.6436 -14.90436 8.5444 -16.76526 8.5444 -0.6659 0 -2.8131 0.9 -4.77156 2 -1.95846 1.1 -4.42059 2 -5.4714 2 -1.05081 0 -2.18868 0.45 -2.5286 1 -0.33992 0.55 -1.68992 1 -3 1 -1.31008 0 -2.66008 0.45 -3 1 -0.33992 0.55 -2.13992 1 -4 1 -1.86008 0 -3.66008 0.45 -4 1 -0.33992 0.55 -2.58992 1 -5 1 -2.41008 0 -4.66008 0.45 -5 1 -0.33992 0.55 -3.03992 1 -6 1 -2.96008 0 -5.66008 0.45 -6 1 -0.34781 0.5628 -5.15738 1 -11 1 -5.84262 0 -10.65219 0.4372 -11 1 -0.39572 0.6403 -15.32405 1 -41.5 1 -26.17595 0 -41.10428 -0.3597 -41.5 -1 -0.34781 -0.5628 -5.15738 -1 -11 -1 -5.84262 0 -10.65219 -0.4372 -11 -1 -0.33992 -0.55 -4.38992 -1 -9 -1 -4.61008 0 -8.66008 -0.45 -9 -1 -0.33992 -0.55 -2.58992 -1 -5 -1 -2.41008 0 -4.66008 -0.45 -5 -1 -0.33992 -0.55 -3.03992 -1 -6 -1 -2.96008 0 -5.66008 -0.45 -6 -1 -0.33992 -0.55 -2.58992 -1 -5 -1 -2.41008 0 -4.66008 -0.45 -5 -1 -0.33992 -0.55 -2.13992 -1 -4 -1 -1.86008 0 -3.66008 -0.45 -4 -1 -0.33992 -0.55 -2.13992 -1 -4 -1 -1.86008 0 -3.66008 -0.45 -4 -1 -0.33992 -0.55 -2.13992 -1 -4 -1 -1.86008 0 -3.66008 -0.45 -4 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -2.13992 -1 -4 -1 -1.86008 0 -3.66008 -0.45 -4 -1 -0.33992 -0.55 -1.92779 -1 -3.5286 -1 -1.60081 0 -4.51294 -0.9 -6.4714 -2 -1.95846 -1.1 -4.42059 -2 -5.4714 -2 -1.05081 0 -2.18868 -0.45 -2.5286 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.68992 -1 -3 -1 -1.31008 0 -2.66008 -0.45 -3 -1 -0.33992 -0.55 -1.47779 -1 -2.5286 -1 -1.05081 0 -3.51294 -0.9 -5.4714 -2 -1.95846 -1.1 -4.20846 -2 -5 -2 -0.79154 0 -3.04154 -0.9 -5 -2 -1.95846 -1.1 -4.15998 -2 -4.89227 -2 -0.73229 0 -4.83077 -1.8 -9.10773 -4 -4.27696 -2.2 -8.28329 -4 -8.90296 -4 -1.48914 0 -54.24961 -26.4051 -56.41643 -28.2348 -0.92434 -0.7805 -5.16458 -3.1092 -9.42276 -5.1749 -4.25818 -2.0658 -7.9882 -4.154 -8.28893 -4.6406 -0.30073 -0.4866 -3.39461 -2.2438 -6.8753 -3.905 -3.48068 -1.6612 -6.89326 -3.7008 -7.58351 -4.5325 -1.69938 -2.0477 -6.36242 -1.9121 -8.17819 0.2378 -0.81294 0.9625 -26.14309 51.1483 -56.28923 111.5239 -30.14615 60.3757 -55.17227 109.9972 -55.61361 110.2699 -1.0542 0.6516 -3.92908 6.4418 -3.92908 7.9135 0 1.7775 -4.92009 11.2315 -6.54848 12.5829 -0.79834 0.6626 -1.45152 2.8798 -1.45152 4.9273 0 3.9611 1.31878 5.5909 6.5 8.0325 1.65 0.7776 3.75613 2.037 4.68028 2.7988 2.22894 1.8372 58.97125 30.2012 60.41778 30.2012 0.61911 0 4.62498 1.8 8.90194 4 4.27696 2.2 8.34343 4 9.0366 4 0.69317 0 3.8267 1.35 6.9634 3 3.1367 1.65 6.31871 3 7.07113 3 0.75242 0 2.97041 0.9 4.92887 2 1.95846 1.1 4.20846 2 5 2 0.79154 0 3.04154 0.9 5 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.47779 1 2.5286 1 1.05081 0 3.51294 0.9 5.4714 2 1.95846 1.1 4.42059 2 5.4714 2 1.05081 0 2.18868 0.45 2.5286 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.68992 1 3 1 1.31008 0 2.66008 0.45 3 1 0.33992 0.55 2.58992 1 5 1 2.41008 0 4.66008 0.45 5 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 1.91492 1 3.5 1 1.58508 0 3.16008 0.45 3.5 1 0.33992 0.55 2.36492 1 4.5 1 2.13508 0 4.16008 0.45 4.5 1 0.33992 0.55 3.03992 1 6 1 2.96008 0 5.66008 0.45 6 1 0.33992 0.55 1.91492 1 3.5 1 1.58508 0 3.16008 0.45 3.5 1 0.33992 0.55 3.26492 1 6.5 1 3.23508 0 6.16008 0.45 6.5 1 0.33992 0.55 2.13992 1 4 1 1.86008 0 3.66008 0.45 4 1 0.33992 0.55 3.03992 1 6 1 2.96008 0 5.66008 0.45 6 1 0.33992 0.55 3.26492 1 6.5 1 3.23508 0 6.16008 0.45 6.5 1 0.33992 0.55 3.48992 1 7 1 3.51008 0 6.66008 0.45 7 1 0.33992 0.55 4.38992 1 9 1 4.61008 0 8.66008 0.45 9 1 0.34456 0.5575 4.99071 1 10.5 1 5.50929 0 10.15544 0.4425 10.5 1 0.35756 0.5785 5.77705 1 12.85902 1 6.73254 0 12.6829 0.4419 13.22303 0.9821 1.91867 1.9186 129.78988 1.8183 131.86795 -0.1035 z M 1556.5 1276 c -0.3582 -0.5795 -5.824 -1 -13 -1 -7.176 0 -12.6418 -0.4205 -13 -1 -0.3399 -0.55 -3.0399 -1 -6 -1 -2.9601 0 -5.6601 -0.45 -6 -1 -0.3399 -0.55 -2.5899 -1 -5 -1 -2.4101 0 -4.6601 -0.45 -5 -1 -0.3399 -0.55 -2.5899 -1 -5 -1 -2.4101 0 -4.6601 -0.45 -5 -1 -0.3399 -0.55 -2.1399 -1 -4 -1 -1.8601 0 -3.6601 -0.45 -4 -1 -0.3399 -0.55 -2.1399 -1 -4 -1 -1.8601 0 -3.6601 -0.45 -4 -1 -0.3399 -0.55 -2.1399 -1 -4 -1 -1.8601 0 -3.6601 -0.45 -4 -1 -0.3399 -0.55 -1.6899 -1 -3 -1 -1.3101 0 -2.6601 -0.45 -3 -1 -0.3399 -0.55 -1.6899 -1 -3 -1 -1.3101 0 -2.6601 -0.45 -3 -1 -0.3399 -0.55 -1.6899 -1 -3 -1 -1.3101 0 -2.6601 -0.45 -3 -1 -0.3399 -0.55 -2.1665 -1 -4.059 -1 -3.3195 0 -4.5112 -1.2205 -2.441 -2.5 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.9278 1 -3.5286 0 -1.6008 0.9 -4.5129 2 -6.4714 1.1 -1.9585 2 -4.8706 2 -6.4714 0 -1.6008 0.45 -3.1887 1 -3.5286 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.9278 1 -3.5286 0 -1.6008 0.9 -4.5129 2 -6.4714 1.1 -1.9585 2 -4.8706 2 -6.4714 0 -1.6008 0.45 -3.1887 1 -3.5286 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.9278 1 -3.5286 0 -1.6008 0.9 -4.5129 2 -6.4714 1.1 -1.9585 2 -4.4206 2 -5.4714 0 -1.0508 0.45 -2.1887 1 -2.5286 0.55 -0.3399 1 -2.1399 1 -4 0 -1.8601 0.45 -3.6601 1 -4 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.6899 1 -3 0 -1.3101 0.45 -2.6601 1 -3 0.55 -0.3399 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -2.13992 1 -4 0 -1.86008 0.45 -3.66008 1 -4 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.92779 1 -3.5286 0 -1.60081 0.9 -4.51294 2 -6.4714 1.1 -1.95846 2 -4.87059 2 -6.4714 0 -1.60081 0.45 -3.18868 1 -3.5286 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -2.13992 1 -4 0 -1.86008 0.45 -3.66008 1 -4 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.68992 1 -3 0 -1.31008 0.45 -2.66008 1 -3 0.55 -0.33992 1 -1.92779 1 -3.5286 0 -1.60081 0.9 -4.51294 2 -6.4714 1.1 -1.95846 2 -4.87059 2 -6.4714 0 -1.60081 0.45 -3.18868 1 -3.5286 0.55 -0.33992 1 -1.42234 1 -2.40538 0 -1.96181 2.8102 -8.09462 3.7092 -8.09462 0.3094 0 0.2931 1.96657 -0.036 4.37015 -0.5196 3.79061 -0.1398 5.13282 2.864 10.12116 1.9047 3.16305 3.4631 6.56992 3.4631 7.57083 0 1.0009 0.45 2.09794 1 2.43786 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 1.68992 1 3 0 1.31008 0.45 2.66008 1 3 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.9278 1 3.5286 0 1.6008 0.9 4.5129 2 6.4714 1.1 1.9585 2 4.8706 2 6.4714 0 1.6008 0.45 3.1887 1 3.5286 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.9278 1 3.5286 0 1.6008 0.9 4.5129 2 6.4714 1.1 1.9585 2 4.8706 2 6.4714 0 1.6008 0.45 3.1887 1 3.5286 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 2.1399 1 4 0 1.8601 0.45 3.6601 1 4 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 1 1.6899 1 3 0 1.3101 0.45 2.6601 1 3 0.55 0.3399 0.9965 1.829 0.9922 3.309 -0.01 2.7645 -3.3421 5.191 -7.1325 5.191 -0.9579 0 -2.0198 0.45 -2.3597 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -2.1399 1 -4 1 -1.8601 0 -3.6601 0.45 -4 1 -0.3399 0.55 -2.1399 1 -4 1 -1.8601 0 -3.6601 0.45 -4 1 -0.3399 0.55 -2.5899 1 -5 1 -2.4101 0 -4.6601 0.45 -5 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -3.4899 1 -7 1 -3.5101 0 -6.6601 0.45 -7 1 -0.3399 0.55 -3.4899 1 -7 1 -3.5101 0 -6.6601 0.45 -7 1 -0.3478 0.5628 -5.1574 1 -11 1 -5.8426 0 -10.6522 0.4372 -11 1 -0.3801 0.615 -8.6574 1 -21.5 1 -12.8426 0 -21.1199 -0.385 -21.5 -1 z m 900.5 -398 0 -163 46.941 0 c 30.2153 0 47.1612 0.35631 47.559 1 0.3758 0.60798 7.824 1 19 1 11.176 0 18.6242 0.39202 19 1 0.3399 0.55 3.9399 1 8 1 4.0601 0 7.6601 0.45 8 1 0.3399 0.55 3.0399 1 6 1 2.9601 0 5.6601 0.45 6 1 0.3399 0.55 2.5899 1 5 1 2.4101 0 4.6601 0.45 5 1 0.3399 0.55 2.1399 1 4 1 1.8601 0 3.6601 0.45 4 1 0.3399 0.55 2.1399 1 4 1 1.8601 0 3.6601 0.45 4 1 0.3399 0.55 1.6899 1 3 1 1.3101 0 2.6601 0.45 3 1 0.3399 0.55 1.6899 1 3 1 1.3101 0 2.6601 0.45 3 1 0.3399 0.55 1.4778 1 2.5286 1 1.0508 0 3.5129 0.9 5.4714 2 1.9585 1.1 4.1062 2 4.7727 2 1.8592 0 19.4189 8.92342 20.7749 10.5573 0.6585 0.79348 1.7474 1.4427 2.4199 1.4427 0.6724 0 2.037 0.9 3.0325 2 0.9955 1.1 2.3455 2 3 2 0.6545 0 2.0045 0.9 3 2 0.9955 1.1 2.309 2 2.9189 2 1.4295 0 27.5811 26.17751 27.5811 27.60842 0 0.59488 0.9 1.89609 2 2.89158 1.1 0.99549 2 2.36013 2 3.03254 0 0.67242 0.6492 1.76137 1.4427 2.41991 1.6339 1.356 10.5573 18.91564 10.5573 20.77481 0 0.66655 0.9 2.81428 2 4.77274 1.1 1.95846 2 4.42059 2 5.4714 0 1.05081 0.45 2.18868 1 2.5286 0.55 0.33992 1 2.13992 1 4 0 1.86008 0.45 3.66008 1 4 0.55 0.33992 1 2.58992 1 5 0 2.41008 0.45 4.66008 1 5 0.55 0.33992 1 3.03992 1 6 0 2.96008 0.45 5.66008 1 6 0.6095 0.37672 1 7.99071 1 19.5 0 11.50929 -0.3905 19.12328 -1 19.5 -0.55 0.33992 -1 3.03992 -1 6 0 2.96008 -0.45 5.66008 -1 6 -0.55 0.33992 -1 3.48992 -1 7 0 3.51008 -0.45 6.66008 -1 7 -0.55 0.33992 -1 1.68992 -1 3 0 1.31008 -0.45 2.66008 -1 3 -0.55 0.33992 -1 1.92779 -1 3.5286 0 1.60081 -0.9 4.51294 -2 6.4714 -1.1 1.95846 -2 4.10619 -2 4.77274 0 1.85917 -8.9234 19.41881 -10.5573 20.77481 -0.7935 0.65854 -1.4427 1.74749 -1.4427 2.41991 0 0.67241 -0.9 2.03705 -2 3.03254 -1.1 0.99549 -2 2.33104 -2 2.9679 0 0.63685 -1.35 2.4513 -3 4.0321 -1.65 1.5808 -3 3.36243 -3 3.95917 0 1.38596 -16.1944 17.54083 -17.5838 17.54083 -0.5731 0 -2.3354 1.35 -3.9162 3 -1.5808 1.65 -3.3952 3 -4.0321 3 -0.6369 0 -1.9724 0.9 -2.9679 2 -0.9955 1.1 -2.3601 2 -3.0325 2 -0.6725 0 -1.7559 0.6425 -2.4076 1.4279 -1.5454 1.862 -27.0637 14.5721 -29.2568 14.5721 -0.9268 0 -1.9632 0.45 -2.3031 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -1.6899 1 -3 1 -1.3101 0 -2.6601 0.45 -3 1 -0.3399 0.55 -2.1399 1 -4 1 -1.8601 0 -3.6601 0.45 -4 1 -0.3399 0.55 -2.1399 1 -4 1 -1.8601 0 -3.6601 0.45 -4 1 -0.3399 0.55 -2.1399 1 -4 1 -1.8601 0 -3.6601 0.45 -4 1 -0.3399 0.55 -3.0399 1 -6 1 -2.9601 0 -5.6601 0.45 -6 1 -0.3399 0.55 -4.3899 1 -9 1 -4.6101 0 -8.6601 0.45 -9 1 -0.4018 0.6501 -23.3437 1 -65.559 1 l -64.941 0 0 -163 z" FillRule="NonZero"/>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </Viewbox>
+</ResourceDictionary>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0734515-73D1-41EE-92B2-5A3A577E5B27}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>LandmarkDevs.UI.Material</RootNamespace>
+    <AssemblyName>LandmarkDevs.UI.Material</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug462|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release462|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug452|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug452\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release452|AnyCPU'">
+    <OutputPath>bin\Release452\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dragablz, Version=0.0.3.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dragablz.0.0.3.186\lib\net45\Dragablz.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignAddon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignAddon.1.0.3\lib\net45\MaterialDesignAddon.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Styles\ApplicationStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ColorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\CorporateBranding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\DragablzStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\GridViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\MiscStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\PrimaryColorScheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SecondaryColorScheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SvgResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TabStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\AppDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Card.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\CellEditPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\CellEditPopupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DialogBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Behaviors\AutoRepositionPopupBehavior.cs" />
+    <Compile Include="Behaviors\EventToCommandBehavior.cs" />
+    <Compile Include="Behaviors\GridViewColumnResizeBehavior.cs" />
+    <Compile Include="Behaviors\HeightWidthBehavior.cs" />
+    <Compile Include="Behaviors\PasswordBoxBindingBehavior.cs" />
+    <Compile Include="Controls\CellEditPopupBox.cs" />
+    <Compile Include="Controls\Dialogs\AppDialog.cs" />
+    <Compile Include="Controls\Dialogs\DialogBase.cs" />
+    <Compile Include="Controls\Dialogs\DialogCoordinator.cs" />
+    <Compile Include="Controls\Dialogs\DialogManager.cs" />
+    <Compile Include="Controls\Dialogs\DialogParticipation.cs" />
+    <Compile Include="Controls\Dialogs\DialogSettings.cs" />
+    <Compile Include="Controls\Dialogs\DialogStateChangedEventArgs.cs" />
+    <Compile Include="Controls\IdentityCard.cs" />
+    <Compile Include="Controls\IdentityCardViewer.cs" />
+    <Compile Include="Controls\Kanban\KanbanBoard.cs" />
+    <Compile Include="Controls\Kanban\KanbanBoardCommands.cs" />
+    <Compile Include="Controls\Kanban\KanbanItem.cs" />
+    <Compile Include="Controls\Kanban\KanbanList.cs" />
+    <Compile Include="Controls\Kanban\KanbanListCommands.cs" />
+    <Compile Include="Controls\Lanes.cs" />
+    <Compile Include="Controls\MaterialColorWheel.cs" />
+    <Compile Include="Controls\MaterialStatusBar.cs" />
+    <Compile Include="Controls\NavigationDrawer.cs" />
+    <Compile Include="Controls\NavigationDrawerButton.cs" />
+    <Compile Include="Controls\Panels\AlignableWrapPanel.cs" />
+    <Compile Include="Controls\Panels\Card.cs" />
+    <Compile Include="Controls\Panels\HorizontalSlidePanel.cs" />
+    <Compile Include="Controls\Panels\MaterialPanel.cs" />
+    <Compile Include="Controls\Panels\MaterialSettingsPanel.cs" />
+    <Compile Include="Controls\Panels\TransitionCard.cs" />
+    <Compile Include="Controls\Panels\VerticalSlidePanel.cs" />
+    <Compile Include="Controls\PopupEx.cs" />
+    <Compile Include="Controls\ShadowAssist.cs" />
+    <Compile Include="Controls\SizingContentControl.cs" />
+    <Compile Include="Controls\Windows\MaterialDesignWindow.cs" />
+    <Compile Include="Controls\YcaKite.cs" />
+    <Page Include="Themes\HorizontalSlidePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\IdentityCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\IdentityCardViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KanbanBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KanbanItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KanbanList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KanbanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialColorWheel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialDesignWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialSettingsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MaterialStatusBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\NavigationDrawer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\NavigationDrawerButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Shadows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\SizingContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TransitionCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\VerticalSlidePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\YcaKite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\CardClipConverter.cs" />
+    <Compile Include="Converters\CardOrientationConverter.cs" />
+    <Compile Include="Converters\ShadowConverter.cs" />
+    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\JsonActions.cs" />
+    <Compile Include="Models\DialogModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Images\Icons\appbar.SAP.Black.png" />
+    <Resource Include="Images\Icons\appbar.SAP.Blue.png" />
+    <Resource Include="Images\Icons\appbar.SAP.Text.png" />
+    <Resource Include="Images\Icons\appbar.SAPgreen.png" />
+    <Resource Include="Images\Icons\appbar.SAPlight.png" />
+    <Resource Include="Images\Icons\AppIcon.ico" />
+    <Resource Include="Images\Icons\PersonPlaceholder.png" />
+    <Resource Include="Images\Icons\SapClearLetters.png" />
+    <Resource Include="Images\Icons\TitleIcon.png" />
+    <Resource Include="Images\Icons\YokogawaIconSmall.ico" />
+    <Resource Include="Images\Icons\YokogawaIconSmall.png" />
+    <Resource Include="Images\Icons\YokoIconBigBright.png" />
+    <Resource Include="Images\Logos\AXF_R_03.png" />
+    <Resource Include="Images\Logos\AXR_R_green_03.png" />
+    <Resource Include="Images\Logos\BM9000VP_TM.png" />
+    <Resource Include="Images\Logos\DPharpEJX_G2.png" />
+    <Resource Include="Images\Logos\sns_Facebook_icon_180b.jpg" />
+    <Resource Include="Images\Logos\sns_Facebook_icon_180w.jpg" />
+    <Resource Include="Images\Logos\sns_LinkedIn_icon_100b.jpg" />
+    <Resource Include="Images\Logos\sns_LinkedIn_icon_100w.jpg" />
+    <Resource Include="Images\Logos\sns_twitter_icon_400b.jpg" />
+    <Resource Include="Images\Logos\sns_twitter_icon_400w.jpg" />
+    <Resource Include="Images\Logos\sns_YouTube_icon_800b.jpg" />
+    <Resource Include="Images\Logos\sns_YouTube_icon_800w.jpg" />
+    <Resource Include="Images\Logos\TDLSLogoLarge.png" />
+    <Resource Include="Images\Logos\TDSLLogo256.png" />
+    <Resource Include="Images\Logos\VPS_R_black.png" />
+    <Resource Include="Images\Logos\YokoGridMaster.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\NotoEmoji-Regular.ttf" />
+    <Resource Include="Fonts\NotoSans-Bold.ttf" />
+    <Resource Include="Fonts\NotoSans-BoldItalic.ttf" />
+    <Resource Include="Fonts\NotoSans-Italic.ttf" />
+    <Resource Include="Fonts\NotoSans-Regular.ttf" />
+    <Resource Include="Fonts\NotoSerif-Bold.ttf" />
+    <Resource Include="Fonts\NotoSerif-BoldItalic.ttf" />
+    <Resource Include="Fonts\NotoSerif-Italic.ttf" />
+    <Resource Include="Fonts\NotoSerif-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Svg\" />
+  </ItemGroup>
+  <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
