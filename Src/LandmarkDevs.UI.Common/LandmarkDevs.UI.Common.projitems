@@ -48,37 +48,4 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ShellDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ThemeSettingsModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\appbar.SAP.Black.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\appbar.SAP.Blue.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\appbar.SAP.Text.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\appbar.SAPgreen.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\appbar.SAPlight.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\AppIcon.ico" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\PersonPlaceholder.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\SapClearLetters.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\TitleIcon.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\YokogawaIconSmall.ico" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\YokogawaIconSmall.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\YokoIconBigBright.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\AXF_R_03.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\AXR_R_green_03.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\BM9000VP_TM.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\DPharpEJX_G2.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_Facebook_icon_180b.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_Facebook_icon_180w.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_LinkedIn_icon_100b.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_LinkedIn_icon_100w.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_twitter_icon_400b.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_twitter_icon_400w.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_YouTube_icon_800b.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\sns_YouTube_icon_800w.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\TDLSLogoLarge.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\TDSLLogo256.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\VPS_R_black.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Logos\YokoGridMaster.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Images\Svg\" />
-  </ItemGroup>
 </Project>
