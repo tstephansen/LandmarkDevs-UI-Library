@@ -8,11 +8,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LandmarkDevs.UI.WPF.Syncfusion")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Material UI Themes for Syncfusion WPF")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("LandmarkDevs")]
 [assembly: AssemblyProduct("LandmarkDevs.UI.WPF.Syncfusion")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright ©  2017 Tim Stephansen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
