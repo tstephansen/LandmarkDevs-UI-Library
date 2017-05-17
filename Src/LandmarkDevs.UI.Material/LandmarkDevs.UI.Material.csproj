@@ -301,7 +301,6 @@
     <Resource Include="Fonts\NotoSerif-BoldItalic.ttf" />
     <Resource Include="Fonts\NotoSerif-Italic.ttf" />
     <Resource Include="Fonts\NotoSerif-Regular.ttf" />
-    <None Include="LandmarkDevs.UI.Material.nuspec" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -311,4 +310,12 @@
   <ItemGroup />
   <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
+xcopy /Y "$(TargetDir)Dragablz.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
+xcopy /Y "$(TargetDir)MaterialDesignColors.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
+xcopy /Y "$(TargetDir)MaterialDesignThemes.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
+xcopy /Y "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
+xcopy /Y "$(TargetDir)System.Windows.Interactivity.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

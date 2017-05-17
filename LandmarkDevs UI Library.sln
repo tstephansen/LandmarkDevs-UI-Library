@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkDevs.UI.WPF.Syncfus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkDevs.UI.WPF.Telerik", "Src\LandmarkDevs.UI.WPF.Telerik\LandmarkDevs.UI.WPF.Telerik.csproj", "{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C0B5713-38FB-4A1B-8992-56042518C423}"
+	ProjectSection(SolutionItems) = preProject
+		LandmarkDevs.UI.Material.nuspec = LandmarkDevs.UI.Material.nuspec
+		LandmarkDevs.UI.WPF.Syncfusion.nuspec = LandmarkDevs.UI.WPF.Syncfusion.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Src\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems*{150b6455-2778-453f-b832-c81265e85769}*SharedItemsImports = 4
