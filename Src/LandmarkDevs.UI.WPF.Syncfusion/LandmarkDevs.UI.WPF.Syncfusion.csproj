@@ -165,11 +165,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="..\LandmarkDevs.UI.Material\Styles\CorporateBranding.xaml">
-      <Link>Styles\CorporateBranding.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="..\LandmarkDevs.UI.Material\Styles\PrimaryColorScheme.xaml">
       <Link>Styles\PrimaryColorScheme.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -232,11 +227,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LandmarkDevs.UI.Material\LandmarkDevs.UI.Material.csproj">
+      <Project>{e0734515-73d1-41ee-92b2-5a3a577e5b27}</Project>
+      <Name>LandmarkDevs.UI.Material</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

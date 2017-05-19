@@ -269,6 +269,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\BitmapToImageSourceConverter.cs" />
     <Compile Include="Converters\CardClipConverter.cs" />
     <Compile Include="Converters\CardOrientationConverter.cs" />
     <Compile Include="Converters\ShadowConverter.cs" />
@@ -289,7 +290,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\NotoEmoji-Regular.ttf" />
@@ -311,11 +312,7 @@
   <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
-xcopy /Y "$(TargetDir)Dragablz.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
-xcopy /Y "$(TargetDir)MaterialDesignColors.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
-xcopy /Y "$(TargetDir)MaterialDesignThemes.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
-xcopy /Y "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"
-xcopy /Y "$(TargetDir)System.Windows.Interactivity.dll" "$(SolutionDir)nuget\LandmarkDevs.UI.Material\lib\net452\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

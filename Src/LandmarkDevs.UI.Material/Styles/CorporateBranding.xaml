@@ -1,13 +1,18 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:LandmarkDevs.UI.Material.Converters"
+                    xmlns:properties="clr-namespace:LandmarkDevs.UI.Material.Properties">
+
+    <converters:BitmapToImageSourceConverter x:Key="BitmapConverter" />
 
     <!--#region Yokogawa Colors-->
     <!--#region CI Colors-->
     <Color x:Key="YokogawaYellow">#FFEE00</Color>
     <Color x:Key="YokogawaBlue">#004F9B</Color>
     <Color x:Key="YokogawaGreen">#00B04D</Color>
-    <SolidColorBrush x:Key="YokogawaYellowBrush" Color="{StaticResource YokogawaYellow}"/>
-    <SolidColorBrush x:Key="YokogawaBlueBrush" Color="{StaticResource YokogawaBlue}"/>
-    <SolidColorBrush x:Key="YokogawaGreenBrush" Color="{StaticResource YokogawaGreen}"/>
+    <SolidColorBrush x:Key="YokogawaYellowBrush" Color="{StaticResource YokogawaYellow}" />
+    <SolidColorBrush x:Key="YokogawaBlueBrush" Color="{StaticResource YokogawaBlue}" />
+    <SolidColorBrush x:Key="YokogawaGreenBrush" Color="{StaticResource YokogawaGreen}" />
     <!--#endregion-->
     <!--#region Corporate Communications Colors-->
     <!--#region 100%-->
@@ -16,11 +21,11 @@
     <Color x:Key="CommGreen100">#00694c</Color>
     <Color x:Key="CommOrange100">#CE4E21</Color>
     <Color x:Key="CommGrey100">#5A707B</Color>
-    <SolidColorBrush x:Key="CommBlue100Brush" Color="{StaticResource CommBlue100}"/>
-    <SolidColorBrush x:Key="CommYellow100Brush" Color="{StaticResource CommYellow100}"/>
-    <SolidColorBrush x:Key="CommGreen100Brush" Color="{StaticResource CommGreen100}"/>
-    <SolidColorBrush x:Key="CommOrange100Brush" Color="{StaticResource CommOrange100}"/>
-    <SolidColorBrush x:Key="CommGrey100Brush" Color="{StaticResource CommGrey100}"/>
+    <SolidColorBrush x:Key="CommBlue100Brush" Color="{StaticResource CommBlue100}" />
+    <SolidColorBrush x:Key="CommYellow100Brush" Color="{StaticResource CommYellow100}" />
+    <SolidColorBrush x:Key="CommGreen100Brush" Color="{StaticResource CommGreen100}" />
+    <SolidColorBrush x:Key="CommOrange100Brush" Color="{StaticResource CommOrange100}" />
+    <SolidColorBrush x:Key="CommGrey100Brush" Color="{StaticResource CommGrey100}" />
     <!--#endregion-->
     <!--#region 80%-->
     <Color x:Key="CommBlue80">#335A8A</Color>
@@ -28,11 +33,11 @@
     <Color x:Key="CommGreen80">#007E65</Color>
     <Color x:Key="CommOrange80">#D77243</Color>
     <Color x:Key="CommGrey80">#7A8E99</Color>
-    <SolidColorBrush x:Key="CommBlue80Brush" Color="{StaticResource CommBlue80}"/>
-    <SolidColorBrush x:Key="CommYellow80Brush" Color="{StaticResource CommYellow80}"/>
-    <SolidColorBrush x:Key="CommGreen80Brush" Color="{StaticResource CommGreen80}"/>
-    <SolidColorBrush x:Key="CommOrange80Brush" Color="{StaticResource CommOrange80}"/>
-    <SolidColorBrush x:Key="CommGrey80Brush" Color="{StaticResource CommGrey80}"/>
+    <SolidColorBrush x:Key="CommBlue80Brush" Color="{StaticResource CommBlue80}" />
+    <SolidColorBrush x:Key="CommYellow80Brush" Color="{StaticResource CommYellow80}" />
+    <SolidColorBrush x:Key="CommGreen80Brush" Color="{StaticResource CommGreen80}" />
+    <SolidColorBrush x:Key="CommOrange80Brush" Color="{StaticResource CommOrange80}" />
+    <SolidColorBrush x:Key="CommGrey80Brush" Color="{StaticResource CommGrey80}" />
     <!--#endregion-->
     <!--#region 60%-->
     <Color x:Key="CommBlue60">#6683A7</Color>
@@ -40,11 +45,11 @@
     <Color x:Key="CommGreen60">#5B9985</Color>
     <Color x:Key="CommOrange60">#FF966C</Color>
     <Color x:Key="CommGrey60">#9BACB5</Color>
-    <SolidColorBrush x:Key="CommBlue60Brush" Color="{StaticResource CommBlue60}"/>
-    <SolidColorBrush x:Key="CommYellow60Brush" Color="{StaticResource CommYellow60}"/>
-    <SolidColorBrush x:Key="CommGreen60Brush" Color="{StaticResource CommGreen60}"/>
-    <SolidColorBrush x:Key="CommOrange60Brush" Color="{StaticResource CommOrange60}"/>
-    <SolidColorBrush x:Key="CommGrey60Brush" Color="{StaticResource CommGrey60}"/>
+    <SolidColorBrush x:Key="CommBlue60Brush" Color="{StaticResource CommBlue60}" />
+    <SolidColorBrush x:Key="CommYellow60Brush" Color="{StaticResource CommYellow60}" />
+    <SolidColorBrush x:Key="CommGreen60Brush" Color="{StaticResource CommGreen60}" />
+    <SolidColorBrush x:Key="CommOrange60Brush" Color="{StaticResource CommOrange60}" />
+    <SolidColorBrush x:Key="CommGrey60Brush" Color="{StaticResource CommGrey60}" />
     <!--#endregion-->
     <!--#region 40%-->
     <Color x:Key="CommBlue40">#99ACC4</Color>
@@ -52,11 +57,11 @@
     <Color x:Key="CommGreen40">#96B9AB</Color>
     <Color x:Key="CommOrange40">#ECBA9B</Color>
     <Color x:Key="CommGrey40">#BCC9D0</Color>
-    <SolidColorBrush x:Key="CommBlue40Brush" Color="{StaticResource CommBlue40}"/>
-    <SolidColorBrush x:Key="CommYellow40Brush" Color="{StaticResource CommYellow40}"/>
-    <SolidColorBrush x:Key="CommGreen40Brush" Color="{StaticResource CommGreen40}"/>
-    <SolidColorBrush x:Key="CommOrange40Brush" Color="{StaticResource CommOrange40}"/>
-    <SolidColorBrush x:Key="CommGrey40Brush" Color="{StaticResource CommGrey40}"/>
+    <SolidColorBrush x:Key="CommBlue40Brush" Color="{StaticResource CommBlue40}" />
+    <SolidColorBrush x:Key="CommYellow40Brush" Color="{StaticResource CommYellow40}" />
+    <SolidColorBrush x:Key="CommGreen40Brush" Color="{StaticResource CommGreen40}" />
+    <SolidColorBrush x:Key="CommOrange40Brush" Color="{StaticResource CommOrange40}" />
+    <SolidColorBrush x:Key="CommGrey40Brush" Color="{StaticResource CommGrey40}" />
     <!--#endregion-->
     <!--#region 20%-->
     <Color x:Key="CommBlue20">#CCD6E2</Color>
@@ -64,11 +69,11 @@
     <Color x:Key="CommGreen20">#CBDCD5</Color>
     <Color x:Key="CommOrange20">#F6DECD</Color>
     <Color x:Key="CommGrey20">#DEE5E9</Color>
-    <SolidColorBrush x:Key="CommBlue20Brush" Color="{StaticResource CommBlue20}"/>
-    <SolidColorBrush x:Key="CommYellow20Brush" Color="{StaticResource CommYellow20}"/>
-    <SolidColorBrush x:Key="CommGreen20Brush" Color="{StaticResource CommGreen20}"/>
-    <SolidColorBrush x:Key="CommOrange20Brush" Color="{StaticResource CommOrange20}"/>
-    <SolidColorBrush x:Key="CommGrey20Brush" Color="{StaticResource CommGrey20}"/>
+    <SolidColorBrush x:Key="CommBlue20Brush" Color="{StaticResource CommBlue20}" />
+    <SolidColorBrush x:Key="CommYellow20Brush" Color="{StaticResource CommYellow20}" />
+    <SolidColorBrush x:Key="CommGreen20Brush" Color="{StaticResource CommGreen20}" />
+    <SolidColorBrush x:Key="CommOrange20Brush" Color="{StaticResource CommOrange20}" />
+    <SolidColorBrush x:Key="CommGrey20Brush" Color="{StaticResource CommGrey20}" />
     <!--#endregion-->
     <!--#endregion-->
     <!--#region Product Colors-->
@@ -82,16 +87,16 @@
     <Color x:Key="FC02">#E19C35</Color>
     <Color x:Key="FC03">#4278AF</Color>
     <Color x:Key="FC04">#DCE3E7</Color>
-    <SolidColorBrush x:Key="CM01Brush" Color="{StaticResource CM01}"/>
-    <SolidColorBrush x:Key="CM02Brush" Color="{StaticResource CM02}"/>
-    <SolidColorBrush x:Key="CM03Brush" Color="{StaticResource CM03}"/>
-    <SolidColorBrush x:Key="IA01Brush" Color="{StaticResource IA01}"/>
-    <SolidColorBrush x:Key="IA02Brush" Color="{StaticResource IA02}"/>
-    <SolidColorBrush x:Key="TM01Brush" Color="{StaticResource TM01}"/>
-    <SolidColorBrush x:Key="FC01Brush" Color="{StaticResource FC01}"/>
-    <SolidColorBrush x:Key="FC02Brush" Color="{StaticResource FC02}"/>
-    <SolidColorBrush x:Key="FC03Brush" Color="{StaticResource FC03}"/>
-    <SolidColorBrush x:Key="FC04Brush" Color="{StaticResource FC04}"/>
+    <SolidColorBrush x:Key="CM01Brush" Color="{StaticResource CM01}" />
+    <SolidColorBrush x:Key="CM02Brush" Color="{StaticResource CM02}" />
+    <SolidColorBrush x:Key="CM03Brush" Color="{StaticResource CM03}" />
+    <SolidColorBrush x:Key="IA01Brush" Color="{StaticResource IA01}" />
+    <SolidColorBrush x:Key="IA02Brush" Color="{StaticResource IA02}" />
+    <SolidColorBrush x:Key="TM01Brush" Color="{StaticResource TM01}" />
+    <SolidColorBrush x:Key="FC01Brush" Color="{StaticResource FC01}" />
+    <SolidColorBrush x:Key="FC02Brush" Color="{StaticResource FC02}" />
+    <SolidColorBrush x:Key="FC03Brush" Color="{StaticResource FC03}" />
+    <SolidColorBrush x:Key="FC04Brush" Color="{StaticResource FC04}" />
     <!--#endregion-->
     <!--#endregion-->
 
@@ -128,7 +133,7 @@
                    Canvas.Top="0"
                    Width="1896"
                    Height="950"
-                   Source="../Images/Logos/YokoGridMaster.png">
+                   Source="{Binding Source={x:Static properties:Resources.YokoGridMaster}, Converter={StaticResource BitmapConverter}}">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="0.666701,0,0,0.666701,-130.032,-239.183" />
@@ -147,7 +152,7 @@
                             <MatrixTransform Matrix="0.666701,0,0,0.666701,-130.032,-239.183" />
                         </DrawingGroup.Transform>
                         <DrawingGroup.Children>
-                            <ImageDrawing ImageSource="../Images/Logos/YokoGridMaster.png" Rect="0,0,1896,950" />
+                            <ImageDrawing ImageSource="{Binding Source={x:Static properties:Resources.YokoGridMaster}}" Rect="0,0,1896,950"/>
                         </DrawingGroup.Children>
                     </DrawingGroup>
                 </DrawingGroup.Children>
