@@ -14,16 +14,15 @@ using System.Windows.Markup;
 [assembly: AssemblyCopyright("Copyright ©  2017 Tim Stephansen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Behaviors")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls.Dialogs")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls.Grids")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls.Kanban")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls.Panels")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Controls.Windows")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Converters")]
-[assembly: XmlnsDefinition("http://schemas.yokogawa.com/us/wpf/xaml", "LandmarkDevs.UI.Material.Helpers")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Behaviors")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Controls")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Dialogs")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Kanban")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Panels")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Windows")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Converters")]
+[assembly: XmlnsDefinition("http://schemas.LandmarkDevs.com/wpf", "LandmarkDevs.UI.Material.Helpers")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -58,5 +57,5 @@ using System.Windows.Markup;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.2")]
-[assembly: AssemblyFileVersion("1.0.2")]
+[assembly: AssemblyVersion("1.0.4")]
+[assembly: AssemblyFileVersion("1.0.4")]
