@@ -14,6 +14,10 @@ using System.Windows.Markup;
 [assembly: AssemblyCopyright("Copyright ©  2017 Tim Stephansen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Common.Behaviors")]
+[assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Common.Converters")]
+[assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Common.Helpers")]
+[assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Common.Models")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Behaviors")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Controls")]
@@ -58,5 +62,5 @@ using System.Windows.Markup;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.5")]
-[assembly: AssemblyFileVersion("1.0.5")]
+[assembly: AssemblyVersion("1.0.7")]
+[assembly: AssemblyFileVersion("1.0.7")]
