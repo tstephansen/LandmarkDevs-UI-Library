@@ -7,12 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkDevs.UI.Material", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkDevs.UI.WPF.Syncfusion", "Src\LandmarkDevs.UI.WPF.Syncfusion\LandmarkDevs.UI.WPF.Syncfusion.csproj", "{150B6455-2778-453F-B832-C81265E85769}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmarkDevs.UI.WPF.Telerik", "Src\LandmarkDevs.UI.WPF.Telerik\LandmarkDevs.UI.WPF.Telerik.csproj", "{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C0B5713-38FB-4A1B-8992-56042518C423}"
 	ProjectSection(SolutionItems) = preProject
-		LandmarkDevs.UI.Material.nuspec = LandmarkDevs.UI.Material.nuspec
-		LandmarkDevs.UI.WPF.Syncfusion.nuspec = LandmarkDevs.UI.WPF.Syncfusion.nuspec
+		README.MD = README.MD
 	EndProjectSection
 EndProject
 Global
@@ -29,10 +26,6 @@ Global
 		{150B6455-2778-453F-B832-C81265E85769}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150B6455-2778-453F-B832-C81265E85769}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150B6455-2778-453F-B832-C81265E85769}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC2D41F4-779E-4CA3-9A93-0F53CE9D8B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

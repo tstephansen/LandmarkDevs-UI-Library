@@ -1,12 +1,8 @@
-﻿#region
-
-using System;
+﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-
-#endregion
 
 namespace LandmarkDevs.UI.Material.Helpers
 {

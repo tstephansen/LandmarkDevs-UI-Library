@@ -1,8 +1,6 @@
-﻿#region
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-#endregion
 
 namespace LandmarkDevs.UI.Material.Controls.Panels
 {
@@ -26,7 +24,7 @@ namespace LandmarkDevs.UI.Material.Controls.Panels
         /// <value>The horizontal content alignment.</value>
         public HorizontalAlignment HorizontalContentAlignment
         {
-            get { return (HorizontalAlignment) GetValue(HorizontalContentAlignmentProperty); }
+            get { return (HorizontalAlignment)GetValue(HorizontalContentAlignmentProperty); }
             set { SetValue(HorizontalContentAlignmentProperty, value); }
         }
 
@@ -56,7 +54,7 @@ namespace LandmarkDevs.UI.Material.Controls.Panels
                     panelSize.Height += curLineSize.Height;
                     curLineSize = sz;
 
-                    if (sz.Width > constraint.Width) // if the element is wider then the constraint - give it a separate line                    
+                    if (sz.Width > constraint.Width) // if the element is wider then the constraint - give it a separate line
                     {
                         panelSize.Width = Math.Max(sz.Width, panelSize.Width);
                         panelSize.Height += sz.Height;
@@ -100,7 +98,7 @@ namespace LandmarkDevs.UI.Material.Controls.Panels
                     accumulatedHeight += curLineSize.Height;
                     curLineSize = sz;
 
-                    if (sz.Width > arrangeBounds.Width) //the element is wider then the constraint - give it a separate line                    
+                    if (sz.Width > arrangeBounds.Width) //the element is wider then the constraint - give it a separate line
                     {
                         ArrangeLine(accumulatedHeight, sz, arrangeBounds.Width, i, ++i);
                         accumulatedHeight += sz.Height;

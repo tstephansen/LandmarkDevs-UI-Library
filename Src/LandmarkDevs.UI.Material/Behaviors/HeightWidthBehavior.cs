@@ -1,7 +1,5 @@
-﻿#region
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Interactivity;
-#endregion
 
 namespace LandmarkDevs.UI.Material.Behaviors
 {
@@ -27,7 +25,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
         /// <returns><see langword="true" /> if XXXX, <see langword="false" /> otherwise.</returns>
         public static bool GetSetHeightToActual(DependencyObject d)
         {
-            return (bool) d.GetValue(SetHeightToActualProperty);
+            return (bool)d.GetValue(SetHeightToActualProperty);
         }
 
         /// <summary>
@@ -47,9 +45,9 @@ namespace LandmarkDevs.UI.Material.Behaviors
         /// <param name="e">The <see cref="DependencyPropertyChangedEventArgs" /> instance containing the event data.</param>
         private static void OnSetHeightToActualChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            if ((bool) e.NewValue)
+            if ((bool)e.NewValue)
             {
-                var element = (FrameworkElement) d;
+                var element = (FrameworkElement)d;
                 RoutedEventHandler handler = null;
                 handler = delegate
                 {

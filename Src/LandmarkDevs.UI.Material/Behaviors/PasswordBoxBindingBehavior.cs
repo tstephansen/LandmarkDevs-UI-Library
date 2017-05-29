@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interactivity;
@@ -48,6 +44,8 @@ namespace LandmarkDevs.UI.Material.Behaviors
         /// <summary>
         ///     Handles changes to the 'Password' attached property.
         /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The event args.</param>
         private static void OnPasswordPropertyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var targetPasswordBox = sender as PasswordBox;
@@ -65,6 +63,8 @@ namespace LandmarkDevs.UI.Material.Behaviors
         /// <summary>
         ///     Handle the 'PasswordChanged'-event on the PasswordBox
         /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The routed event args.</param>
         private static void PasswordBoxPasswordChanged(object sender, RoutedEventArgs e)
         {
             var passwordBox = (PasswordBox)sender;
@@ -84,7 +84,8 @@ namespace LandmarkDevs.UI.Material.Behaviors
             base.OnAttached();
             this.AssociatedObject.PasswordChanged += PasswordBoxPasswordChanged;
             this.Dispatcher.BeginInvoke(DispatcherPriority.Loaded,
-                                        new Action(() => {
+                                        new Action(() =>
+                                        {
                                             if (this.AssociatedObject != null)
                                             {
                                                 SetPassword(this.AssociatedObject, this.AssociatedObject.Password);

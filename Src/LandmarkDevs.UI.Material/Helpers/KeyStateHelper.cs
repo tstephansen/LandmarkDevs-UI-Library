@@ -21,10 +21,10 @@ namespace LandmarkDevs.UI.Material.Helpers
         /// <summary>
         ///     Gets the caps lock on.
         /// </summary>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if caps lock is on, <c>false</c> otherwise.</returns>
         public static bool GetCapsLockOn()
         {
-	        return Keyboard.GetKeyStates(Key.CapsLock) == KeyStates.Toggled;
+            return Keyboard.GetKeyStates(Key.CapsLock) == KeyStates.Toggled;
         }
     }
 }

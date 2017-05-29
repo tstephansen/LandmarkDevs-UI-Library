@@ -1,14 +1,10 @@
-﻿#region
-
-using System;
+﻿using System;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Media.Imaging;
-
-#endregion
 
 namespace LandmarkDevs.UI.Material.Helpers
 {
@@ -82,6 +78,7 @@ namespace LandmarkDevs.UI.Material.Helpers
         /// <summary>
         ///     Gets the user thumbnail photo from active directory as an image.
         /// </summary>
+        /// <param name="username">The username.</param>
         /// <returns>System.Object.</returns>
         public static BitmapImage GetUserThumbnailPhotoAsImage(string username)
         {
@@ -90,7 +87,7 @@ namespace LandmarkDevs.UI.Material.Helpers
             {
                 var thumbPhoto = SearchDirectoryForKey("thumbnailphoto", username) as byte[];
                 if (thumbPhoto == null)
-                    return new BitmapImage(new Uri("pack://application:,,,/LandmarkDevs.UI.Common;component/Images/Icons/PersonPlaceholder.png"));
+                    return new BitmapImage(new Uri("pack://application:,,,/LandmarkDevs.UI.Material;component/Images/Icons/PersonPlaceholder.png"));
                 using (var stream = new MemoryStream(thumbPhoto))
                 {
                     var userImage = Image.FromStream(stream);

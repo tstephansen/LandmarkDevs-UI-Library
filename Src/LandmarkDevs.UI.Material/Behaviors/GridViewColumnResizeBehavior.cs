@@ -21,6 +21,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
         public static readonly DependencyProperty WidthProperty =
             DependencyProperty.RegisterAttached("Width", typeof(string), typeof(GridViewColumnResize),
                                                 new PropertyMetadata(OnSetWidthCallback));
+
         /// <summary>
         /// The GridViewColumnResizeBehavior property.
         /// </summary>
@@ -28,6 +29,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
             DependencyProperty.RegisterAttached("GridViewColumnResizeBehavior",
                                                 typeof(GridViewColumnResizeBehavior), typeof(GridViewColumnResize),
                                                 null);
+
         /// <summary>
         /// The enabled property.
         /// </summary>
@@ -42,7 +44,8 @@ namespace LandmarkDevs.UI.Material.Behaviors
             DependencyProperty.RegisterAttached("ListViewResizeBehaviorProperty",
                                                 typeof(ListViewResizeBehavior), typeof(GridViewColumnResize), null);
 
-        #endregion        
+        #endregion DependencyProperties
+
         /// <summary>
         /// Gets the width.
         /// </summary>
@@ -83,7 +86,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
             obj.SetValue(EnabledProperty, value);
         }
 
-        #region CallBack        
+        #region CallBack
         /// <summary>
         /// Handles the <see cref="E:SetWidthCallback" /> event.
         /// </summary>
@@ -157,7 +160,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
             return behavior;
         }
 
-        #endregion
+        #endregion CallBack
 
         #region Nested type: GridViewColumnResizeBehavior
 
@@ -201,6 +204,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
                     return double.TryParse(Width, out result) ? result : -1;
                 }
             }
+
             /// <summary>
             /// Gets the percentage.
             /// </summary>
@@ -238,14 +242,14 @@ namespace LandmarkDevs.UI.Material.Behaviors
                 }
             }
 
-			/// <summary>
-			/// Sets the width.
-			/// </summary>
-			/// <param name="allowedSpace">The allowed space.</param>
-			/// <param name="totalPercentage">The total percentage.</param>
-	        [System.Diagnostics.CodeAnalysis.SuppressMessage("Sonar Code Smell", "S3218:Inner class members should not shadow outer class \"static\" or type members", Justification = "This is necessary in this instance.")]
-			public void SetWidth(double allowedSpace, double totalPercentage)
-			{
+            /// <summary>
+            /// Sets the width.
+            /// </summary>
+            /// <param name="allowedSpace">The allowed space.</param>
+            /// <param name="totalPercentage">The total percentage.</param>
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Sonar Code Smell", "S3218:Inner class members should not shadow outer class \"static\" or type members", Justification = "This is necessary in this instance.")]
+            public void SetWidth(double allowedSpace, double totalPercentage)
+            {
                 if (IsStatic)
                 {
                     _element.Width = StaticWidth;
@@ -258,7 +262,7 @@ namespace LandmarkDevs.UI.Material.Behaviors
             }
         }
 
-        #endregion
+        #endregion Nested type: GridViewColumnResizeBehavior
 
         #region Nested type: ListViewResizeBehavior
 
@@ -295,12 +299,12 @@ namespace LandmarkDevs.UI.Material.Behaviors
                 _timer = new Timer(x => Application.Current.Dispatcher.BeginInvoke(resizeAndEnableSize), null, Delay,
                                    RefreshTime);
             }
+
             /// <summary>
             /// Gets or sets a value indicating whether this <see cref="ListViewResizeBehavior"/> is enabled.
             /// </summary>
             /// <value><see langword="true" /> if enabled; otherwise, <see langword="false" />.</value>
             public bool Enabled { get; set; }
-
 
             private void OnLoaded(object sender, RoutedEventArgs e)
             {
@@ -371,6 +375,6 @@ namespace LandmarkDevs.UI.Material.Behaviors
             }
         }
 
-        #endregion
+        #endregion Nested type: ListViewResizeBehavior
     }
 }

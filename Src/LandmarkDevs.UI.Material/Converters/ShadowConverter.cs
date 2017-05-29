@@ -25,7 +25,7 @@ namespace LandmarkDevs.UI.Material.Converters
         /// </summary>
         static ShadowConverter()
         {
-            var resourceDictionary = new ResourceDictionary { Source = new Uri("pack://application:,,,/LandmarkDevs.UI.Common;component/Themes/Shadows.xaml", UriKind.Absolute) };
+            var resourceDictionary = new ResourceDictionary { Source = new Uri("pack://application:,,,/LandmarkDevs.UI.Material;component/Themes/Shadows.xaml", UriKind.Absolute) };
 
             ShadowsDictionary = new Dictionary<ShadowDepth, DropShadowEffect>
             {

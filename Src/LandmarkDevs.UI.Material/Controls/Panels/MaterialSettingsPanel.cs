@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LandmarkDevs.UI.Material.Controls.Windows;
 using System.Windows;
 using System.Windows.Controls;
-using LandmarkDevs.UI.Material.Controls.Windows;
 
 namespace LandmarkDevs.UI.Material.Controls.Panels
 {
@@ -34,7 +29,7 @@ namespace LandmarkDevs.UI.Material.Controls.Panels
             if (_closeSettingsPanelButton != null)
                 _closeSettingsPanelButton.Click += (s, e) =>
                 {
-                    ((MaterialDesignWindow) Application.Current.MainWindow).SettingsPanelVisibility = Visibility.Collapsed;
+                    ((MaterialDesignWindow)Application.Current.MainWindow).SettingsPanelVisibility = Visibility.Collapsed;
                 };
         }
     }
