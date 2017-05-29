@@ -268,13 +268,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\BitmapToImageSourceConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\BrushToColorConverter.cs" />
     <Compile Include="Converters\CardClipConverter.cs" />
     <Compile Include="Converters\CardOrientationConverter.cs" />
+    <Compile Include="Converters\CommandParameterConverter.cs" />
+    <Compile Include="Converters\ExpandDirectionConverter.cs" />
+    <Compile Include="Converters\IntToPercentConverter.cs" />
+    <Compile Include="Converters\IsNullConverter.cs" />
+    <Compile Include="Converters\NumberToNullConverter.cs" />
+    <Compile Include="Converters\RadioButtonToIntConverter.cs" />
+    <Compile Include="Converters\RangeConverter.cs" />
     <Compile Include="Converters\ShadowConverter.cs" />
+    <Compile Include="Converters\TextAlignmentConverter.cs" />
+    <Compile Include="Converters\TextForegroundColorConverter.cs" />
+    <Compile Include="Converters\ViewModelBaseTitleConverter.cs" />
+    <Compile Include="Helpers\AnimationHelper.cs" />
+    <Compile Include="Helpers\AutoSizeHelper.cs" />
     <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="Helpers\FocusHelper.cs" />
+    <Compile Include="Helpers\GridViewSort.cs" />
     <Compile Include="Helpers\JsonActions.cs" />
+    <Compile Include="Helpers\KeyboardNavigationEx.cs" />
+    <Compile Include="Helpers\KeyStateHelper.cs" />
+    <Compile Include="Helpers\MouseUtilities.cs" />
+    <Compile Include="Helpers\PropertyChangeNotifier.cs" />
+    <Compile Include="Helpers\StateManager.cs" />
+    <Compile Include="Helpers\SystemToControlImageHelper.cs" />
+    <Compile Include="Helpers\UpdatingCollection.cs" />
+    <Compile Include="Helpers\VisualTreeHelper.cs" />
     <Compile Include="Models\DialogModel.cs" />
+    <Compile Include="Models\IdentityCardModel.cs" />
+    <Compile Include="Models\IViewModel.cs" />
+    <Compile Include="Models\KanbanBoardModel.cs" />
+    <Compile Include="Models\KanbanItemModel.cs" />
+    <Compile Include="Models\KanbanNote.cs" />
+    <Compile Include="Models\KanbanPriority.cs" />
     <Compile Include="Models\PubSubEvents.cs" />
+    <Compile Include="Models\RoleModel.cs" />
+    <Compile Include="Models\ShellDialog.cs" />
+    <Compile Include="Models\ThemeSettingsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -311,7 +344,6 @@
   <ItemGroup>
     <None Include="Resources\YokoGridMaster.png" />
   </ItemGroup>
-  <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

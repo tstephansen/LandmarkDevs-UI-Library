@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:kbn="clr-namespace:LandmarkDevs.UI.Material.Controls.Kanban"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-                    xmlns:models="clr-namespace:LandmarkDevs.UI.Common.Models">
+                    xmlns:models="clr-namespace:LandmarkDevs.UI.Material.Models">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="../Styles/ApplicationStyles.xaml" />

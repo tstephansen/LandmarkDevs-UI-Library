@@ -1,12 +1,12 @@
 ﻿using System.Windows.Input;
 using Syncfusion.UI.Xaml.Grid;
 
-namespace LandmarkDevs.UI.Material.Controls.Grids
+namespace LandmarkDevs.UI.WPF.Syncfusion.Grids
 {
     /// <summary>
     /// Class GridCellSelectionControllerExt.
     /// </summary>
-    /// <seealso cref="Syncfusion.UI.Xaml.Grid.GridCellSelectionController" />
+    /// <seealso cref="GridCellSelectionController" />
     public class GridCellSelectionControllerExt : GridCellSelectionController
     {
         /// <summary>

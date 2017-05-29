@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using LandmarkDevs.UI.Common.Helpers;
+using LandmarkDevs.UI.Material.Helpers;
 
 namespace LandmarkDevs.UI.Material.Controls.Panels
 {

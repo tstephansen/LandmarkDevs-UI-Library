@@ -1,4 +1,5 @@
 ﻿#region
+
 using System.Windows;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Grid;
@@ -7,12 +8,12 @@ using Syncfusion.UI.Xaml.ScrollAxis;
 
 #endregion
 
-namespace LandmarkDevs.UI.Material.Controls.Grids
+namespace LandmarkDevs.UI.WPF.Syncfusion.Grids
 {
     /// <summary>
     ///     Class SfDataGridExt.
     /// </summary>
-    /// <seealso cref="Syncfusion.UI.Xaml.Grid.SfDataGrid" />
+    /// <seealso cref="SfDataGrid" />
     public class SfDataGridExt : SfDataGrid
     {
         /// <summary>

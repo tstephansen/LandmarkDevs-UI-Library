@@ -1,4 +1,6 @@
 ﻿#region
+using LandmarkDevs.UI.Material.Models;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,9 +11,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
-using LandmarkDevs.UI.Common.Models;
-using MaterialDesignThemes.Wpf;
-using LandmarkDevs.UI.Material.Models;
 
 #endregion
 

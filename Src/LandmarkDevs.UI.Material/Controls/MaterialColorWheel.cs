@@ -1,4 +1,6 @@
-﻿using MaterialDesignColors;
+﻿using LandmarkDevs.UI.Material.Helpers;
+using MaterialDesignColors;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -9,8 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
-using MaterialDesignThemes.Wpf;
-using LandmarkDevs.UI.Common.Helpers;
 
 namespace LandmarkDevs.UI.Material.Controls
 {
@@ -377,7 +377,8 @@ namespace LandmarkDevs.UI.Material.Controls
                     }
                 };
         }
-        #endregion
+
+        #endregion Initialization and Template
 
         #region Event Methods
         /// <summary>
@@ -388,7 +389,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <param name="e">The event arguments</param>
         private void UnrestrictedColorCanvas_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var canvas = (Canvas) sender;
+            var canvas = (Canvas)sender;
             if (canvas == null)
                 throw new InvalidOperationException("Canvas can't be found.");
             var upperColorName = canvas.Name.Replace("PART_", "").Replace("Canvas", "");
@@ -396,7 +397,7 @@ namespace LandmarkDevs.UI.Material.Controls
             var selectorName = $"PART_{upperColorName}Selector";
             var numberOneName = $"PART_{upperColorName}1Canvas";
             var numberTwoName = $"PART_{upperColorName}2Canvas";
-            var colorArray = new [] { upperColorName, colorName, selectorName, numberOneName, numberTwoName };
+            var colorArray = new[] { upperColorName, colorName, selectorName, numberOneName, numberTwoName };
             if (_isSecondColorSelected)
             {
                 SecondColorSelected();
@@ -467,7 +468,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <param name="e">The event arguments</param>
         private void RestrictedColorCanvas_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var canvas = (Canvas) sender;
+            var canvas = (Canvas)sender;
             if (canvas == null)
                 throw new InvalidOperationException("Canvas can't be found.");
             var upperColorName = canvas.Name.Replace("PART_", "").Replace("Canvas", "");
@@ -503,9 +504,10 @@ namespace LandmarkDevs.UI.Material.Controls
                 DisableInvalidColorChoices(upperColorName);
             }
         }
-        #endregion
-        
-        #region Helpers        
+
+        #endregion Event Methods
+
+        #region Helpers
         /// <summary>
         ///     Keeps grey, brown, and blue grey from being selected as an accent color.
         /// </summary>
@@ -800,7 +802,8 @@ namespace LandmarkDevs.UI.Material.Controls
             foreach (var dictionary in parentDictionary.MergedDictionaries)
                 ReplaceEntry(entryName, newValue, dictionary);
         }
-        #endregion
+
+        #endregion Helpers
 
         #region Dependency Properties
         /// <summary>
@@ -815,7 +818,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the selector.</value>
         public SolidColorBrush SelectorColor
         {
-            get { return (SolidColorBrush) GetValue(SelectorColorProperty); }
+            get { return (SolidColorBrush)GetValue(SelectorColorProperty); }
             set { SetValue(SelectorColorProperty, value); }
         }
 
@@ -832,7 +835,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the selector foreground.</value>
         public SolidColorBrush SelectorForegroundColor
         {
-            get { return (SolidColorBrush) GetValue(SelectorForegroundColorProperty); }
+            get { return (SolidColorBrush)GetValue(SelectorForegroundColorProperty); }
             set { SetValue(SelectorForegroundColorProperty, value); }
         }
 
@@ -848,7 +851,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The stretch.</value>
         public Stretch Stretch
         {
-            get { return (Stretch) GetValue(StretchProperty); }
+            get { return (Stretch)GetValue(StretchProperty); }
             set { SetValue(StretchProperty, value); }
         }
 
@@ -857,14 +860,14 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         public static readonly DependencyProperty CenterButtonTextProperty = DependencyProperty.Register(
             "CenterButtonText", typeof(string), typeof(MaterialColorWheel), new FrameworkPropertyMetadata("Light"));
-        
+
         /// <summary>
         ///     Gets or sets the center button text.
         /// </summary>
         /// <value>The center button text.</value>
         public string CenterButtonText
         {
-            get { return (string) GetValue(CenterButtonTextProperty); }
+            get { return (string)GetValue(CenterButtonTextProperty); }
             set { SetValue(CenterButtonTextProperty, value); }
         }
 
@@ -880,7 +883,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The width of the button.</value>
         public double ButtonWidth
         {
-            get { return (double) GetValue(ButtonWidthProperty); }
+            get { return (double)GetValue(ButtonWidthProperty); }
             set { SetValue(ButtonWidthProperty, value); }
         }
 
@@ -896,7 +899,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The height of the button.</value>
         public double ButtonHeight
         {
-            get { return (double) GetValue(ButtonHeightProperty); }
+            get { return (double)GetValue(ButtonHeightProperty); }
             set { SetValue(ButtonHeightProperty, value); }
         }
 
@@ -904,7 +907,7 @@ namespace LandmarkDevs.UI.Material.Controls
         ///     The center button font color property
         /// </summary>
         public static readonly DependencyProperty CenterButtonFontColorProperty = DependencyProperty.Register(
-            "CenterButtonFontColor", typeof(SolidColorBrush), typeof(MaterialColorWheel), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(221,0,0,0))));
+            "CenterButtonFontColor", typeof(SolidColorBrush), typeof(MaterialColorWheel), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(221, 0, 0, 0))));
 
         /// <summary>
         ///     Gets or sets the color of the center button font.
@@ -912,17 +915,20 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the center button font.</value>
         public SolidColorBrush CenterButtonFontColor
         {
-            get { return (SolidColorBrush) GetValue(CenterButtonFontColorProperty); }
+            get { return (SolidColorBrush)GetValue(CenterButtonFontColorProperty); }
             set { SetValue(CenterButtonFontColorProperty, value); }
         }
-        #endregion
+
+        #endregion Dependency Properties
 
         #region Template Properties
         // ReSharper disable once InconsistentNaming
         private const string PART_DarkLightButton = "PART_DarkLightButton";
+
         private Button _darkLightButton;
         // ReSharper disable InconsistentNaming
         private const string PART_CyanCanvas = "PART_CyanCanvas";
+
         private const string PART_TealCanvas = "PART_TealCanvas";
         private const string PART_GreenCanvas = "PART_GreenCanvas";
         private const string PART_LightGreenCanvas = "PART_LightGreenCanvas";
@@ -943,6 +949,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_PinkCanvas = "PART_PinkCanvas";
         // ReSharper restore InconsistentNaming
         private Canvas _cyanCanvas;
+
         private Canvas _tealCanvas;
         private Canvas _greenCanvas;
         private Canvas _lightGreenCanvas;
@@ -963,6 +970,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private Canvas _pinkCanvas;
         // ReSharper disable InconsistentNaming
         private const string PART_CyanSelector = "PART_CyanSelector";
+
         private const string PART_TealSelector = "PART_TealSelector";
         private const string PART_GreenSelector = "PART_GreenSelector";
         private const string PART_LightGreenSelector = "PART_LightGreenSelector";
@@ -983,6 +991,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_PinkSelector = "PART_PinkSelector";
         // ReSharper restore InconsistentNaming
         private Path _cyanSelector;
+
         private Path _tealSelector;
         private Path _greenSelector;
         private Path _lightGreenSelector;
@@ -1003,6 +1012,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private Path _pinkSelector;
         // ReSharper disable InconsistentNaming
         private const string PART_Cyan1Canvas = "PART_Cyan1Canvas";
+
         private const string PART_Teal1Canvas = "PART_Teal1Canvas";
         private const string PART_Green1Canvas = "PART_Green1Canvas";
         private const string PART_LightGreen1Canvas = "PART_LightGreen1Canvas";
@@ -1042,6 +1052,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_Pink2Canvas = "PART_Pink2Canvas";
         // ReSharper restore InconsistentNaming
         private Canvas _cyan1Canvas;
+
         private Canvas _teal1Canvas;
         private Canvas _green1Canvas;
         private Canvas _lightGreen1Canvas;
@@ -1090,6 +1101,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private Dictionary<string, Canvas> _polygons;
         // ReSharper disable InconsistentNaming
         private const string PART_CyanPolys = "PART_CyanPolys";
+
         private const string PART_TealPolys = "PART_TealPolys";
         private const string PART_GreenPolys = "PART_GreenPolys";
         private const string PART_LightGreenPolys = "PART_LightGreenPolys";
@@ -1110,6 +1122,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_PinkPolys = "PART_PinkPolys";
         // ReSharper restore InconsistentNaming
         private Canvas _cyanPolys;
+
         private Canvas _tealPolys;
         private Canvas _greenPolys;
         private Canvas _lightGreenPolys;
@@ -1133,16 +1146,19 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         /// <value>The name of the primary color.</value>
         public string PrimaryName { get; set; }
+
         /// <summary>
         ///     Gets or sets the name of the accent color.
         /// </summary>
         /// <value>The name of the accent color.</value>
         public string AccentName { get; set; }
+
         /// <summary>
         ///     Gets or sets a value indicating whether this instance is dark.
         /// </summary>
         /// <value><c>true</c> if this instance is dark; otherwise, <c>false</c>.</value>
         public bool IsDark { get; set; }
-        #endregion
+
+        #endregion Template Properties
     }
 }

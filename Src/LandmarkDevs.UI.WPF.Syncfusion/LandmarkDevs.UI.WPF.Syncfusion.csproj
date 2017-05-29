@@ -173,6 +173,5 @@
       <Name>LandmarkDevs.UI.Material</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\LandmarkDevs.UI.Common\LandmarkDevs.UI.Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

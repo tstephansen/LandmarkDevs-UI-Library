@@ -1,9 +1,10 @@
 ﻿#region
+
 using System.Windows.Input;
 
 #endregion
 
-namespace LandmarkDevs.UI.Material.Controls.Grids
+namespace LandmarkDevs.UI.WPF.Syncfusion.Grids
 {
     /// <summary>
     ///     Class SfDataGridCommands.

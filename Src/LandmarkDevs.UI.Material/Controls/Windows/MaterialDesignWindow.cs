@@ -1,4 +1,9 @@
 ﻿#region
+using LandmarkDevs.UI.Material.Controls.Dialogs;
+using LandmarkDevs.UI.Material.Controls.Panels;
+using LandmarkDevs.UI.Material.Helpers;
+using LandmarkDevs.UI.Material.Models;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,13 +16,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using MaterialDesignThemes.Wpf;
-using LandmarkDevs.UI.Material.Controls.Dialogs;
-using LandmarkDevs.UI.Material.Helpers;
 using Path = System.IO.Path;
 using WinInterop = System.Windows.Interop;
-using LandmarkDevs.UI.Common.Models;
-using LandmarkDevs.UI.Material.Controls.Panels;
 #endregion
 
 // ReSharper disable InconsistentNaming
