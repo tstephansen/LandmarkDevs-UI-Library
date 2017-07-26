@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>LandmarkDevs.UI.Material</id>
-    <version>1.0.4</version>
+    <version>1.1.0</version>
     <title>LandmarkDevs Material UI</title>
     <authors>Tim Stephansen</authors>
     <owners>LandmarkDevs</owners>
     <description>LandmarkDevs Material UI for WPF</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Fixed the exported namespace.</releaseNotes>
+    <releaseNotes>Added an additional list view style.</releaseNotes>
     <copyright>Copyright 2017 - Tim Stephansen</copyright>
     <tags>material landmarkdevs ui</tags>
     <dependencies>
