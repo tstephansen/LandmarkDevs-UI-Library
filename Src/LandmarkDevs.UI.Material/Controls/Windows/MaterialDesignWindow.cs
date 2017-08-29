@@ -101,7 +101,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
             _colorSelectorContentControl = GetTemplateChild(PART_ColorSelectorContentControl) as ContentControl;
             _palletButton = GetTemplateChild(PART_PalletButton) as Button;
             _cancelChangeThemeButton = GetTemplateChild(PART_CancelThemeChangeButton) as Button;
-            _materialColorWheel = GetTemplateChild(PART_MaterialColorWheel) as MaterialColorWheel;
+            ColorWheel = GetTemplateChild(PART_MaterialColorWheel) as MaterialColorWheel;
             _settingsPanelContentControl = GetTemplateChild(PART_SettingsPanelContentControl) as ContentControl;
             _settingsPanel = GetTemplateChild(PART_SettingsPanel) as MaterialSettingsPanel;
             SetThemeSettings();
@@ -126,8 +126,14 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
                 _currentAccent = themeSettings.AccentName;
                 if (_isDark)
                 {
-                    _materialColorWheel.CenterButtonText = "Dark";
+                    ColorWheel.CenterButtonText = "Dark";
                     MaterialColorWheel.ReplaceEntry("MaterialDesignUserControlBackground", new SolidColorBrush(Color.FromArgb(255, 55, 71, 79)));
+                }
+                if(themeSettings.ForegroundIsDark)
+                {
+                    ColorWheel.ForegroundIsDark = true;
+                    MaterialColorWheel.ReplaceEntry("CurrentForegroundColor", new SolidColorBrush(Color.FromArgb(221, 0, 0, 0)));
+                    MaterialColorWheel.ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromArgb(221, 255, 255, 255)));
                 }
             }
         }
@@ -186,9 +192,10 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
                 File.Delete(fileName);
             var themeSettings = new ThemeSettingsModel
             {
-                PrimaryName = _materialColorWheel.PrimaryName,
-                AccentName = _materialColorWheel.AccentName,
-                IsDark = _materialColorWheel.IsDark
+                PrimaryName = ColorWheel.PrimaryName,
+                AccentName = ColorWheel.AccentName,
+                IsDark = ColorWheel.IsDark,
+                ForegroundIsDark = ColorWheel.ForegroundIsDark
             };
             JsonActions.SaveToJson(fileName, themeSettings);
         }
@@ -254,7 +261,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         private ContentControl _colorSelectorContentControl;
         private Button _palletButton;
         private Storyboard _windowShadeStoryboard;
-        private MaterialColorWheel _materialColorWheel;
+        public MaterialColorWheel ColorWheel;
         private Button _cancelChangeThemeButton;
         private ContentControl _settingsPanelContentControl;
         private MaterialSettingsPanel _settingsPanel;

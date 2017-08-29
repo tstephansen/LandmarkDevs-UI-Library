@@ -7,7 +7,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Shows a standard dialog to the user.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class ShowDialogEvent : PubSubEvent<DialogModel>
+    public class ShowDialogEvent : PubSubEvent<DialogModel>
     {
     }
 
@@ -15,7 +15,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Shows or hides the loading state on the main window.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class ShellLoadingStateVisible : PubSubEvent<bool>
+    public class ShellLoadingStateVisible : PubSubEvent<bool>
     {
     }
 
@@ -23,7 +23,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Shows or hides the navigation bar.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class ChangeNavbarVisibilityEvent : PubSubEvent<bool>
+    public class ChangeNavbarVisibilityEvent : PubSubEvent<bool>
     {
     }
 
@@ -31,7 +31,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Toggles help tooltips throughout the program.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class ToggleHelpTooltipsEvent : PubSubEvent<bool>
+    public class ToggleHelpTooltipsEvent : PubSubEvent<bool>
     {
     }
 
@@ -39,7 +39,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Sets the text on the status bar.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class SetStatusBarTextEvent : PubSubEvent<string>
+    public class SetStatusBarTextEvent : PubSubEvent<string>
     {
     }
 
@@ -47,7 +47,7 @@ namespace LandmarkDevs.UI.Material.Models
     /// Shows or hides the menu button.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class SetMenuButtonVisibleEvent : PubSubEvent<bool>
+    public class SetMenuButtonVisibleEvent : PubSubEvent<bool>
     {
     }
 }

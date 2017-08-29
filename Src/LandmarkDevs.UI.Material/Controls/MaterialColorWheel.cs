@@ -118,6 +118,7 @@ namespace LandmarkDevs.UI.Material.Controls
     [TemplatePart(Name = PART_IndigoPolys, Type = typeof(Canvas))]
     [TemplatePart(Name = PART_PinkPolys, Type = typeof(Canvas))]
     [TemplatePart(Name = PART_DarkLightButton, Type = typeof(Button))]
+    [TemplatePart(Name = PART_ForegroundColorButton, Type = typeof(Button))]
     public class MaterialColorWheel : Control
     {
         #region Initialization and Template
@@ -247,6 +248,7 @@ namespace LandmarkDevs.UI.Material.Controls
             _indigoPolys = GetTemplateChild(PART_IndigoPolys) as Canvas;
             _pinkPolys = GetTemplateChild(PART_PinkPolys) as Canvas;
             _darkLightButton = GetTemplateChild(PART_DarkLightButton) as Button;
+            _foregroundColorButton = GetTemplateChild(PART_ForegroundColorButton) as Button;
         }
 
         private void CreateDictionaries()
@@ -364,16 +366,46 @@ namespace LandmarkDevs.UI.Material.Controls
                     if (IsDark)
                     {
                         IsDark = false;
+                        ForegroundIsDark = true;
                         new PaletteHelper().SetLightDark(false);
+                        ReplaceEntry("CurrentForegroundColor", new SolidColorBrush(Color.FromArgb(221, 0, 0, 0)));
+                        ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
                         CenterButtonFontColor = new SolidColorBrush(Color.FromArgb(221, 0, 0, 0));
                         CenterButtonText = "Light";
                     }
                     else
                     {
                         IsDark = true;
+                        ForegroundIsDark = false;
                         new PaletteHelper().SetLightDark(true);
+                        ReplaceEntry("CurrentForegroundColor", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
+                        ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromRgb(55, 71, 79)));
                         CenterButtonFontColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
                         CenterButtonText = "Dark";
+                    }
+                };
+            if (_foregroundColorButton != null)
+                _foregroundColorButton.Click += (s, e) =>
+                {
+                    var btn = (Button)s;
+                    if (btn == null)
+                        return;
+                    if (ForegroundIsDark)
+                    {
+                        ForegroundIsDark = false;
+                        ReplaceEntry("CurrentForegroundColor", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
+                        ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromRgb(55, 71, 79)));
+                        ForegroundButtonBackgroundColor = new SolidColorBrush(Color.FromRgb(55, 71, 79));
+                        ForegroundButtonForegroundColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                    }
+                    else
+                    {
+                        ForegroundIsDark = true;
+                        ReplaceEntry("CurrentForegroundColor", new SolidColorBrush(Color.FromArgb(221, 0, 0, 0)));
+                        ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
+                        ForegroundButtonForegroundColor = new SolidColorBrush(Color.FromRgb(55, 71, 79));
+                        ForegroundButtonBackgroundColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+                        // ForegroundButtonBackgroundColor = new SolidColorBrush(Color.FromArgb(255, 250, 250, 250));
                     }
                 };
         }
@@ -872,6 +904,38 @@ namespace LandmarkDevs.UI.Material.Controls
         }
 
         /// <summary>
+        ///     The foreground color button text property
+        /// </summary>
+        public static readonly DependencyProperty ForegroundColorButtonTextProperty = DependencyProperty.Register(
+            "ForegroundColorButtonText", typeof(string), typeof(MaterialColorWheel), new FrameworkPropertyMetadata("Light"));
+
+        /// <summary>
+        ///     Gets or sets the foreground color button text.
+        /// </summary>
+        /// <value>The foreground color button text.</value>
+        public string ForegroundColorButtonText
+        {
+            get { return (string)GetValue(ForegroundColorButtonTextProperty); }
+            set { SetValue(ForegroundColorButtonTextProperty, value); }
+        }
+
+        /// <summary>
+        ///     The background color button text property
+        /// </summary>
+        public static readonly DependencyProperty BackgroundColorButtonTextProperty = DependencyProperty.Register(
+            "BackgroundColorButtonText", typeof(string), typeof(MaterialColorWheel), new FrameworkPropertyMetadata("Light"));
+
+        /// <summary>
+        ///     Gets or sets the background color button text.
+        /// </summary>
+        /// <value>The background color button text.</value>
+        public string BackgroundColorButtonText
+        {
+            get { return (string)GetValue(BackgroundColorButtonTextProperty); }
+            set { SetValue(BackgroundColorButtonTextProperty, value); }
+        }
+
+        /// <summary>
         ///     The button width property
         /// </summary>
         public static readonly DependencyProperty ButtonWidthProperty = DependencyProperty.Register(
@@ -919,12 +983,46 @@ namespace LandmarkDevs.UI.Material.Controls
             set { SetValue(CenterButtonFontColorProperty, value); }
         }
 
+        /// <summary>
+        /// The foreground button background color property
+        /// </summary>
+        public static readonly DependencyProperty ForegroundButtonBackgroundColorProperty = DependencyProperty.Register(
+            "ForegroundButtonBackgroundColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
+            new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 0, 0, 0))));
+
+        /// <summary>
+        /// Gets or sets the color of the foreground button background.
+        /// </summary>
+        /// <value>The color of the foreground button background.</value>
+        public SolidColorBrush ForegroundButtonBackgroundColor
+        {
+            get { return (SolidColorBrush)GetValue(ForegroundButtonBackgroundColorProperty); }
+            set { SetValue(ForegroundButtonBackgroundColorProperty, value); }
+        }
+
+        /// <summary>
+        /// The foreground button foreground color property
+        /// </summary>
+        public static readonly DependencyProperty ForegroundButtonForegroundColorProperty = DependencyProperty.Register(
+            "ForegroundButtonForegroundColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
+            new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 255, 255, 255))));
+
+        /// <summary>
+        /// Gets or sets the color of the foreground button foreground.
+        /// </summary>
+        /// <value>The color of the foreground button foreground.</value>
+        public SolidColorBrush ForegroundButtonForegroundColor
+        {
+            get { return (SolidColorBrush)GetValue(ForegroundButtonForegroundColorProperty); }
+            set { SetValue(ForegroundButtonForegroundColorProperty, value); }
+        }
         #endregion Dependency Properties
 
         #region Template Properties
         // ReSharper disable once InconsistentNaming
         private const string PART_DarkLightButton = "PART_DarkLightButton";
-
+        private const string PART_ForegroundColorButton = "PART_ForegroundColorButton";
+        private Button _foregroundColorButton;
         private Button _darkLightButton;
         // ReSharper disable InconsistentNaming
         private const string PART_CyanCanvas = "PART_CyanCanvas";
@@ -1158,6 +1256,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         /// <value><c>true</c> if this instance is dark; otherwise, <c>false</c>.</value>
         public bool IsDark { get; set; }
+        public bool ForegroundIsDark { get; set; }
 
         #endregion Template Properties
     }

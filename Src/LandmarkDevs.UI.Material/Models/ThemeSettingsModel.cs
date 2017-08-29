@@ -27,9 +27,14 @@ namespace LandmarkDevs.UI.Material.Models
         /// <value><c>true</c> if this instance is dark; otherwise, <c>false</c>.</value>
         public bool IsDark { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether [text foreground inverted].
+        /// Gets or sets a value indicating whether the foreground text is inverted.
         /// </summary>
-        /// <value><c>true</c> if [text foreground inverted]; otherwise, <c>false</c>.</value>
+        /// <value><c>true</c> if the foreground text is inverted; otherwise, <c>false</c>.</value>
         public bool TextForegroundInverted { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether the foreground color is dark.
+        /// </summary>
+        /// <value><c>true</c> if the foreground color is dark; otherwise, <c>false</c>.</value>
+        public bool ForegroundIsDark { get; set; }
     }
 }
