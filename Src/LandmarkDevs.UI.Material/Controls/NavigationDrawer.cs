@@ -142,7 +142,7 @@ namespace LandmarkDevs.UI.Material.Controls
                 typeof(RoutedEventHandler), typeof(NavigationDrawer));
 
         /// <summary>
-        /// Occurs when [is expand changed].
+        /// Occurs when the navigation drawer is expanded.
         /// </summary>
         public event RoutedEventHandler IsExpandChanged
         {
@@ -157,7 +157,7 @@ namespace LandmarkDevs.UI.Material.Controls
         internal PropertyChangeNotifier IsExpandedPropertyChangeNotifier { get; set; }
 
         /// <summary>
-        /// Determines whether [is expanded changed] [the specified sender].
+        /// Occurs when the IsExpanded property changes.
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="e">The <see cref="DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>

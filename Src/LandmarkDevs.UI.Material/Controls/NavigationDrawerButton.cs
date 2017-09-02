@@ -24,6 +24,7 @@ namespace LandmarkDevs.UI.Material.Controls
         {
             var mw = Application.Current.MainWindow as MaterialDesignWindow;
             mw.NavigationDrawer.IsExpanded = false;
+            mw.NavigationDrawerVisible = false;
             mw.HideWindowShade();
         }
 
