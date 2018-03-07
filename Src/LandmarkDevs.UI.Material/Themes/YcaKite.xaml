@@ -56,12 +56,6 @@
                                 </Grid>
                             </Viewbox>
                         </Grid>
-                        <!--<ContentControl Grid.Row="0"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Content="{TemplateBinding misc:YcaKite.Header}"
-                                        ContentTemplate="{TemplateBinding misc:YcaKite.HeaderTemplate}"
-                                        ContentTemplateSelector="{TemplateBinding misc:YcaKite.HeaderTemplate}" />-->
                     </Grid>
                 </Grid>
             </Border>

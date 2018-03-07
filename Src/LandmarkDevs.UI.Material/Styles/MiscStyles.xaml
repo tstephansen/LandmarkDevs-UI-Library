@@ -7,7 +7,7 @@
     <Style x:Key="TitleTextBlock"
            BasedOn="{x:Null}"
            TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="FontFamily" Value="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto-Bold" />
@@ -20,7 +20,7 @@
     <Style x:Key="SubTitle"
            BasedOn="{x:Null}"
            TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
         <Setter Property="FontFamily" Value="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto" />
         <Setter Property="FontSize" Value="20" />
         <Setter Property="TextAlignment" Value="Center" />
@@ -98,180 +98,4 @@
         </Setter>
     </Style>
     <!--#endregion-->
-
-    <!--#region PopupBox-->
-    <Style TargetType="{x:Type md:PopupBox}">
-        <Setter Property="ToggleContent">
-            <Setter.Value>
-                <md:PackIcon Width="24"
-                             Height="24"
-                             Margin="4,0"
-                             Foreground="{Binding Foreground,
-                                                  RelativeSource={RelativeSource FindAncestor,
-                                                                                 AncestorLevel=1,
-                                                                                 AncestorType={x:Type md:PopupBox}}}"
-                             Kind="DotsVertical" />
-            </Setter.Value>
-        </Setter>
-        <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="md:ShadowAssist.ShadowDepth" Value="Depth3" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type md:PopupBox}">
-                    <ControlTemplate.Resources>
-                        <Style x:Key="ToggleButtonStyle" TargetType="{x:Type ToggleButton}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type ToggleButton}">
-                                        <md:Ripple HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                   VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                   md:RippleAssist.IsCentered="True"
-                                                   ClipToBounds="False"
-                                                   Content="{TemplateBinding Content}"
-                                                   ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                   Feedback="{DynamicResource MaterialDesignFlatButtonRipple}"
-                                                   Focusable="False"
-                                                   Padding="{TemplateBinding Padding}"
-                                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ControlTemplate.Resources>
-                    <Grid>
-                        <ToggleButton x:Name="PART_Toggle"
-                                      VerticalAlignment="Center"
-                                      Content="{TemplateBinding ToggleContent}"
-                                      ContentTemplate="{TemplateBinding ToggleContentTemplate}"
-                                      Cursor="Hand"
-                                      IsChecked="{Binding IsPopupOpen,
-                                                          Mode=TwoWay,
-                                                          RelativeSource={RelativeSource TemplatedParent}}">
-                            <ToggleButton.Style>
-                                <Style TargetType="{x:Type ToggleButton}">
-                                    <Setter Property="Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="{x:Type ToggleButton}">
-                                                <md:Ripple HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                           md:RippleAssist.IsCentered="True"
-                                                           ClipToBounds="False"
-                                                           Content="{TemplateBinding Content}"
-                                                           ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                           Feedback="{DynamicResource MaterialDesignFlatButtonRipple}"
-                                                           Focusable="False"
-                                                           Padding="{TemplateBinding Padding}"
-                                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-                            </ToggleButton.Style>
-                        </ToggleButton>
-                        <controlzEx:PopupEx x:Name="PART_Popup"
-                                            AllowsTransparency="True"
-                                            CustomPopupPlacementCallback="{Binding PopupPlacementMethod,
-                                                                                   RelativeSource={RelativeSource TemplatedParent}}"
-                                            HorizontalOffset="5"
-                                            IsOpen="{Binding IsPopupOpen,
-                                                             Mode=TwoWay,
-                                                             RelativeSource={RelativeSource TemplatedParent}}"
-                                            Placement="Custom"
-                                            PopupAnimation="Fade"
-                                            VerticalOffset="5">
-                            <md:Card Margin="5"
-                                     Content="{TemplateBinding PopupContent}"
-                                     ContentTemplate="{TemplateBinding PopupContentTemplate}"
-                                     FontSize="15"
-                                     FontWeight="Normal"
-                                     Foreground="#DD000000"
-                                     Padding="0,8"
-                                     RenderOptions.ClearTypeHint="Enabled">
-                                <md:Card.Resources>
-                                    <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
-                                        <Setter Property="VerticalContentAlignment" Value="Bottom" />
-                                        <Setter Property="HorizontalContentAlignment" Value="Left" />
-                                        <Setter Property="Padding" Value="16,0,16,16" />
-                                        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate TargetType="{x:Type Button}">
-                                                    <Grid>
-                                                        <Border x:Name="MouseOverBorder"
-                                                                Background="{Binding Foreground,
-                                                                                     RelativeSource={RelativeSource Mode=TemplatedParent},
-                                                                                     Converter={StaticResource FeedbackBrushRoundConverter}}"
-                                                                Opacity="0">
-                                                            <!--<Border.Background>
-                                                                <TemplateBinding Property="Foreground">
-                                                                    <TemplateBinding.Converter>
-                                                                        <converters:BrushRoundConverter HighValue="White" LowValue="Black" />
-                                                                    </TemplateBinding.Converter>
-                                                                </TemplateBinding>
-                                                            </Border.Background>-->
-                                                        </Border>
-                                                        <md:Ripple MinHeight="48"
-                                                                   HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                                   VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                                   Content="{TemplateBinding Content}"
-                                                                   ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                                   Feedback="{Binding Foreground,
-                                                                                      RelativeSource={RelativeSource Mode=TemplatedParent},
-                                                                                      Converter={StaticResource FeedbackBrushRoundConverter}}"
-                                                                   Focusable="False"
-                                                                   Padding="{TemplateBinding Padding}"
-                                                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                                                            <!--<md:Ripple.Feedback>
-                                                                <TemplateBinding Property="Foreground">
-                                                                    <TemplateBinding.Converter>
-                                                                        <converters:BrushRoundConverter HighValue="White" LowValue="Black" />
-                                                                    </TemplateBinding.Converter>
-                                                                </TemplateBinding>
-                                                            </md:Ripple.Feedback>-->
-                                                        </md:Ripple>
-                                                        <VisualStateManager.VisualStateGroups>
-                                                            <VisualStateGroup x:Name="CommonStates">
-                                                                <VisualStateGroup.Transitions>
-                                                                    <VisualTransition From="{x:Null}"
-                                                                                      GeneratedDuration="0:0:0.3"
-                                                                                      Storyboard="{x:Null}"
-                                                                                      To="Normal">
-                                                                        <VisualTransition.GeneratedEasingFunction>
-                                                                            <CircleEase EasingMode="EaseOut" />
-                                                                        </VisualTransition.GeneratedEasingFunction>
-                                                                    </VisualTransition>
-                                                                </VisualStateGroup.Transitions>
-                                                                <VisualState x:Name="Normal" />
-                                                                <VisualState x:Name="MouseOver">
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Duration="0"
-                                                                                         Storyboard.TargetName="MouseOverBorder"
-                                                                                         Storyboard.TargetProperty="Opacity"
-                                                                                         To="0.1" />
-                                                                    </Storyboard>
-                                                                </VisualState>
-                                                                <VisualState x:Name="Disabled" />
-                                                            </VisualStateGroup>
-                                                        </VisualStateManager.VisualStateGroups>
-                                                    </Grid>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsEnabled" Value="False">
-                                                <Setter Property="Foreground" Value="#56000000" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </md:Card.Resources>
-                            </md:Card>
-                        </controlzEx:PopupEx>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--#endregion-->
-
 </ResourceDictionary>

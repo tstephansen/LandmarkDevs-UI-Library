@@ -1,7 +1,4 @@
-﻿using LandmarkDevs.UI.Material.Helpers;
-using MaterialDesignColors;
-using MaterialDesignThemes.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
@@ -11,6 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
+using LandmarkDevs.UI.Material.Helpers;
+using MaterialDesignColors;
+using MaterialDesignThemes.Wpf;
 
 namespace LandmarkDevs.UI.Material.Controls
 {
@@ -22,112 +22,17 @@ namespace LandmarkDevs.UI.Material.Controls
     ///     based on that file.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Control" />
-    [TemplatePart(Name = PART_CyanCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_TealCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_GreenCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightGreenCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LimeCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_YellowCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_AmberCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_OrangeCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BrownCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BlueGreyCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_GreyCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepOrangeCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_RedCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_PurpleCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepPurpleCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BlueCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightBlueCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_IndigoCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_PinkCanvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_CyanSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_TealSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_GreenSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_LightGreenSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_LimeSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_YellowSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_AmberSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_OrangeSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_BrownSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_BlueGreySelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_GreySelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_DeepOrangeSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_RedSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_PurpleSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_DeepPurpleSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_BlueSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_LightBlueSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_IndigoSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_PinkSelector, Type = typeof(Path))]
-    [TemplatePart(Name = PART_Cyan1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Teal1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Green1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightGreen1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Lime1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Yellow1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Amber1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Orange1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Brown1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BlueGrey1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Grey1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepOrange1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Red1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Purple1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepPurple1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Blue1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightBlue1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Indigo1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Pink1Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Cyan2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Teal2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Green2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightGreen2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Lime2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Yellow2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Amber2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Orange2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Brown2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BlueGrey2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Grey2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepOrange2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Red2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Purple2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepPurple2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Blue2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightBlue2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Indigo2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_Pink2Canvas, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_CyanPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_TealPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_GreenPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightGreenPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LimePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_YellowPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_AmberPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_OrangePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BrownPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BlueGreyPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_GreyPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepOrangePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_RedPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_PurplePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DeepPurplePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_BluePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_LightBluePolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_IndigoPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_PinkPolys, Type = typeof(Canvas))]
-    [TemplatePart(Name = PART_DarkLightButton, Type = typeof(Button))]
-    [TemplatePart(Name = PART_ForegroundColorButton, Type = typeof(Button))]
     public class MaterialColorWheel : Control
     {
         #region Initialization and Template
+
         /// <summary>
         ///     Initializes static members of the <see cref="MaterialColorWheel" /> class.
         /// </summary>
         static MaterialColorWheel()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(MaterialColorWheel), new FrameworkPropertyMetadata(typeof(MaterialColorWheel)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(MaterialColorWheel),
+                new FrameworkPropertyMetadata(typeof(MaterialColorWheel)));
         }
 
         /// <summary>
@@ -135,7 +40,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         public MaterialColorWheel()
         {
-            _swatches = new SwatchesProvider().Swatches;
+            Swatches = new SwatchesProvider().Swatches;
         }
 
         /// <summary>
@@ -251,6 +156,9 @@ namespace LandmarkDevs.UI.Material.Controls
             _foregroundColorButton = GetTemplateChild(PART_ForegroundColorButton) as Button;
         }
 
+        /// <summary>
+        ///     Creates the dictionaries of colors, selectors, and polygons.
+        /// </summary>
         private void CreateDictionaries()
         {
             _colorCanvases = new Dictionary<string, Canvas>
@@ -321,20 +229,24 @@ namespace LandmarkDevs.UI.Material.Controls
             };
         }
 
+        /// <summary>
+        ///     Sets the canvas click event.
+        /// </summary>
+        /// <param name="canvas">The canvas.</param>
+        /// <param name="restricted">if set to <c>true</c> the colors that can be selected are restricted.</param>
         private void SetCanvasClickEvent(Canvas canvas, bool restricted)
         {
             if (canvas == null)
                 return;
             if (!restricted)
-            {
                 canvas.PreviewMouseLeftButtonUp += UnrestrictedColorCanvas_PreviewMouseLeftButtonUp;
-            }
             else
-            {
                 canvas.PreviewMouseLeftButtonUp += RestrictedColorCanvas_PreviewMouseLeftButtonUp;
-            }
         }
 
+        /// <summary>
+        ///     Sets the color canvases.
+        /// </summary>
         private void SetColorCanvases()
         {
             SetCanvasClickEvent(_cyanCanvas, false);
@@ -359,7 +271,7 @@ namespace LandmarkDevs.UI.Material.Controls
             if (_darkLightButton != null)
                 _darkLightButton.Click += (s, e) =>
                 {
-                    var btn = (Button)s;
+                    var btn = (Button) s;
                     if (btn == null)
                         return;
                     ToggleDarkLight();
@@ -387,7 +299,7 @@ namespace LandmarkDevs.UI.Material.Controls
             if (_foregroundColorButton != null)
                 _foregroundColorButton.Click += (s, e) =>
                 {
-                    var btn = (Button)s;
+                    var btn = (Button) s;
                     if (btn == null)
                         return;
                     if (ForegroundIsDark)
@@ -405,7 +317,6 @@ namespace LandmarkDevs.UI.Material.Controls
                         ReplaceEntry("CurrentBackgroundColor", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
                         ForegroundButtonForegroundColor = new SolidColorBrush(Color.FromRgb(55, 71, 79));
                         ForegroundButtonBackgroundColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-                        // ForegroundButtonBackgroundColor = new SolidColorBrush(Color.FromArgb(255, 250, 250, 250));
                     }
                 };
         }
@@ -413,6 +324,7 @@ namespace LandmarkDevs.UI.Material.Controls
         #endregion Initialization and Template
 
         #region Event Methods
+
         /// <summary>
         ///     Fired when a canvas that is not grey, blue grey, or brown is clicked. This changes
         ///     the primary or accent color depending on which selection is being processed.
@@ -421,7 +333,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <param name="e">The event arguments</param>
         private void UnrestrictedColorCanvas_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var canvas = (Canvas)sender;
+            var canvas = (Canvas) sender;
             if (canvas == null)
                 throw new InvalidOperationException("Canvas can't be found.");
             var upperColorName = canvas.Name.Replace("PART_", "").Replace("Canvas", "");
@@ -429,21 +341,18 @@ namespace LandmarkDevs.UI.Material.Controls
             var selectorName = $"PART_{upperColorName}Selector";
             var numberOneName = $"PART_{upperColorName}1Canvas";
             var numberTwoName = $"PART_{upperColorName}2Canvas";
-            var colorArray = new[] { upperColorName, colorName, selectorName, numberOneName, numberTwoName };
-            if (_isSecondColorSelected)
-            {
-                SecondColorSelected();
-            }
+            var colorArray = new[] {upperColorName, colorName, selectorName, numberOneName, numberTwoName};
+            if (_isSecondColorSelected) SecondColorSelected();
             if (!_isFirstColorSelected)
-            {
                 FirstColorNotSelected(canvas, colorArray);
-            }
             else
-            {
                 FirstColorSelected(canvas, colorArray);
-            }
         }
 
+        /// <summary>
+        ///     Called when the second color has been selected. It clears the
+        ///     previous selections and lets the user select new colors.
+        /// </summary>
         private void SecondColorSelected()
         {
             ClearAllSelections();
@@ -451,6 +360,12 @@ namespace LandmarkDevs.UI.Material.Controls
             _isSecondColorSelected = false;
         }
 
+        /// <summary>
+        ///     Called when the user makes a selection and the first color has not already
+        ///     been selected.
+        /// </summary>
+        /// <param name="canvas">The canvas.</param>
+        /// <param name="colorArray">The color array.</param>
         private void FirstColorNotSelected(Canvas canvas, string[] colorArray)
         {
             PrimaryName = colorArray[0];
@@ -473,6 +388,11 @@ namespace LandmarkDevs.UI.Material.Controls
             DisableInvalidColorChoices(colorArray[0]);
         }
 
+        /// <summary>
+        ///     Called when the user makes a selection and the first color has already been selected.
+        /// </summary>
+        /// <param name="canvas">The canvas.</param>
+        /// <param name="colorArray">The color array.</param>
         private void FirstColorSelected(Canvas canvas, string[] colorArray)
         {
             AccentName = colorArray[0];
@@ -500,7 +420,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <param name="e">The event arguments</param>
         private void RestrictedColorCanvas_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var canvas = (Canvas)sender;
+            var canvas = (Canvas) sender;
             if (canvas == null)
                 throw new InvalidOperationException("Canvas can't be found.");
             var upperColorName = canvas.Name.Replace("PART_", "").Replace("Canvas", "");
@@ -513,6 +433,7 @@ namespace LandmarkDevs.UI.Material.Controls
                 _isFirstColorSelected = false;
                 _isSecondColorSelected = false;
             }
+
             if (!_isFirstColorSelected)
             {
                 PrimaryName = upperColorName;
@@ -540,6 +461,7 @@ namespace LandmarkDevs.UI.Material.Controls
         #endregion Event Methods
 
         #region Helpers
+
         /// <summary>
         ///     Keeps grey, brown, and blue grey from being selected as an accent color.
         /// </summary>
@@ -559,8 +481,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <returns>Canvas.</returns>
         private Canvas GetColorCanvas(string color)
         {
-            Canvas canvas;
-            _colorCanvases.TryGetValue(color, out canvas);
+            _colorCanvases.TryGetValue(color, out var canvas);
             return canvas;
         }
 
@@ -769,8 +690,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <returns></returns>
         private Canvas GetPolygons(string color)
         {
-            Canvas canvas;
-            _polygons.TryGetValue(color, out canvas);
+            _polygons.TryGetValue(color, out var canvas);
             return canvas;
         }
 
@@ -799,7 +719,9 @@ namespace LandmarkDevs.UI.Material.Controls
         public virtual void ToggleDarkLight()
         {
             ReplaceEntry("MaterialDesignUserControlBackground",
-                IsDark ? new SolidColorBrush(Color.FromRgb(224, 224, 224)) : new SolidColorBrush(Color.FromRgb(55, 71, 79)));
+                IsDark
+                    ? new SolidColorBrush(Color.FromRgb(224, 224, 224))
+                    : new SolidColorBrush(Color.FromRgb(55, 71, 79)));
         }
 
         /// <summary>
@@ -808,7 +730,10 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         /// <param name="entryName">The entry to replace</param>
         /// <param name="newValue">The new entry value</param>
-        /// <param name="parentDictionary">The root dictionary to start searching at. Null means using Application.Current.Resources</param>
+        /// <param name="parentDictionary">
+        ///     The root dictionary to start searching at. Null means using
+        ///     Application.Current.Resources
+        /// </param>
         public static void ReplaceEntry(object entryName, object newValue, ResourceDictionary parentDictionary = null)
         {
             if (parentDictionary == null)
@@ -821,14 +746,16 @@ namespace LandmarkDevs.UI.Material.Controls
                 {
                     var animation = new ColorAnimation
                     {
-                        From = ((SolidColorBrush)parentDictionary[entryName]).Color,
-                        To = ((SolidColorBrush)newValue).Color,
+                        From = ((SolidColorBrush) parentDictionary[entryName]).Color,
+                        To = ((SolidColorBrush) newValue).Color,
                         Duration = new Duration(TimeSpan.FromMilliseconds(300))
                     };
                     brush.BeginAnimation(SolidColorBrush.ColorProperty, animation);
                 }
                 else
+                {
                     parentDictionary[entryName] = newValue;
+                }
             }
 
             foreach (var dictionary in parentDictionary.MergedDictionaries)
@@ -838,11 +765,13 @@ namespace LandmarkDevs.UI.Material.Controls
         #endregion Helpers
 
         #region Dependency Properties
+
         /// <summary>
         ///     The selector color property
         /// </summary>
         public static readonly DependencyProperty SelectorColorProperty = DependencyProperty.Register(
-            "SelectorColor", typeof(SolidColorBrush), typeof(MaterialColorWheel), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(158, 158, 158))));
+            "SelectorColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
+            new PropertyMetadata(new SolidColorBrush(Color.FromRgb(158, 158, 158))));
 
         /// <summary>
         ///     Gets or sets the color of the selector.
@@ -850,8 +779,8 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the selector.</value>
         public SolidColorBrush SelectorColor
         {
-            get { return (SolidColorBrush)GetValue(SelectorColorProperty); }
-            set { SetValue(SelectorColorProperty, value); }
+            get => (SolidColorBrush) GetValue(SelectorColorProperty);
+            set => SetValue(SelectorColorProperty, value);
         }
 
         /// <summary>
@@ -867,8 +796,8 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the selector foreground.</value>
         public SolidColorBrush SelectorForegroundColor
         {
-            get { return (SolidColorBrush)GetValue(SelectorForegroundColorProperty); }
-            set { SetValue(SelectorForegroundColorProperty, value); }
+            get => (SolidColorBrush) GetValue(SelectorForegroundColorProperty);
+            set => SetValue(SelectorForegroundColorProperty, value);
         }
 
         /// <summary>
@@ -883,8 +812,8 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The stretch.</value>
         public Stretch Stretch
         {
-            get { return (Stretch)GetValue(StretchProperty); }
-            set { SetValue(StretchProperty, value); }
+            get => (Stretch) GetValue(StretchProperty);
+            set => SetValue(StretchProperty, value);
         }
 
         /// <summary>
@@ -899,15 +828,16 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The center button text.</value>
         public string CenterButtonText
         {
-            get { return (string)GetValue(CenterButtonTextProperty); }
-            set { SetValue(CenterButtonTextProperty, value); }
+            get => (string) GetValue(CenterButtonTextProperty);
+            set => SetValue(CenterButtonTextProperty, value);
         }
 
         /// <summary>
         ///     The foreground color button text property
         /// </summary>
         public static readonly DependencyProperty ForegroundColorButtonTextProperty = DependencyProperty.Register(
-            "ForegroundColorButtonText", typeof(string), typeof(MaterialColorWheel), new FrameworkPropertyMetadata("Light"));
+            "ForegroundColorButtonText", typeof(string), typeof(MaterialColorWheel),
+            new FrameworkPropertyMetadata("Light"));
 
         /// <summary>
         ///     Gets or sets the foreground color button text.
@@ -915,15 +845,16 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The foreground color button text.</value>
         public string ForegroundColorButtonText
         {
-            get { return (string)GetValue(ForegroundColorButtonTextProperty); }
-            set { SetValue(ForegroundColorButtonTextProperty, value); }
+            get => (string) GetValue(ForegroundColorButtonTextProperty);
+            set => SetValue(ForegroundColorButtonTextProperty, value);
         }
 
         /// <summary>
         ///     The background color button text property
         /// </summary>
         public static readonly DependencyProperty BackgroundColorButtonTextProperty = DependencyProperty.Register(
-            "BackgroundColorButtonText", typeof(string), typeof(MaterialColorWheel), new FrameworkPropertyMetadata("Light"));
+            "BackgroundColorButtonText", typeof(string), typeof(MaterialColorWheel),
+            new FrameworkPropertyMetadata("Light"));
 
         /// <summary>
         ///     Gets or sets the background color button text.
@@ -931,8 +862,8 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The background color button text.</value>
         public string BackgroundColorButtonText
         {
-            get { return (string)GetValue(BackgroundColorButtonTextProperty); }
-            set { SetValue(BackgroundColorButtonTextProperty, value); }
+            get => (string) GetValue(BackgroundColorButtonTextProperty);
+            set => SetValue(BackgroundColorButtonTextProperty, value);
         }
 
         /// <summary>
@@ -947,8 +878,8 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The width of the button.</value>
         public double ButtonWidth
         {
-            get { return (double)GetValue(ButtonWidthProperty); }
-            set { SetValue(ButtonWidthProperty, value); }
+            get => (double) GetValue(ButtonWidthProperty);
+            set => SetValue(ButtonWidthProperty, value);
         }
 
         /// <summary>
@@ -963,15 +894,16 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The height of the button.</value>
         public double ButtonHeight
         {
-            get { return (double)GetValue(ButtonHeightProperty); }
-            set { SetValue(ButtonHeightProperty, value); }
+            get => (double) GetValue(ButtonHeightProperty);
+            set => SetValue(ButtonHeightProperty, value);
         }
 
         /// <summary>
         ///     The center button font color property
         /// </summary>
         public static readonly DependencyProperty CenterButtonFontColorProperty = DependencyProperty.Register(
-            "CenterButtonFontColor", typeof(SolidColorBrush), typeof(MaterialColorWheel), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(221, 0, 0, 0))));
+            "CenterButtonFontColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
+            new PropertyMetadata(new SolidColorBrush(Color.FromArgb(221, 0, 0, 0))));
 
         /// <summary>
         ///     Gets or sets the color of the center button font.
@@ -979,54 +911,52 @@ namespace LandmarkDevs.UI.Material.Controls
         /// <value>The color of the center button font.</value>
         public SolidColorBrush CenterButtonFontColor
         {
-            get { return (SolidColorBrush)GetValue(CenterButtonFontColorProperty); }
-            set { SetValue(CenterButtonFontColorProperty, value); }
+            get => (SolidColorBrush) GetValue(CenterButtonFontColorProperty);
+            set => SetValue(CenterButtonFontColorProperty, value);
         }
 
         /// <summary>
-        /// The foreground button background color property
+        ///     The foreground button background color property
         /// </summary>
         public static readonly DependencyProperty ForegroundButtonBackgroundColorProperty = DependencyProperty.Register(
             "ForegroundButtonBackgroundColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
             new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 0, 0, 0))));
 
         /// <summary>
-        /// Gets or sets the color of the foreground button background.
+        ///     Gets or sets the color of the foreground button background.
         /// </summary>
         /// <value>The color of the foreground button background.</value>
         public SolidColorBrush ForegroundButtonBackgroundColor
         {
-            get { return (SolidColorBrush)GetValue(ForegroundButtonBackgroundColorProperty); }
-            set { SetValue(ForegroundButtonBackgroundColorProperty, value); }
+            get => (SolidColorBrush) GetValue(ForegroundButtonBackgroundColorProperty);
+            set => SetValue(ForegroundButtonBackgroundColorProperty, value);
         }
 
         /// <summary>
-        /// The foreground button foreground color property
+        ///     The foreground button foreground color property
         /// </summary>
         public static readonly DependencyProperty ForegroundButtonForegroundColorProperty = DependencyProperty.Register(
             "ForegroundButtonForegroundColor", typeof(SolidColorBrush), typeof(MaterialColorWheel),
             new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 255, 255, 255))));
 
         /// <summary>
-        /// Gets or sets the color of the foreground button foreground.
+        ///     Gets or sets the color of the foreground button foreground.
         /// </summary>
         /// <value>The color of the foreground button foreground.</value>
         public SolidColorBrush ForegroundButtonForegroundColor
         {
-            get { return (SolidColorBrush)GetValue(ForegroundButtonForegroundColorProperty); }
-            set { SetValue(ForegroundButtonForegroundColorProperty, value); }
+            get => (SolidColorBrush) GetValue(ForegroundButtonForegroundColorProperty);
+            set => SetValue(ForegroundButtonForegroundColorProperty, value);
         }
+
         #endregion Dependency Properties
 
         #region Template Properties
-        // ReSharper disable once InconsistentNaming
+
+        // ReSharper disable InconsistentNaming
         private const string PART_DarkLightButton = "PART_DarkLightButton";
         private const string PART_ForegroundColorButton = "PART_ForegroundColorButton";
-        private Button _foregroundColorButton;
-        private Button _darkLightButton;
-        // ReSharper disable InconsistentNaming
         private const string PART_CyanCanvas = "PART_CyanCanvas";
-
         private const string PART_TealCanvas = "PART_TealCanvas";
         private const string PART_GreenCanvas = "PART_GreenCanvas";
         private const string PART_LightGreenCanvas = "PART_LightGreenCanvas";
@@ -1046,8 +976,9 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_IndigoCanvas = "PART_IndigoCanvas";
         private const string PART_PinkCanvas = "PART_PinkCanvas";
         // ReSharper restore InconsistentNaming
+        private Button _foregroundColorButton;
+        private Button _darkLightButton;
         private Canvas _cyanCanvas;
-
         private Canvas _tealCanvas;
         private Canvas _greenCanvas;
         private Canvas _lightGreenCanvas;
@@ -1066,9 +997,9 @@ namespace LandmarkDevs.UI.Material.Controls
         private Canvas _lightBlueCanvas;
         private Canvas _indigoCanvas;
         private Canvas _pinkCanvas;
+
         // ReSharper disable InconsistentNaming
         private const string PART_CyanSelector = "PART_CyanSelector";
-
         private const string PART_TealSelector = "PART_TealSelector";
         private const string PART_GreenSelector = "PART_GreenSelector";
         private const string PART_LightGreenSelector = "PART_LightGreenSelector";
@@ -1086,10 +1017,11 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_BlueSelector = "PART_BlueSelector";
         private const string PART_LightBlueSelector = "PART_LightBlueSelector";
         private const string PART_IndigoSelector = "PART_IndigoSelector";
+
         private const string PART_PinkSelector = "PART_PinkSelector";
         // ReSharper restore InconsistentNaming
-        private Path _cyanSelector;
 
+        private Path _cyanSelector;
         private Path _tealSelector;
         private Path _greenSelector;
         private Path _lightGreenSelector;
@@ -1108,9 +1040,9 @@ namespace LandmarkDevs.UI.Material.Controls
         private Path _lightBlueSelector;
         private Path _indigoSelector;
         private Path _pinkSelector;
+
         // ReSharper disable InconsistentNaming
         private const string PART_Cyan1Canvas = "PART_Cyan1Canvas";
-
         private const string PART_Teal1Canvas = "PART_Teal1Canvas";
         private const string PART_Green1Canvas = "PART_Green1Canvas";
         private const string PART_LightGreen1Canvas = "PART_LightGreen1Canvas";
@@ -1149,8 +1081,8 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_Indigo2Canvas = "PART_Indigo2Canvas";
         private const string PART_Pink2Canvas = "PART_Pink2Canvas";
         // ReSharper restore InconsistentNaming
-        private Canvas _cyan1Canvas;
 
+        private Canvas _cyan1Canvas;
         private Canvas _teal1Canvas;
         private Canvas _green1Canvas;
         private Canvas _lightGreen1Canvas;
@@ -1193,13 +1125,13 @@ namespace LandmarkDevs.UI.Material.Controls
         private bool _brownSelected;
         private bool _greySelected;
         private bool _blueGreySelected;
-        private readonly IEnumerable<Swatch> _swatches;
+        public IEnumerable<Swatch> Swatches { get; }
         private Dictionary<string, Canvas> _colorCanvases;
         private Dictionary<string, Path> _selectors;
         private Dictionary<string, Canvas> _polygons;
+
         // ReSharper disable InconsistentNaming
         private const string PART_CyanPolys = "PART_CyanPolys";
-
         private const string PART_TealPolys = "PART_TealPolys";
         private const string PART_GreenPolys = "PART_GreenPolys";
         private const string PART_LightGreenPolys = "PART_LightGreenPolys";
@@ -1219,8 +1151,8 @@ namespace LandmarkDevs.UI.Material.Controls
         private const string PART_IndigoPolys = "PART_IndigoPolys";
         private const string PART_PinkPolys = "PART_PinkPolys";
         // ReSharper restore InconsistentNaming
-        private Canvas _cyanPolys;
 
+        private Canvas _cyanPolys;
         private Canvas _tealPolys;
         private Canvas _greenPolys;
         private Canvas _lightGreenPolys;
@@ -1239,6 +1171,7 @@ namespace LandmarkDevs.UI.Material.Controls
         private Canvas _lightBluePolys;
         private Canvas _indigoPolys;
         private Canvas _pinkPolys;
+
         /// <summary>
         ///     Gets or sets the name of the primary color.
         /// </summary>
@@ -1256,6 +1189,7 @@ namespace LandmarkDevs.UI.Material.Controls
         /// </summary>
         /// <value><c>true</c> if this instance is dark; otherwise, <c>false</c>.</value>
         public bool IsDark { get; set; }
+
         public bool ForegroundIsDark { get; set; }
 
         #endregion Template Properties

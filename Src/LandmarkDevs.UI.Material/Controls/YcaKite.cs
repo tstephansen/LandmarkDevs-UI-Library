@@ -102,11 +102,11 @@ namespace LandmarkDevs.UI.Material.Controls
         {
             if (isActiveState)
             {
-                var vsg = LayoutRoot == null ? null : VisualStateManager.GetVisualStateGroups(LayoutRoot);
-                var vsgs = vsg?.OfType<VisualStateGroup>().FirstOrDefault(c => c.Name == "KiteStates");
-                if (vsgs == null)
+                var visualStateGroup = LayoutRoot == null ? null : VisualStateManager.GetVisualStateGroups(LayoutRoot);
+                var visualStateGroups = visualStateGroup?.OfType<VisualStateGroup>().FirstOrDefault(c => c.Name == "KiteStates");
+                if (visualStateGroups == null)
                     return;
-                var state = vsgs.States.OfType<VisualState>().FirstOrDefault(c => c.Name == "ActiveState");
+                var state = visualStateGroups.States.OfType<VisualState>().FirstOrDefault(c => c.Name == "ActiveState");
                 var sb = state?.Storyboard;
                 VisualStateManager.GoToState(this, "ActiveState", true);
                 if (sb == null)
@@ -115,11 +115,11 @@ namespace LandmarkDevs.UI.Material.Controls
             }
             else
             {
-                var vsg = LayoutRoot == null ? null : VisualStateManager.GetVisualStateGroups(LayoutRoot);
-                var vsgs = vsg?.OfType<VisualStateGroup>().FirstOrDefault(c => c.Name == "KiteStates");
-                if (vsgs == null)
+                var visualStateGroup = LayoutRoot == null ? null : VisualStateManager.GetVisualStateGroups(LayoutRoot);
+                var visualStateGroups = visualStateGroup?.OfType<VisualStateGroup>().FirstOrDefault(c => c.Name == "KiteStates");
+                if (visualStateGroups == null)
                     return;
-                var state = vsgs.States.OfType<VisualState>().FirstOrDefault(c => c.Name == "ActiveState");
+                var state = visualStateGroups.States.OfType<VisualState>().FirstOrDefault(c => c.Name == "ActiveState");
                 var sb = state?.Storyboard;
                 VisualStateManager.GoToState(this, "InActiveState", true);
                 if (sb == null)

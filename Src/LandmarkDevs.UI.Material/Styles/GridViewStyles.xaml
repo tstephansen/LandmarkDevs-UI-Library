@@ -51,7 +51,6 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="FontWeight" Value="Normal" />
                 <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
-                <!--<Setter Property="Padding" Value="4,2" />-->
                 <Setter Property="MinHeight" Value="20" />
                 <Setter Property="Template">
                     <Setter.Value>
@@ -174,7 +173,6 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="FontWeight" Value="Normal" />
                 <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
-                <!--<Setter Property="Padding" Value="4,2" />-->
                 <Setter Property="MinHeight" Value="20" />
                 <Setter Property="Template">
                     <Setter.Value>

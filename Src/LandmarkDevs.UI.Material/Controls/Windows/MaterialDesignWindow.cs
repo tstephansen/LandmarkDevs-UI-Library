@@ -48,7 +48,6 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
     [TemplatePart(Name = PART_CancelThemeChangeButton, Type = typeof(Button))]
     [TemplatePart(Name = PART_SettingsPanelContentControl, Type = typeof(ContentControl))]
     [TemplatePart(Name = PART_SettingsPanel, Type = typeof(MaterialSettingsPanel))]
-    //[TemplatePart(Name = PART_CloseSettingsPanelButton, Type = typeof(Button))]
     public class MaterialDesignWindow : Window
     {
         /// <summary>
@@ -184,12 +183,12 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         /// </summary>
         public void SaveThemeSettings()
         {
-            var directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            if (directoryName == null)
-                return;
-            var fileName = Path.Combine(directoryName, "Theme.config");
-            if (File.Exists(fileName))
-                File.Delete(fileName);
+            if(string.IsNullOrEmpty(ThemeFileName)) return;
+            // var directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // if (directoryName == null)
+            //     return;
+            if (File.Exists(ThemeFileName))
+                File.Delete(ThemeFileName);
             var themeSettings = new ThemeSettingsModel
             {
                 PrimaryName = ColorWheel.PrimaryName,
@@ -197,7 +196,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
                 IsDark = ColorWheel.IsDark,
                 ForegroundIsDark = ColorWheel.ForegroundIsDark
             };
-            JsonActions.SaveToJson(fileName, themeSettings);
+            JsonActions.SaveToJson(ThemeFileName, themeSettings);
         }
 
         /// <summary>
@@ -206,13 +205,14 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         /// <returns>ThemeSettingsModel.</returns>
         public static ThemeSettingsModel LoadThemeSettings()
         {
-            var directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            if (directoryName == null)
+            if(string.IsNullOrEmpty(ThemeFileName)) return null;
+            // var directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // if (directoryName == null)
+            //     return null;
+            // var fileName = Path.Combine(directoryName, "Theme.config");
+            if (!File.Exists(ThemeFileName))
                 return null;
-            var fileName = Path.Combine(directoryName, "Theme.config");
-            if (!File.Exists(fileName))
-                return null;
-            return JsonActions.ReadJson<ThemeSettingsModel>(fileName);
+            return JsonActions.ReadJson<ThemeSettingsModel>(ThemeFileName);
         }
 
         #endregion
@@ -269,6 +269,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         private string _currentPrimary;
         private string _currentAccent;
         private bool _isDark;
+        public static string ThemeFileName { get; set; }
         #endregion
 
         #region Themes
@@ -819,7 +820,6 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
             completionHandler = (sender, args) =>
             {
                 sb.Completed -= completionHandler;
-
                 // ReSharper disable once PossibleUnintendedReferenceComparison
                 if (_windowShadeStoryboard == sb)
                     _windowShadeStoryboard = null;
