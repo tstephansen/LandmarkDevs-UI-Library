@@ -8,10 +8,10 @@ using System.Windows.Markup;
 // associated with an assembly.
 [assembly: AssemblyTitle("LandmarkDevs.UI.Material")]
 [assembly: AssemblyDescription("Material UI for WPF")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("LandmarkDevs")]
 [assembly: AssemblyProduct("LandmarkDevs.UI.Material")]
-[assembly: AssemblyCopyright("Copyright ©  2017 Tim Stephansen")]
+[assembly: AssemblyCopyright("Copyright ©  2018 Tim Stephansen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material")]
@@ -58,5 +58,5 @@ using System.Windows.Markup;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.3")]
-[assembly: AssemblyFileVersion("1.2.3")]
+[assembly: AssemblyVersion("2.0.0")]
+[assembly: AssemblyFileVersion("2.0.0")]

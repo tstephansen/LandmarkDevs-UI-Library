@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
-<package>
+<package >
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
+    <projectUrl>https://github.com/tstephansen/LandmarkDevs-UI-Library</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Updated main package.</releaseNotes>
-    <copyright>Copyright 2017 - Tim Stephansen</copyright>
-    <tags>landmarkdevs syncfusion wpf material ui</tags>
+    <description>This library contains material design styles for Syncfusion WPF.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018 - Tim Stephansen</copyright>
+    <tags>LandmarkDevs WPF Material</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\LandmarkDevs.UI.WPF.Syncfusion.pdb" target="lib\net462\LandmarkDevs.UI.WPF.Syncfusion.pdb" />
+  </files>
 </package>

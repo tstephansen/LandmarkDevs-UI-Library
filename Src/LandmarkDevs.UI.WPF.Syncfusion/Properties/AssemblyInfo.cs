@@ -8,7 +8,7 @@ using System.Windows.Markup;
 // associated with an assembly.
 [assembly: AssemblyTitle("LandmarkDevs.UI.WPF.Syncfusion")]
 [assembly: AssemblyDescription("Material UI Themes for Syncfusion WPF")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("LandmarkDevs")]
 [assembly: AssemblyProduct("LandmarkDevs.UI.WPF.Syncfusion")]
 [assembly: AssemblyCopyright("Copyright ©  2017 Tim Stephansen")]
@@ -48,5 +48,5 @@ using System.Windows.Markup;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.5")]
-[assembly: AssemblyFileVersion("1.0.5")]
+[assembly: AssemblyVersion("2.0.0")]
+[assembly: AssemblyFileVersion("2.0.0")]
