@@ -10,7 +10,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 nuget:
   account_feed: true
-  project_feed: true
+  project_feed: false
 before_build:
 - cmd: >-
     nuget sources add -Name LandmarkDevs -Source http://nuget.landmarkdevs.com/nuget/feed/
