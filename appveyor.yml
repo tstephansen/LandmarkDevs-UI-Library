@@ -1,0 +1,33 @@
+version: 2.0.{build}
+image: Visual Studio 2017
+configuration: Release
+platform: Any CPU
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+build:
+  project: Src\LandmarkDevs.UI.Material\LandmarkDevs.UI.Material.csproj
+  publish_nuget: true
+  publish_nuget_symbols: true
+  include_nuget_references: true
+  verbosity: normal
+notifications:
+- provider: Email
+  to:
+  - tim@landmarkdevs.com
+  subject: '[AppVeyor] LandmarkDevs UI Library Build Success'
+  message: LandmarkDevs UI Library has been built successfully.
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
+- provider: Email
+  to:
+  - tim@landmarkdevs.com
+  subject: '[AppVeyor] LandmarkDevs UI Library Build Failed'
+  message: LandmarkDevs UI Library has failed to build.
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
