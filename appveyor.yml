@@ -8,12 +8,10 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
-nuget:
-  account_feed: true
-  project_feed: false
 before_build:
-- cmd: >-
+- ps: >-
     nuget sources add -Name LandmarkDevs -Source http://nuget.landmarkdevs.com/nuget/feed/
+
     nuget restore
 build:
   project: Src\LandmarkDevs.UI.Material\LandmarkDevs.UI.Material.csproj
