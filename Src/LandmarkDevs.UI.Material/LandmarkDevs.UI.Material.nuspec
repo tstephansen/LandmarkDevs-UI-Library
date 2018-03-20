@@ -14,6 +14,6 @@
     <tags>LandmarkDevs WPF Material</tags>
   </metadata>
   <files>
-    <file src="bin\Release\LandmarkDevs.UI.Material.pdb" target="lib\net462\LandmarkDevs.UI.Material.pdb" />
+    <file src="bin\Release\LandmarkDevs.UI.Material.pdb" target="lib\net452\LandmarkDevs.UI.Material.pdb" />
   </files>
 </package>
