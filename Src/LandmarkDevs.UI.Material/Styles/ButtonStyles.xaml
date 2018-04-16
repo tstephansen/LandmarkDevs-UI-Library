@@ -670,8 +670,7 @@
                     <Grid>
                         <Border x:Name="MouseOverBorder"
                                 Background="{Binding Foreground, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource FeedbackBrushRoundConverter}}"
-                                Opacity="0">
-                        </Border>
+                                Opacity="0" />
                         <md:Ripple MinHeight="48"
                                    Padding="{TemplateBinding Padding}"
                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -680,8 +679,7 @@
                                    ContentTemplate="{TemplateBinding ContentTemplate}"
                                    Feedback="{Binding Foreground, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource FeedbackBrushRoundConverter}}"
                                    Focusable="False"
-                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        </md:Ripple>
+                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualStateGroup.Transitions>

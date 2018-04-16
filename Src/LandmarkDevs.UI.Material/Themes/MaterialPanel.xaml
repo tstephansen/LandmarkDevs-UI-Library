@@ -2,23 +2,22 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels">
     <Style TargetType="{x:Type panels:MaterialPanel}">
-        <Setter Property="HorizontalContentAlignment"
-                    Value="Stretch" />
-        <Setter Property="VerticalContentAlignment"
-                    Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type panels:MaterialPanel}">
-                    <Grid x:Name="PART_LayoutRoot"
-                          RenderTransformOrigin="0.5,0.5">
-                        <ContentControl x:Name="PART_HiddenContent" Visibility="Hidden" Panel.ZIndex="-1000"/>
-                        <ContentPresenter Cursor="{TemplateBinding Cursor}"
-                                              ContentTemplate="{TemplateBinding ContentTemplate}"
-                                              Content="{TemplateBinding Content}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              Margin="{TemplateBinding Padding}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              x:Name="PART_MainContentPresenter">
+                    <Grid x:Name="PART_LayoutRoot" RenderTransformOrigin="0.5,0.5">
+                        <ContentControl x:Name="PART_HiddenContent"
+                                        Panel.ZIndex="-1000"
+                                        Visibility="Hidden" />
+                        <ContentPresenter x:Name="PART_MainContentPresenter"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Cursor="{TemplateBinding Cursor}">
                             <ContentPresenter.RenderTransform>
                                 <TranslateTransform />
                             </ContentPresenter.RenderTransform>
@@ -29,7 +28,7 @@
                             </Rectangle.RenderTransform>
                         </Rectangle>
                         <!--<Border Background="#FFFAFAFA" x:Name="PART_ShadowBorder" Effect="{DynamicResource Shadow1}" Padding="20"/>-->
-                        <!--<Grid x:Name="PART_MainGrid" 
+                        <!--<Grid x:Name="PART_MainGrid"
                               RenderTransformOrigin="0.5,0.5">
                             <ContentControl x:Name="PART_HiddenContent" Visibility="Hidden" Panel.ZIndex="-1000"/>
                             <ContentPresenter Cursor="{TemplateBinding Cursor}"

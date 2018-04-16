@@ -14,9 +14,7 @@
                     <ContentPresenter />
                     <Grid HorizontalAlignment="Center"
                           VerticalAlignment="Center"
-                          Visibility="{Binding RelativeSource={RelativeSource TemplatedParent},
-                                               Path=IsActive,
-                                               Converter={StaticResource BooleanToVisibilityConverter}}">
+                          Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsActive, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />

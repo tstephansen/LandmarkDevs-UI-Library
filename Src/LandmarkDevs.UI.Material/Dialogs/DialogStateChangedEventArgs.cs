@@ -1,9 +1,6 @@
-#region
-using System;
+﻿using System;
 
-#endregion
-
-namespace LandmarkDevs.UI.Material.Controls.Dialogs
+namespace LandmarkDevs.UI.Material.Dialogs
 {
     /// <summary>
     ///     Class DialogStateChangedEventArgs.

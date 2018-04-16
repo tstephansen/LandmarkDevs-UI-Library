@@ -129,6 +129,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\BaseDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ButtonDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Card.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -144,6 +152,10 @@
     <Page Include="Themes\DialogBase.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DialogHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -161,7 +173,6 @@
     <Compile Include="Controls\Dialogs\DialogManager.cs" />
     <Compile Include="Controls\Dialogs\DialogParticipation.cs" />
     <Compile Include="Controls\Dialogs\DialogSettings.cs" />
-    <Compile Include="Controls\Dialogs\DialogStateChangedEventArgs.cs" />
     <Compile Include="Controls\IdentityCard.cs" />
     <Compile Include="Controls\IdentityCardViewer.cs" />
     <Compile Include="Controls\Kanban\KanbanBoard.cs" />
@@ -280,6 +291,14 @@
     <Compile Include="Converters\TextAlignmentConverter.cs" />
     <Compile Include="Converters\TextForegroundColorConverter.cs" />
     <Compile Include="Converters\ViewModelBaseTitleConverter.cs" />
+    <Compile Include="Dialogs\ButtonDialog.cs" />
+    <Compile Include="Dialogs\BaseDialog.cs" />
+    <Compile Include="Dialogs\DialogHost.cs" />
+    <Compile Include="Dialogs\DialogManager.cs" />
+    <Compile Include="Dialogs\DialogResult.cs" />
+    <Compile Include="Dialogs\DialogSettings.cs" />
+    <Compile Include="Dialogs\DialogStateChangedEventArgs.cs" />
+    <Compile Include="Dialogs\DialogStyle.cs" />
     <Compile Include="Helpers\AnimationHelper.cs" />
     <Compile Include="Helpers\AutoSizeHelper.cs" />
     <Compile Include="Helpers\DirectoryHelper.cs" />

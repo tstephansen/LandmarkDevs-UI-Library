@@ -44,15 +44,15 @@
                                                   Visibility="Collapsed" />
                         </Border>-->
                         <controls:SizingContentControl x:Name="SizingContent"
-                                                               Margin="10"
-                                                               Grid.Column="0"
-                                                               Grid.Row="1">
+                                                       Grid.Row="1"
+                                                       Grid.Column="0"
+                                                       Margin="10">
                             <ContentPresenter x:Name="PART_SelectedContentHost"
-                                                  Margin="{TemplateBinding Padding}"
-                                                  ContentSource="SelectedContent"
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                              Margin="{TemplateBinding Padding}"
+                                              ContentSource="SelectedContent"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </controls:SizingContentControl>
-                        
+
                     </Grid>
                     <ControlTemplate.Triggers>
                         <!--<Trigger Property="TabStripPlacement" Value="Bottom">
@@ -112,10 +112,8 @@
                             </StackPanel.Resources>
                             <ContentPresenter x:Name="TabItemContent"
                                               Margin="{TemplateBinding Padding}"
-                                              HorizontalAlignment="{Binding HorizontalContentAlignment,
-                                                                            RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
-                                              VerticalAlignment="{Binding VerticalContentAlignment,
-                                                                          RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                              HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                              VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                               ContentSource="Header"
                                               Focusable="False"
                                               RecognizesAccessKey="True"
@@ -125,12 +123,9 @@
                                               TextElement.Foreground="#2F3535" />
                             <Rectangle x:Name="Underline"
                                        Height="2"
-                                       Margin="0, 1, 0, 0"
+                                       Margin="0,1,0,0"
                                        HorizontalAlignment="Stretch"
-                                       Visibility="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                           AncestorType={x:Type TabControl}},
-                                                            Path=IsFocused,
-                                                            Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                       Visibility="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}, Path=IsFocused, Converter={StaticResource BooleanToVisibilityConverter}}" />
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>

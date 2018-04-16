@@ -2,31 +2,31 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:LandmarkDevs.UI.Material.Controls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/ApplicationStyles.xaml"/>
+        <ResourceDictionary Source="../Styles/ApplicationStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
     <ControlTemplate x:Key="CellEditPopupTemplate" TargetType="{x:Type controls:CellEditPopup}">
         <Border Margin="10" Background="#FFFAFAFA">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="8"
-                                          Direction="270"
-                                          Opacity=".42"
-                                          RenderingBias="Performance"
-                                          ShadowDepth="1.5"
-                                          Color="#AA000000" />
+                                  Direction="270"
+                                  Opacity=".42"
+                                  RenderingBias="Performance"
+                                  ShadowDepth="1.5"
+                                  Color="#AA000000" />
             </Border.Effect>
             <Grid x:Name="PART_PopupGrid"
-                          MinWidth="100"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center">
+                  MinWidth="100"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
                 <TextBox x:Name="PART_PopupCellEditTextBox"
-                                 MinWidth="100"
-                                 HorizontalAlignment="Stretch"
-                                 VerticalAlignment="Center"
-                                 Style="{DynamicResource MaterialDesignTextBox}"
-                                 Text="{TemplateBinding CellEditText}" />
+                         MinWidth="100"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Center"
+                         Style="{DynamicResource MaterialDesignTextBox}"
+                         Text="{TemplateBinding CellEditText}" />
             </Grid>
         </Border>
     </ControlTemplate>
-    
+
 </ResourceDictionary>

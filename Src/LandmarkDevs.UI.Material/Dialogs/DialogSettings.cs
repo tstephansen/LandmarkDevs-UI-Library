@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Windows;
 
-namespace LandmarkDevs.UI.Material.Controls.Dialogs
+namespace LandmarkDevs.UI.Material.Dialogs
 {
     /// <summary>
     ///     Class DialogSettings.
@@ -68,19 +67,5 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         /// </summary>
         /// <value><c>true</c> if [suppress default resources]; otherwise, <c>false</c>.</value>
         public bool SuppressDefaultResources { get; set; }
-    }
-
-    /// <summary>
-    ///     Class DialogStateChangedEventArgs.
-    /// </summary>
-    /// <seealso cref="System.EventArgs" />
-    public class DialogStateChangedEventArgs : EventArgs
-    {
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="DialogStateChangedEventArgs" /> class.
-        /// </summary>
-        internal DialogStateChangedEventArgs()
-        {
-        }
     }
 }

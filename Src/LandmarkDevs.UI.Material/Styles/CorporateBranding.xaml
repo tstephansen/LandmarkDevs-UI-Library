@@ -152,7 +152,7 @@
                             <MatrixTransform Matrix="0.666701,0,0,0.666701,-130.032,-239.183" />
                         </DrawingGroup.Transform>
                         <DrawingGroup.Children>
-                            <ImageDrawing ImageSource="{Binding Source={x:Static properties:Resources.YokoGridMaster}}" Rect="0,0,1896,950"/>
+                            <ImageDrawing ImageSource="{Binding Source={x:Static properties:Resources.YokoGridMaster}}" Rect="0,0,1896,950" />
                         </DrawingGroup.Children>
                     </DrawingGroup>
                 </DrawingGroup.Children>

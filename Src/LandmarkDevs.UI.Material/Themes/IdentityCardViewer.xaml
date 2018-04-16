@@ -11,9 +11,9 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle Margin="2" 
-                               SnapsToDevicePixels="true" 
-                               Stroke="Transparent" 
+                    <Rectangle Margin="2"
+                               SnapsToDevicePixels="true"
+                               Stroke="Transparent"
                                StrokeThickness="0" />
                 </ControlTemplate>
             </Setter.Value>
@@ -21,16 +21,16 @@
     </Style>
 
     <Style TargetType="{x:Type controls:IdentityCardViewer}">
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
         <Setter Property="ScrollViewer.PanningMode" Value="Both" />
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:IdentityCardViewer}">
@@ -59,14 +59,14 @@
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate DataType="{x:Type models:IdentityCardModel}">
-                    <controls:IdentityCard FirstName="{Binding FirstName}"
+                    <controls:IdentityCard Margin="20"
+                                           HorizontalAlignment="Center"
+                                           FirstName="{Binding FirstName}"
                                            FullName="{Binding FullName}"
-                                           Roles="{Binding Roles}"
                                            LastName="{Binding LastName}"
+                                           Roles="{Binding Roles}"
                                            UserImage="{Binding UserImageSource}"
-                                           Username="{Binding Username}" 
-                                           Margin="20"
-                                           HorizontalAlignment="Center"/>
+                                           Username="{Binding Username}" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>

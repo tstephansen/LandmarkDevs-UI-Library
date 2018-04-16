@@ -21,5 +21,8 @@
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialColorWheel.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/SizingContentControl.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialSettingsPanel.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/BaseDialog.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/DialogHost.xaml" />
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/ButtonDialog.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

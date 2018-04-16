@@ -4,7 +4,7 @@
                     xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels"
                     xmlns:windows="clr-namespace:LandmarkDevs.UI.Material.Controls.Windows">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Styles/ButtonStyles.xaml"/>
+        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Styles/ButtonStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="MaterialDesignWindowTemplate" TargetType="{x:Type windows:MaterialDesignWindow}">
@@ -27,13 +27,14 @@
                                   Background="{DynamicResource PrimaryHueMidBrush}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="35" />
-                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="35" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <Rectangle x:Name="PART_TitleRectangle"
                                            Grid.Column="0"
-                                           Grid.ColumnSpan="4" Fill="{DynamicResource PrimaryHueMidBrush}"/>
+                                           Grid.ColumnSpan="4"
+                                           Fill="{DynamicResource PrimaryHueMidBrush}" />
                                 <Button x:Name="PART_NavigationDrawerToggleButton"
                                         Grid.Column="0"
                                         HorizontalAlignment="Center"
@@ -48,11 +49,14 @@
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
                                         BorderThickness="0"
-                                        Visibility="{TemplateBinding PalletButtonVisibility}"
                                         Style="{DynamicResource TitleBarButtonStyle}"
+                                        Visibility="{TemplateBinding PalletButtonVisibility}"
                                         WindowChrome.IsHitTestVisibleInChrome="True">
                                     <Button.Content>
-                                        <Viewbox Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Viewbox Width="30"
+                                                 Height="30"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center">
                                             <Canvas Width="24" Height="24">
                                                 <Path Data="M18,4V3A1,1 0 0,0 17,2H5A1,1 0 0,0 4,3V7A1,1 0 0,0 5,8H17A1,1 0 0,0 18,7V6H19V10H9V21A1,1 0 0,0 10,22H12A1,1 0 0,0 13,21V12H21V4H18Z" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" />
                                             </Canvas>
@@ -105,16 +109,14 @@
                                             Visibility="Collapsed">
                                 <Rectangle x:Name="PART_WindowShade" Fill="#7A212121" />
                             </ContentControl>
-                            <!-- Settings Panel -->
+                            <!--  Settings Panel  -->
                             <panels:MaterialSettingsPanel x:Name="PART_SettingsPanel"
                                                           Grid.Row="1"
                                                           Grid.RowSpan="2"
-                                                          Panel.ZIndex="-1"
                                                           HorizontalAlignment="Center"
                                                           VerticalAlignment="Center"
-                                                          Content="{Binding SettingsPanelContent,
-                                                                            RelativeSource={RelativeSource TemplatedParent},
-                                                                            Mode=OneWay}"
+                                                          Panel.ZIndex="-1"
+                                                          Content="{Binding SettingsPanelContent, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
                                                           RenderTransformOrigin="0.5,0.5">
                                 <panels:MaterialSettingsPanel.RenderTransform>
                                     <TransformGroup>
@@ -125,14 +127,14 @@
                                     </TransformGroup>
                                 </panels:MaterialSettingsPanel.RenderTransform>
                             </panels:MaterialSettingsPanel>
-                            
-                            <!--  Dialogs -->
+
+                            <!--  Dialogs  -->
                             <Grid x:Name="PART_DialogsLayoutRoot"
                                   Grid.Row="1"
                                   Grid.RowSpan="2"
                                   Grid.Column="0"
-                                  Background="#7A212121"
                                   Panel.ZIndex="50"
+                                  Background="#7A212121"
                                   FocusVisualStyle="{x:Null}"
                                   Focusable="False"
                                   Visibility="Collapsed">
@@ -171,7 +173,7 @@
                                                        HeaderText="{TemplateBinding NavigationDrawerHeaderText}"
                                                        HeaderTextFontColor="{TemplateBinding NavigationDrawerHeaderTextFontColor}"
                                                        HeaderTextFontSize="{TemplateBinding NavigationDrawerHeaderTextFontSize}" />
-                            <!-- Color Selection -->
+                            <!--  Color Selection  -->
                             <ContentControl x:Name="PART_ColorSelectorContentControl"
                                             Grid.Row="1"
                                             MaxWidth="800"
@@ -183,18 +185,22 @@
                                 <panels:Card Margin="50">
                                     <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
-                                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <StackPanel Grid.Row="0"
+                                                    HorizontalAlignment="Right"
+                                                    Orientation="Horizontal">
                                             <Button x:Name="PART_CancelThemeChangeButton"
                                                     Content="Cancel"
-                                                    Style="{DynamicResource MaterialDesignFlatButton}"/>
+                                                    Style="{DynamicResource MaterialDesignFlatButton}" />
                                             <Button x:Name="PART_CloseThemeButton"
                                                     Content="Close"
-                                                    Style="{DynamicResource MaterialDesignFlatButton}"/>
+                                                    Style="{DynamicResource MaterialDesignFlatButton}" />
                                         </StackPanel>
-                                        <controls:MaterialColorWheel x:Name="PART_MaterialColorWheel" Grid.Row="1" Stretch="Uniform"/>
+                                        <controls:MaterialColorWheel x:Name="PART_MaterialColorWheel"
+                                                                     Grid.Row="1"
+                                                                     Stretch="Uniform" />
                                     </Grid>
                                 </panels:Card>
                             </ContentControl>
@@ -214,9 +220,7 @@
                                                             HorizontalAlignment="Left"
                                                             VerticalAlignment="Bottom"
                                                             VerticalContentAlignment="Center"
-                                                            Content="{Binding StatusBarItems,
-                                                                              RelativeSource={RelativeSource TemplatedParent},
-                                                                              Mode=OneWay}" />
+                                                            Content="{Binding StatusBarItems, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" />
                                 <Path x:Name="ResizeGrip"
                                       Grid.Column="1"
                                       Width="12"
@@ -242,19 +246,19 @@
                 </Int32AnimationUsingKeyFrames>
                 <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_SettingsPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0"
-                                                      Value="0" />
+                                          KeyTime="0"
+                                          Value="0" />
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0:0:0.2"
-                                                      Value="1" />
+                                          KeyTime="0:0:0.2"
+                                          Value="1" />
                 </DoubleAnimationUsingKeyFrames>
                 <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_SettingsPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0"
-                                                      Value="0" />
+                                          KeyTime="0"
+                                          Value="0" />
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0:0:0.2"
-                                                      Value="1" />
+                                          KeyTime="0:0:0.2"
+                                          Value="1" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
             <Storyboard x:Key="HideSettingsPanelStoryboard">
@@ -265,19 +269,19 @@
                 </Int32AnimationUsingKeyFrames>
                 <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_SettingsPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0"
-                                                      Value="1" />
+                                          KeyTime="0"
+                                          Value="1" />
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0:0:0.2"
-                                                      Value="0" />
+                                          KeyTime="0:0:0.2"
+                                          Value="0" />
                 </DoubleAnimationUsingKeyFrames>
                 <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_SettingsPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0"
-                                                      Value="1" />
+                                          KeyTime="0"
+                                          Value="1" />
                     <SplineDoubleKeyFrame KeySpline="0.2,0,0.4,1"
-                                                      KeyTime="0:0:0.2"
-                                                      Value="0" />
+                                          KeyTime="0:0:0.2"
+                                          Value="0" />
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
             <Storyboard x:Key="ShowWindowShadeStoryboard">
@@ -343,8 +347,8 @@
         <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
         <Setter Property="AllowsTransparency" Value="True" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
-        <Setter Property="PalletButtonVisibility" Value="Visible"/>
-        <Setter Property="ShowPalletButton" Value="True"/>
+        <Setter Property="PalletButtonVisibility" Value="Visible" />
+        <Setter Property="ShowPalletButton" Value="True" />
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
                 <WindowChrome CaptionHeight="35"
