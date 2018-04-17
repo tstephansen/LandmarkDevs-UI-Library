@@ -1,8 +1,6 @@
-﻿#region
-using System;
-#endregion
+﻿using System;
 
-namespace LandmarkDevs.UI.Material.Models
+namespace LandmarkDevs.UI.Models.Identity
 {
     /// <summary>
     ///     Class RoleModel.

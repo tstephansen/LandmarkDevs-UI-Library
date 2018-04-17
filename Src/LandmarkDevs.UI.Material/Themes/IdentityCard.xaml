@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:LandmarkDevs.UI.Material.Controls"
                     xmlns:converters="clr-namespace:LandmarkDevs.UI.Material.Converters"
-                    xmlns:models="clr-namespace:LandmarkDevs.UI.Material.Models"
+                    xmlns:identity="clr-namespace:LandmarkDevs.UI.Models.Identity;assembly=LandmarkDevs.UI.Models"
                     xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels">
 
     <!--<ResourceDictionary.MergedDictionaries>
@@ -378,7 +378,7 @@
                                       HorizontalAlignment="Stretch"
                                       ItemsSource="{TemplateBinding Roles}">
                             <ItemsControl.ItemTemplate>
-                                <DataTemplate DataType="{x:Type models:RoleModel}">
+                                <DataTemplate DataType="{x:Type identity:RoleModel}">
                                     <CheckBox Content="{Binding RoleName}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               IsChecked="{Binding IsSelected}" />

@@ -4,8 +4,6 @@
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/NavigationDrawerButton.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/MaterialStatusBar.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/YcaKite.xaml" />
-        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/DialogBase.xaml" />
-        <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/AppDialog.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/CellEditPopupBox.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/VerticalSlidePanel.xaml" />
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Themes/HorizontalSlidePanel.xaml" />

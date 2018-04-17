@@ -4,8 +4,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
+using LandmarkDevs.UI.Models.Dialogs;
 
-namespace LandmarkDevs.UI.Material.Dialogs
+namespace LandmarkDevs.UI.Material.Controls.Dialogs
 {
     /// <summary>
     /// Class ButtonDialog.
@@ -311,10 +312,6 @@ namespace LandmarkDevs.UI.Material.Dialogs
         private void Initialize()
         {
             Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("pack://application:,,,/LandmarkDevs.UI.Material;component/Themes/ButtonDialog.xaml") });
-            if (DialogSettings?.CustomResourceDictionary != null)
-            {
-                Resources.MergedDictionaries.Add(DialogSettings.CustomResourceDictionary);
-            }
             Loaded += (sender, args) =>
             {
                 OnLoaded();

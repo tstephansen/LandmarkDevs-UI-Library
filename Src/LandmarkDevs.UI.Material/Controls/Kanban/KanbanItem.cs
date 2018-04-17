@@ -1,13 +1,10 @@
-﻿#region
-using LandmarkDevs.UI.Material.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
-#endregion
+using LandmarkDevs.UI.Models.Kanban;
 
 namespace LandmarkDevs.UI.Material.Controls.Kanban
 {

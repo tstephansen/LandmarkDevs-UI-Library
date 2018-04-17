@@ -1,4 +1,4 @@
-﻿namespace LandmarkDevs.UI.Material.Models
+﻿namespace LandmarkDevs.UI.Models.Dialogs
 {
     /// <summary>
     /// Class ShellDialog.

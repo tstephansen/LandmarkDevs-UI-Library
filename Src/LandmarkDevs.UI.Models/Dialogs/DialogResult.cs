@@ -1,4 +1,4 @@
-﻿namespace LandmarkDevs.UI.Material.Dialogs
+﻿namespace LandmarkDevs.UI.Models.Dialogs
 {
     /// <summary>
     ///     Enum DialogResult

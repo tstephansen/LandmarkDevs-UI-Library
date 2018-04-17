@@ -1,27 +1,5 @@
-#region File Header
-
-// ***********************************************************************
-// Solution           : TDLS
-// Assembly           : LandmarkDevs.UI.Material
-// File               : KanbanListCommands.cs
-// Created            : 01-04-2017  6:36 PM
-// 
-// Last Modified By   : Tim Stephansen
-// Last Modified Date : 01-04-2017  6:37 PM
-// ***********************************************************************
-// <copyright file="KanbanListCommands.cs" company="LandmarkDevs">
-//     Copyright © LandmarkDevs 2016
-// </copyright>
-// ***********************************************************************
-
-#endregion
-
-#region
-
 using System.Windows.Controls;
 using System.Windows.Input;
-
-#endregion
 
 namespace LandmarkDevs.UI.Material.Controls.Kanban
 {

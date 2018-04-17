@@ -1,7 +1,4 @@
-﻿#region
-using System.Windows.Input;
-
-#endregion
+﻿using System.Windows.Input;
 
 namespace LandmarkDevs.UI.Material.Controls.Kanban
 {

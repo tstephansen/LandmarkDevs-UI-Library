@@ -1,10 +1,11 @@
-﻿using Prism.Events;
+﻿using LandmarkDevs.UI.Models.Dialogs;
+using Prism.Events;
 using System.Diagnostics.CodeAnalysis;
 
 namespace LandmarkDevs.UI.Material.Models
 {
     /// <summary>
-    /// Shows a standard dialog to the user.
+    ///     Shows a standard dialog to the user.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class ShowDialogEvent : PubSubEvent<DialogModel>
@@ -12,7 +13,7 @@ namespace LandmarkDevs.UI.Material.Models
     }
 
     /// <summary>
-    /// Shows or hides the loading state on the main window.
+    ///     Shows or hides the loading state on the main window.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class ShellLoadingStateVisible : PubSubEvent<bool>
@@ -20,7 +21,7 @@ namespace LandmarkDevs.UI.Material.Models
     }
 
     /// <summary>
-    /// Shows or hides the navigation bar.
+    ///     Shows or hides the navigation bar.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class ChangeNavbarVisibilityEvent : PubSubEvent<bool>
@@ -28,7 +29,7 @@ namespace LandmarkDevs.UI.Material.Models
     }
 
     /// <summary>
-    /// Toggles help tooltips throughout the program.
+    ///     Toggles help tooltips throughout the program.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class ToggleHelpTooltipsEvent : PubSubEvent<bool>
@@ -36,7 +37,7 @@ namespace LandmarkDevs.UI.Material.Models
     }
 
     /// <summary>
-    /// Sets the text on the status bar.
+    ///     Sets the text on the status bar.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class SetStatusBarTextEvent : PubSubEvent<string>
@@ -44,7 +45,7 @@ namespace LandmarkDevs.UI.Material.Models
     }
 
     /// <summary>
-    /// Shows or hides the menu button.
+    ///     Shows or hides the menu button.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class SetMenuButtonVisibleEvent : PubSubEvent<bool>

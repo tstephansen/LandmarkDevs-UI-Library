@@ -1,9 +1,11 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
+using LandmarkDevs.UI.Models.Dialogs;
+
 // ReSharper disable InconsistentNaming
 
-namespace LandmarkDevs.UI.Material.Dialogs
+namespace LandmarkDevs.UI.Material.Controls.Dialogs
 {
     [TemplatePart(Name = PART_WindowShadeContentControl, Type = typeof(ContentControl))]
     [TemplatePart(Name = PART_WindowShade, Type = typeof(Rectangle))]

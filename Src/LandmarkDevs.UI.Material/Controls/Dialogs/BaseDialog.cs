@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Animation;
+using LandmarkDevs.UI.Models.Dialogs;
+
 // ReSharper disable InheritdocConsiderUsage
 
-namespace LandmarkDevs.UI.Material.Dialogs
+namespace LandmarkDevs.UI.Material.Controls.Dialogs
 {
     /// <summary>
     ///     Class BaseDialog.
@@ -28,7 +28,7 @@ namespace LandmarkDevs.UI.Material.Dialogs
         {
             DialogSettings = settings ?? host.DialogOptions;
             OwningControl = host;
-            Initialize();
+            InitializeBaseDialog();
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace LandmarkDevs.UI.Material.Dialogs
         {
             DialogSettings = new DialogSettings { DialogStyle = style };
             OwningControl = host;
-            Initialize();
+            InitializeBaseDialog();
         }
 
         /// <summary>
@@ -49,14 +49,14 @@ namespace LandmarkDevs.UI.Material.Dialogs
         protected BaseDialog()
         {
             DialogSettings = new DialogSettings();
-            Initialize();
+            InitializeBaseDialog();
         }
 
         /// <summary>
         ///     Gets the dialog settings.
         /// </summary>
         /// <value>The dialog settings.</value>
-        public DialogSettings DialogSettings { get; private set; }
+        public DialogSettings DialogSettings { get; set; }
 
         /// <summary>
         ///     Gets the parent dialog window.
@@ -70,7 +70,7 @@ namespace LandmarkDevs.UI.Material.Dialogs
         /// <value>The owning window.</value>
         protected internal ContentControl OwningControl { get; internal set; }
 
-        private void Initialize()
+        private void InitializeBaseDialog()
         {
             Resources.MergedDictionaries.Add(new ResourceDictionary
             {
@@ -80,8 +80,6 @@ namespace LandmarkDevs.UI.Material.Dialogs
             {
                 Source = new Uri("pack://application:,,,/LandmarkDevs.UI.Material;component/Themes/BaseDialog.xaml")
             });
-            if (DialogSettings?.CustomResourceDictionary != null)
-                Resources.MergedDictionaries.Add(DialogSettings.CustomResourceDictionary);
             Unloaded += BaseDialog_Unloaded;
         }
 
@@ -96,6 +94,9 @@ namespace LandmarkDevs.UI.Material.Dialogs
         protected internal virtual void OnShown()
         {
         }
+
+        internal SizeChangedEventHandler SizeChangedHandler { get; set; }
+
         #region Dependency Properties
         /// <summary>
         ///     The title property
@@ -143,6 +144,22 @@ namespace LandmarkDevs.UI.Material.Dialogs
         {
             get => GetValue(DialogBottomProperty);
             set => SetValue(DialogBottomProperty, value);
+        }
+
+        public static readonly DependencyProperty DialogMessageFontSizeProperty = DependencyProperty.Register("DialogMessageFontSize", typeof(double), typeof(BaseDialog), new PropertyMetadata(26D));
+        
+        public double DialogMessageFontSize
+        {
+            get => (double)GetValue(DialogMessageFontSizeProperty);
+            set => SetValue(DialogMessageFontSizeProperty, value);
+        }
+
+        public static readonly DependencyProperty DialogTitleFontSizeProperty = DependencyProperty.Register("DialogTitleFontSize", typeof(double), typeof(BaseDialog), new PropertyMetadata(15D));
+
+        public double DialogTitleFontSize
+        {
+            get => (double)GetValue(DialogTitleFontSizeProperty);
+            set => SetValue(DialogTitleFontSizeProperty, value);
         }
         #endregion
     }

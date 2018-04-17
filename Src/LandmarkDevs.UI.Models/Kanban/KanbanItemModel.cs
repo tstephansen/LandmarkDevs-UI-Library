@@ -1,10 +1,7 @@
-﻿#region
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 
-#endregion
-
-namespace LandmarkDevs.UI.Material.Models
+namespace LandmarkDevs.UI.Models.Kanban
 {
     /// <summary>
     ///     Class KanbanItemModel.

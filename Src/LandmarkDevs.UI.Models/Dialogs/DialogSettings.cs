@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Windows;
 
-namespace LandmarkDevs.UI.Material.Controls.Dialogs
+namespace LandmarkDevs.UI.Models.Dialogs
 {
     /// <summary>
     ///     Class DialogSettings.
@@ -58,29 +57,9 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         public DialogStyle DialogStyle { get; set; }
 
         /// <summary>
-        ///     Gets or sets the custom resource dictionary.
-        /// </summary>
-        /// <value>The custom resource dictionary.</value>
-        public ResourceDictionary CustomResourceDictionary { get; set; }
-
-        /// <summary>
         ///     Gets or sets a value indicating whether [suppress default resources].
         /// </summary>
         /// <value><c>true</c> if [suppress default resources]; otherwise, <c>false</c>.</value>
         public bool SuppressDefaultResources { get; set; }
-    }
-
-    /// <summary>
-    ///     Class DialogStateChangedEventArgs.
-    /// </summary>
-    /// <seealso cref="System.EventArgs" />
-    public class DialogStateChangedEventArgs : EventArgs
-    {
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="DialogStateChangedEventArgs" /> class.
-        /// </summary>
-        internal DialogStateChangedEventArgs()
-        {
-        }
     }
 }

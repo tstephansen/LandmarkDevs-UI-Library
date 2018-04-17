@@ -1,113 +1,98 @@
-﻿#region
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using LandmarkDevs.UI.Material.Controls.Windows;
-#endregion
+using LandmarkDevs.UI.Models.Dialogs;
 
 namespace LandmarkDevs.UI.Material.Controls.Dialogs
 {
-    /// <summary>
-    ///     Class DialogManager.
-    /// </summary>
     public static class DialogManager
     {
-        #region Show Dialog Methods
         /// <summary>
         ///     Shows the dialog asynchronously.
         /// </summary>
-        /// <param name="window">The window.</param>
+        /// <param name="host">The host.</param>
         /// <param name="title">The title.</param>
         /// <param name="message">The message.</param>
         /// <returns>Task&lt;DialogResult&gt;.</returns>
-        public static Task<DialogResult> ShowDialogAsync(this MaterialDesignWindow window, string title, string message)
-        {
-            return ShowDialogAsync(window, title, message, null);
-        }
+        public static Task<DialogResult> ShowDialogAsync(this DialogHost host, string title, string message) => ShowDialogAsync(host, title, message, null);
 
         /// <summary>
         ///     Shows the dialog asynchronously.
         /// </summary>
-        /// <param name="window">The window.</param>
+        /// <param name="host">The host.</param>
         /// <param name="title">The title.</param>
         /// <param name="message">The message.</param>
         /// <param name="style">The style.</param>
         /// <returns>Task&lt;DialogResult&gt;.</returns>
-        public static Task<DialogResult> ShowDialogAsync(this MaterialDesignWindow window, string title, string message,
-                                                         DialogStyle style)
-        {
-            return ShowDialogAsync(window, title, message, style, null);
-        }
+        public static Task<DialogResult> ShowDialogAsync(this DialogHost host, string title, string message,
+            DialogStyle style) => ShowDialogAsync(host, title, message, style, null);
 
         /// <summary>
         ///     Shows the dialog asynchronously.
         /// </summary>
-        /// <param name="window">The window.</param>
+        /// <param name="host">The host.</param>
         /// <param name="title">The title.</param>
         /// <param name="message">The message.</param>
         /// <param name="settings">The settings.</param>
         /// <returns>Task&lt;DialogResult&gt;.</returns>
-        public static Task<DialogResult> ShowDialogAsync(this MaterialDesignWindow window, string title, string message,
-                                                         DialogSettings settings)
-        {
-            return ShowDialogAsync(window, title, message, DialogStyle.Ok, settings);
-        }
+        public static Task<DialogResult> ShowDialogAsync(this DialogHost host, string title, string message,
+            DialogSettings settings) => ShowDialogAsync(host, title, message, DialogStyle.Ok, settings);
 
         /// <summary>
         ///     Shows the dialog asynchronously.
         /// </summary>
-        /// <param name="window">The window.</param>
+        /// <param name="host">The host.</param>
         /// <param name="title">The title.</param>
         /// <param name="message">The message.</param>
         /// <param name="style">The style.</param>
         /// <param name="settings">The settings.</param>
         /// <returns>Task&lt;DialogResult&gt;.</returns>
-        public static Task<DialogResult> ShowDialogAsync(this MaterialDesignWindow window, string title, string message,
+        public static Task<DialogResult> ShowDialogAsync(this DialogHost host, string title, string message,
                                                          DialogStyle style, DialogSettings settings)
         {
             // Verify UI Access.
-            window.Dispatcher.VerifyAccess();
+            host.Dispatcher.VerifyAccess();
             // Show the window shade
-            return ShowWindowShade(window).ContinueWith(z =>
+            return ShowWindowShade(host).ContinueWith(z =>
             {
                 // Return the dialog result
-                return window.Dispatcher.Invoke(() =>
+                return host.Dispatcher.Invoke(() =>
                 {
                     // Create the dialog
                     var settings1 = settings;
                     if (settings == null)
-                        settings1 = window.DialogOptions;
-                    var dialog = new AppDialog(window, settings1)
+                        settings1 = host.DialogOptions;
+                    var dialog = new ButtonDialog(host, settings1)
                     {
                         Title = title,
                         Message = message,
                         ButtonStyle = style
                     };
-                    var sizeHandler = SetupAndOpenDialog(window, dialog);
+                    var sizeHandler = SetupAndOpenDialog(host, dialog);
                     dialog.SizeChangedHandler = sizeHandler;
                     // Load the dialog
                     return dialog.WaitForLoadAsync().ContinueWith(x =>
                     {
                         if (DialogOpened != null)
-                            window.Dispatcher.BeginInvoke(
-                                new Action(() => DialogOpened(window, new DialogStateChangedEventArgs())));
+                            host.Dispatcher.BeginInvoke(
+                                new Action(() => DialogOpened(host, new DialogStateChangedEventArgs())));
                         // Wait for the user to press ok.
                         return dialog.WaitForButtonPressAsync().ContinueWith(y =>
                         {
                             dialog.OnClose();
                             if (DialogClosed != null)
-                                window.Dispatcher.BeginInvoke(
-                                    new Action(() => DialogClosed(window, new DialogStateChangedEventArgs())));
-                            var closingTask = window.Dispatcher.Invoke(() => dialog.WaitForCloseAsync());
+                                host.Dispatcher.BeginInvoke(
+                                    new Action(() => DialogClosed(host, new DialogStateChangedEventArgs())));
+                            var closingTask = host.Dispatcher.Invoke(() => dialog.WaitForCloseAsync());
                             return closingTask.ContinueWith(a =>
                             {
-                                return window.Dispatcher.Invoke(() =>
+                                return host.Dispatcher.Invoke(() =>
                                 {
-                                    window.SizeChanged -= sizeHandler;
-                                    window.RemoveDialog(dialog);
-                                    return HideWindowShade(window);
+                                    host.SizeChanged -= sizeHandler;
+                                    host.RemoveDialog(dialog);
+                                    return HideWindowShade(host);
                                 }).ContinueWith(b => y).Unwrap();
                             });
                         }).Unwrap();
@@ -116,195 +101,129 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
             }).Unwrap();
         }
 
-        /// <summary>
-        ///     Shows the dialog.
-        /// </summary>
-        /// <param name="window">The window.</param>
-        /// <param name="title">The title.</param>
-        /// <param name="message">The message.</param>
-        /// <param name="style">The style.</param>
-        /// <param name="settings">The settings.</param>
-        public static void ShowDialog(this MaterialDesignWindow window, string title, string message,
-                                      DialogStyle style, DialogSettings settings = null)
-        {
-            window.Dispatcher.VerifyAccess();
-
-            var task = new Task(async () =>
-            {
-                await ShowWindowShadeNonAsync(window).ContinueWith(z =>
-                {
-                    // Return the dialog result
-                    return window.Dispatcher.Invoke(() =>
-                    {
-                        // Create the dialog
-                        if (settings == null)
-                            settings = window.DialogOptions;
-                        var dialog = new AppDialog(window, settings)
-                        {
-                            Title = title,
-                            Message = message,
-                            ButtonStyle = style
-                        };
-                        var sizeHandler = SetupAndOpenDialog(window, dialog);
-                        dialog.SizeChangedHandler = sizeHandler;
-                        // Load the dialog
-                        return dialog.WaitForLoadAsync().ContinueWith(x =>
-                        {
-                            if (DialogOpened != null)
-                                window.Dispatcher.BeginInvoke(
-                                    new Action(() => DialogOpened(window, new DialogStateChangedEventArgs())));
-                            // Wait for the user to press ok.
-                            return dialog.WaitForButtonPressAsync().ContinueWith(y =>
-                            {
-                                dialog.OnClose();
-                                if (DialogClosed != null)
-                                    window.Dispatcher.BeginInvoke(
-                                        new Action(() => DialogClosed(window, new DialogStateChangedEventArgs())));
-                                var closingTask = window.Dispatcher.Invoke(() => dialog.WaitForCloseAsync());
-                                return closingTask.ContinueWith(a =>
-                                {
-                                    return window.Dispatcher.Invoke(() =>
-                                    {
-                                        window.SizeChanged -= sizeHandler;
-                                        window.RemoveDialog(dialog);
-                                        return HideWindowShade(window);
-                                    }).ContinueWith(b => y).Unwrap();
-                                });
-                            }).Unwrap();
-                        }).Unwrap().Unwrap();
-                    });
-                }).Unwrap();
-            });
-            task.Start();
-        }
-        #endregion
-
         #region Applies to all dialogs
-        private static async Task ShowWindowShadeNonAsync(MaterialDesignWindow window)
-        {
-            await ShowWindowShade(window);
-        }
+        private static async Task ShowWindowShadeNonAsync(DialogHost host) => await ShowWindowShade(host);
 
-        private static Task ShowWindowShade(MaterialDesignWindow window)
+        private static Task ShowWindowShade(DialogHost host)
         {
             return
-                Task.Factory.StartNew(() => window.Dispatcher.Invoke(window.ShowWindowShade))
-                    .ContinueWith(c => window.Dispatcher.Invoke(window.ShowDialogContainer));
+                Task.Factory.StartNew(() => host.Dispatcher.Invoke(host.ShowWindowShade))
+                    .ContinueWith(c => host.Dispatcher.Invoke(host.ShowDialogContainer));
         }
 
-        private static Task HideWindowShade(MaterialDesignWindow window)
+        private static Task HideWindowShade(DialogHost host)
         {
             return
-                Task.Factory.StartNew(() => window.Dispatcher.Invoke(window.HideWindowShade))
-                    .ContinueWith(c => window.Dispatcher.Invoke(window.HideDialogContainer));
+                Task.Factory.StartNew(() => host.Dispatcher.Invoke(host.HideWindowShade))
+                    .ContinueWith(c => host.Dispatcher.Invoke(host.HideDialogContainer));
         }
 
         /// <summary>
         ///     Gets the current dialog asynchronously.
         /// </summary>
         /// <typeparam name="TDialog">The type of the t dialog.</typeparam>
-        /// <param name="window">The window.</param>
+        /// <param name="host">The host.</param>
         /// <returns>Task&lt;TDialog&gt;.</returns>
-        public static Task<TDialog> GetCurrentDialogAsync<TDialog>(this MaterialDesignWindow window)
-            where TDialog : DialogBase
+        public static Task<TDialog> GetCurrentDialogAsync<TDialog>(this DialogHost host)
+            where TDialog : BaseDialog
         {
-            window.Dispatcher.VerifyAccess();
+            host.Dispatcher.VerifyAccess();
             var t = new TaskCompletionSource<TDialog>();
-            window.Dispatcher.Invoke(() =>
+            host.Dispatcher.Invoke(() =>
             {
-                TDialog dialog = window.ActiveDialogContainer?.Children.OfType<TDialog>().LastOrDefault();
+                TDialog dialog = host.ActiveDialogContainer?.Children.OfType<TDialog>().LastOrDefault();
                 t.TrySetResult(dialog);
             });
             return t.Task;
         }
 
-        private static SizeChangedEventHandler SetupAndOpenDialog(MaterialDesignWindow window, DialogBase dialog)
+        private static SizeChangedEventHandler SetupAndOpenDialog(DialogHost host, BaseDialog dialog)
         {
             dialog.SetValue(Panel.ZIndexProperty, 20);
-            dialog.MinHeight = window.ActualHeight / 4.0;
-            dialog.MaxHeight = window.ActualHeight;
-            SizeChangedEventHandler sizeHandler = (sender, args) =>
+            dialog.MinHeight = host.ActualHeight / 4.0;
+            dialog.MaxHeight = host.ActualHeight;
+            void SizeHandler(object sender, SizeChangedEventArgs args)
             {
-                dialog.MinHeight = window.ActualHeight / 4.0;
-                dialog.MaxHeight = window.ActualHeight;
-            };
-            window.SizeChanged += sizeHandler;
-            window.AddDialog(dialog);
+                dialog.MinHeight = host.ActualHeight / 4.0;
+                dialog.MaxHeight = host.ActualHeight;
+            }
+            host.SizeChanged += SizeHandler;
+            host.AddDialog(dialog);
             dialog.OnShown();
-            return sizeHandler;
+            return SizeHandler;
         }
 
-        private static SizeChangedEventHandler SetupAndOpenDialog(MaterialDesignWindow window, AppDialog dialog)
+        private static SizeChangedEventHandler SetupAndOpenDialog(DialogHost host, ButtonDialog dialog)
         {
             dialog.SetValue(Panel.ZIndexProperty, 20);
-            dialog.MinHeight = window.ActualHeight / 4.0;
-            dialog.MaxHeight = window.ActualHeight;
-            SizeChangedEventHandler sizeHandler = (sender, args) =>
+            dialog.MinHeight = host.ActualHeight / 4.0;
+            dialog.MaxHeight = host.ActualHeight;
+            void SizeHandler(object sender, SizeChangedEventArgs args)
             {
-                dialog.MinHeight = window.ActualHeight / 4.0;
-                dialog.MaxHeight = window.ActualHeight;
-            };
-            window.SizeChanged += sizeHandler;
-            window.AddDialog(dialog);
+                dialog.MinHeight = host.ActualHeight / 4.0;
+                dialog.MaxHeight = host.ActualHeight;
+            }
+            host.SizeChanged += SizeHandler;
+            host.AddDialog(dialog);
             dialog.OnShown();
-            return sizeHandler;
+            return SizeHandler;
         }
 
-        private static void AddDialog(this MaterialDesignWindow window, AppDialog dialog)
+        private static void AddDialog(this DialogHost host, ButtonDialog dialog)
         {
-            var activeDialog = window.ActiveDialogContainer.Children.Cast<UIElement>().SingleOrDefault();
+            var activeDialog = host.ActiveDialogContainer.Children.Cast<UIElement>().SingleOrDefault();
             if (activeDialog != null)
             {
-                window.ActiveDialogContainer.Children.Remove(activeDialog);
-                window.InactiveDialogContainer.Children.Add(activeDialog);
+                host.ActiveDialogContainer.Children.Remove(activeDialog);
+                host.InactiveDialogContainer.Children.Add(activeDialog);
             }
-            window.ActiveDialogContainer.Children.Add(dialog);
+            host.ActiveDialogContainer.Children.Add(dialog);
         }
 
-        private static void RemoveDialog(this MaterialDesignWindow window, AppDialog dialog)
+        private static void RemoveDialog(this DialogHost host, ButtonDialog dialog)
         {
-            if (window.ActiveDialogContainer.Children.Contains(dialog))
+            if (host.ActiveDialogContainer.Children.Contains(dialog))
             {
-                window.ActiveDialogContainer.Children.Remove(dialog);
-                var dlg = window.InactiveDialogContainer.Children.Cast<UIElement>().LastOrDefault();
+                host.ActiveDialogContainer.Children.Remove(dialog);
+                var dlg = host.InactiveDialogContainer.Children.Cast<UIElement>().LastOrDefault();
                 if (dlg != null)
                 {
-                    window.InactiveDialogContainer.Children.Remove(dlg);
-                    window.ActiveDialogContainer.Children.Add(dlg);
+                    host.InactiveDialogContainer.Children.Remove(dlg);
+                    host.ActiveDialogContainer.Children.Add(dlg);
                 }
             }
             else
             {
-                window.InactiveDialogContainer.Children.Remove(dialog);
+                host.InactiveDialogContainer.Children.Remove(dialog);
             }
         }
 
-        private static void AddDialog(this MaterialDesignWindow window, DialogBase dialog)
+        private static void AddDialog(this DialogHost host, BaseDialog dialog)
         {
-            var activeDialog = window.ActiveDialogContainer.Children.Cast<UIElement>().SingleOrDefault();
+            var activeDialog = host.ActiveDialogContainer.Children.Cast<UIElement>().SingleOrDefault();
             if (activeDialog != null)
             {
-                window.ActiveDialogContainer.Children.Remove(activeDialog);
-                window.InactiveDialogContainer.Children.Add(activeDialog);
+                host.ActiveDialogContainer.Children.Remove(activeDialog);
+                host.InactiveDialogContainer.Children.Add(activeDialog);
             }
-            window.ActiveDialogContainer.Children.Add(dialog);
+            host.ActiveDialogContainer.Children.Add(dialog);
         }
 
-        private static void RemoveDialog(this MaterialDesignWindow window, DialogBase dialog)
+        private static void RemoveDialog(this DialogHost host, BaseDialog dialog)
         {
-            if (window.ActiveDialogContainer.Children.Contains(dialog))
+            if (host.ActiveDialogContainer.Children.Contains(dialog))
             {
-                window.ActiveDialogContainer.Children.Remove(dialog);
-                var dlg = window.InactiveDialogContainer.Children.Cast<UIElement>().LastOrDefault();
+                host.ActiveDialogContainer.Children.Remove(dialog);
+                var dlg = host.InactiveDialogContainer.Children.Cast<UIElement>().LastOrDefault();
                 if (dlg != null)
                 {
-                    window.InactiveDialogContainer.Children.Remove(dlg);
-                    window.ActiveDialogContainer.Children.Add(dlg);
+                    host.InactiveDialogContainer.Children.Remove(dlg);
+                    host.ActiveDialogContainer.Children.Add(dlg);
                 }
             }
             else
             {
-                window.InactiveDialogContainer.Children.Remove(dialog);
+                host.InactiveDialogContainer.Children.Remove(dialog);
             }
         }
 

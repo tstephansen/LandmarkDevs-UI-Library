@@ -2,7 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:LandmarkDevs.UI.Material.Controls"
                     xmlns:panels="clr-namespace:LandmarkDevs.UI.Material.Controls.Panels"
-                    xmlns:windows="clr-namespace:LandmarkDevs.UI.Material.Controls.Windows">
+                    xmlns:windows="clr-namespace:LandmarkDevs.UI.Material.Controls.Windows"
+                    xmlns:dialogs="clr-namespace:LandmarkDevs.UI.Material.Controls.Dialogs">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/LandmarkDevs.UI.Material;component/Styles/ButtonStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -16,120 +17,121 @@
             <Grid>
                 <AdornerDecorator>
                     <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}">
-                        <Grid x:Name="PART_LayoutRoot">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="25" />
-                            </Grid.RowDefinitions>
-                            <Grid x:Name="PART_WindowTitleGrid"
-                                  Grid.Row="0"
-                                  Background="{DynamicResource PrimaryHueMidBrush}">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="35" />
-                                    <ColumnDefinition Width="35" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Rectangle x:Name="PART_TitleRectangle"
-                                           Grid.Column="0"
-                                           Grid.ColumnSpan="4"
-                                           Fill="{DynamicResource PrimaryHueMidBrush}" />
-                                <Button x:Name="PART_NavigationDrawerToggleButton"
-                                        Grid.Column="0"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        BorderThickness="0"
-                                        Content="{DynamicResource HamburgerDynamic}"
-                                        Style="{DynamicResource TitleBarButtonStyle}"
-                                        Visibility="{TemplateBinding NavigationDrawerButtonVisibility}"
-                                        WindowChrome.IsHitTestVisibleInChrome="True" />
-                                <Button x:Name="PART_PalletButton"
-                                        Grid.Column="1"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        BorderThickness="0"
-                                        Style="{DynamicResource TitleBarButtonStyle}"
-                                        Visibility="{TemplateBinding PalletButtonVisibility}"
-                                        WindowChrome.IsHitTestVisibleInChrome="True">
-                                    <Button.Content>
-                                        <Viewbox Width="30"
-                                                 Height="30"
-                                                 HorizontalAlignment="Center"
-                                                 VerticalAlignment="Center">
-                                            <Canvas Width="24" Height="24">
-                                                <Path Data="M18,4V3A1,1 0 0,0 17,2H5A1,1 0 0,0 4,3V7A1,1 0 0,0 5,8H17A1,1 0 0,0 18,7V6H19V10H9V21A1,1 0 0,0 10,22H12A1,1 0 0,0 13,21V12H21V4H18Z" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" />
-                                            </Canvas>
-                                        </Viewbox>
-                                    </Button.Content>
-                                </Button>
-                                <TextBlock Grid.Column="0"
-                                           Grid.ColumnSpan="4"
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Background="Transparent"
-                                           FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-                                           FontSize="16"
-                                           Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                                           Text="{TemplateBinding Title}" />
-                                <StackPanel x:Name="WindowCommandButtonsStackPanel"
-                                            Grid.Column="3"
-                                            Margin="0,0,2,0"
-                                            HorizontalAlignment="Right"
+                        <dialogs:DialogHost x:Name="PART_DialogHost">
+                            <Grid x:Name="PART_LayoutRoot">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="25" />
+                                </Grid.RowDefinitions>
+                                <Grid x:Name="PART_WindowTitleGrid"
+                                      Grid.Row="0"
+                                      Background="{DynamicResource PrimaryHueMidBrush}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="35" />
+                                        <ColumnDefinition Width="35" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle x:Name="PART_TitleRectangle"
+                                               Grid.Column="0"
+                                               Grid.ColumnSpan="4"
+                                               Fill="{DynamicResource PrimaryHueMidBrush}" />
+                                    <Button x:Name="PART_NavigationDrawerToggleButton"
+                                            Grid.Column="0"
+                                            HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
-                                            Background="Transparent"
-                                            Orientation="Horizontal"
+                                            BorderThickness="0"
+                                            Content="{DynamicResource HamburgerDynamic}"
+                                            Style="{DynamicResource TitleBarButtonStyle}"
+                                            Visibility="{TemplateBinding NavigationDrawerButtonVisibility}"
+                                            WindowChrome.IsHitTestVisibleInChrome="True" />
+                                    <Button x:Name="PART_PalletButton"
+                                            Grid.Column="1"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            BorderThickness="0"
+                                            Style="{DynamicResource TitleBarButtonStyle}"
+                                            Visibility="{TemplateBinding PalletButtonVisibility}"
                                             WindowChrome.IsHitTestVisibleInChrome="True">
-                                    <Button x:Name="Minimize"
-                                            Command="{Binding Source={x:Static SystemCommands.MinimizeWindowCommand}}"
-                                            Content="{DynamicResource MinimizeDynamic}"
-                                            Style="{StaticResource TitleBarButtonStyle}" />
-                                    <Grid Margin="1,0,1,0">
-                                        <Button x:Name="Restore"
-                                                Command="{Binding Source={x:Static SystemCommands.RestoreWindowCommand}}"
-                                                Content="{DynamicResource RestoreDynamic}"
-                                                Style="{StaticResource TitleBarButtonStyle}"
-                                                Visibility="Collapsed" />
-                                        <Button x:Name="Maximize"
-                                                Command="{Binding Source={x:Static SystemCommands.MaximizeWindowCommand}}"
-                                                Content="{DynamicResource MaximizeDynamic}"
+                                        <Button.Content>
+                                            <Viewbox Width="30"
+                                                     Height="30"
+                                                     HorizontalAlignment="Center"
+                                                     VerticalAlignment="Center">
+                                                <Canvas Width="24" Height="24">
+                                                    <Path Data="M18,4V3A1,1 0 0,0 17,2H5A1,1 0 0,0 4,3V7A1,1 0 0,0 5,8H17A1,1 0 0,0 18,7V6H19V10H9V21A1,1 0 0,0 10,22H12A1,1 0 0,0 13,21V12H21V4H18Z" Fill="{DynamicResource PrimaryHueMidForegroundBrush}" />
+                                                </Canvas>
+                                            </Viewbox>
+                                        </Button.Content>
+                                    </Button>
+                                    <TextBlock Grid.Column="0"
+                                               Grid.ColumnSpan="4"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Background="Transparent"
+                                               FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+                                               FontSize="16"
+                                               Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                               Text="{TemplateBinding Title}" />
+                                    <StackPanel x:Name="WindowCommandButtonsStackPanel"
+                                                Grid.Column="3"
+                                                Margin="0,0,2,0"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Center"
+                                                Background="Transparent"
+                                                Orientation="Horizontal"
+                                                WindowChrome.IsHitTestVisibleInChrome="True">
+                                        <Button x:Name="Minimize"
+                                                Command="{Binding Source={x:Static SystemCommands.MinimizeWindowCommand}}"
+                                                Content="{DynamicResource MinimizeDynamic}"
                                                 Style="{StaticResource TitleBarButtonStyle}" />
-                                    </Grid>
-                                    <Button x:Name="Close"
-                                            Command="{Binding Source={x:Static SystemCommands.CloseWindowCommand}}"
-                                            Content="{DynamicResource CloseDynamic}"
-                                            Style="{StaticResource TitleBarCloseButtonStyle}" />
-                                </StackPanel>
-                            </Grid>
-                            <ContentControl x:Name="PART_WindowShadeContentControl"
-                                            Grid.Row="1"
-                                            HorizontalAlignment="Stretch"
-                                            VerticalAlignment="Stretch"
-                                            Panel.ZIndex="0"
-                                            Visibility="Collapsed">
-                                <Rectangle x:Name="PART_WindowShade" Fill="#7A212121" />
-                            </ContentControl>
-                            <!--  Settings Panel  -->
-                            <panels:MaterialSettingsPanel x:Name="PART_SettingsPanel"
-                                                          Grid.Row="1"
-                                                          Grid.RowSpan="2"
-                                                          HorizontalAlignment="Center"
-                                                          VerticalAlignment="Center"
-                                                          Panel.ZIndex="-1"
-                                                          Content="{Binding SettingsPanelContent, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
-                                                          RenderTransformOrigin="0.5,0.5">
-                                <panels:MaterialSettingsPanel.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform ScaleX="0" ScaleY="0" />
-                                        <SkewTransform />
-                                        <RotateTransform />
-                                        <TranslateTransform />
-                                    </TransformGroup>
-                                </panels:MaterialSettingsPanel.RenderTransform>
-                            </panels:MaterialSettingsPanel>
+                                        <Grid Margin="1,0,1,0">
+                                            <Button x:Name="Restore"
+                                                    Command="{Binding Source={x:Static SystemCommands.RestoreWindowCommand}}"
+                                                    Content="{DynamicResource RestoreDynamic}"
+                                                    Style="{StaticResource TitleBarButtonStyle}"
+                                                    Visibility="Collapsed" />
+                                            <Button x:Name="Maximize"
+                                                    Command="{Binding Source={x:Static SystemCommands.MaximizeWindowCommand}}"
+                                                    Content="{DynamicResource MaximizeDynamic}"
+                                                    Style="{StaticResource TitleBarButtonStyle}" />
+                                        </Grid>
+                                        <Button x:Name="Close"
+                                                Command="{Binding Source={x:Static SystemCommands.CloseWindowCommand}}"
+                                                Content="{DynamicResource CloseDynamic}"
+                                                Style="{StaticResource TitleBarCloseButtonStyle}" />
+                                    </StackPanel>
+                                </Grid>
+                                <ContentControl x:Name="PART_WindowShadeContentControl"
+                                                Grid.Row="1"
+                                                HorizontalAlignment="Stretch"
+                                                VerticalAlignment="Stretch"
+                                                Panel.ZIndex="0"
+                                                Visibility="Collapsed">
+                                    <Rectangle x:Name="PART_WindowShade" Fill="#7A212121" />
+                                </ContentControl>
+                                <!--  Settings Panel  -->
+                                <panels:MaterialSettingsPanel x:Name="PART_SettingsPanel"
+                                                              Grid.Row="1"
+                                                              Grid.RowSpan="2"
+                                                              HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"
+                                                              Panel.ZIndex="-1"
+                                                              Content="{Binding SettingsPanelContent, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
+                                                              RenderTransformOrigin="0.5,0.5">
+                                    <panels:MaterialSettingsPanel.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0" ScaleY="0" />
+                                            <SkewTransform />
+                                            <RotateTransform />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </panels:MaterialSettingsPanel.RenderTransform>
+                                </panels:MaterialSettingsPanel>
 
-                            <!--  Dialogs  -->
-                            <Grid x:Name="PART_DialogsLayoutRoot"
+                                <!--  Dialogs  -->
+                                <!--<Grid x:Name="PART_DialogsLayoutRoot"
                                   Grid.Row="1"
                                   Grid.RowSpan="2"
                                   Grid.Column="0"
@@ -158,83 +160,84 @@
                                       Grid.Column="1"
                                       Panel.ZIndex="5"
                                       FocusVisualStyle="{x:Null}" />
+                            </Grid>-->
+                                <ContentPresenter x:Name="PART_MainContentPresenter" Grid.Row="1" />
+                                <!--  Navigation Drawer  -->
+                                <controls:NavigationDrawer x:Name="PART_NavigationDrawer"
+                                                           Grid.Row="1"
+                                                           HorizontalAlignment="Left"
+                                                           HorizontalContentAlignment="Stretch"
+                                                           Background="{DynamicResource MaterialDesignPaper}"
+                                                           CollapsedWidth="0"
+                                                           Content="{TemplateBinding NavigationDrawerContent}"
+                                                           DrawerWidth="{TemplateBinding NavigationDrawerWidth}"
+                                                           HeaderContent="{TemplateBinding NavigationDrawerHeaderContent}"
+                                                           HeaderText="{TemplateBinding NavigationDrawerHeaderText}"
+                                                           HeaderTextFontColor="{TemplateBinding NavigationDrawerHeaderTextFontColor}"
+                                                           HeaderTextFontSize="{TemplateBinding NavigationDrawerHeaderTextFontSize}" />
+                                <!--  Color Selection  -->
+                                <ContentControl x:Name="PART_ColorSelectorContentControl"
+                                                Grid.Row="1"
+                                                MaxWidth="800"
+                                                MaxHeight="800"
+                                                HorizontalAlignment="Stretch"
+                                                VerticalAlignment="Stretch"
+                                                Background="#7A212121"
+                                                Visibility="{TemplateBinding ThemeSelectionVisibility}">
+                                    <panels:Card Margin="50">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <StackPanel Grid.Row="0"
+                                                        HorizontalAlignment="Right"
+                                                        Orientation="Horizontal">
+                                                <Button x:Name="PART_CancelThemeChangeButton"
+                                                        Content="Cancel"
+                                                        Style="{DynamicResource MaterialDesignFlatButton}" />
+                                                <Button x:Name="PART_CloseThemeButton"
+                                                        Content="Close"
+                                                        Style="{DynamicResource MaterialDesignFlatButton}" />
+                                            </StackPanel>
+                                            <controls:MaterialColorWheel x:Name="PART_MaterialColorWheel"
+                                                                         Grid.Row="1"
+                                                                         Stretch="Uniform" />
+                                        </Grid>
+                                    </panels:Card>
+                                </ContentControl>
+                                <!--  Status Bar  -->
+                                <Grid x:Name="PART_StatusBarGrid"
+                                      Grid.Row="2"
+                                      Background="{DynamicResource PrimaryHueMidBrush}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="20" />
+                                    </Grid.ColumnDefinitions>
+                                    <controls:MaterialStatusBar x:Name="PART_StatusBar"
+                                                                Grid.Column="0"
+                                                                Grid.ColumnSpan="2"
+                                                                MinHeight="30"
+                                                                Margin="1,1,1,1"
+                                                                HorizontalAlignment="Left"
+                                                                VerticalAlignment="Bottom"
+                                                                VerticalContentAlignment="Center"
+                                                                Content="{Binding StatusBarItems, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" />
+                                    <Path x:Name="ResizeGrip"
+                                          Grid.Column="1"
+                                          Width="12"
+                                          Height="12"
+                                          Margin="1"
+                                          HorizontalAlignment="Right"
+                                          VerticalAlignment="Bottom"
+                                          Data="F1 M1,10 L3,10 M5,10 L7,10 M9,10 L11,10 M2,9 L2,11 M6,9 L6,11 M10,9 L10,11 M5,6 L7,6 M9,6 L11,6 M6,5 L6,7 M10,5 L10,7 M9,2 L11,2 M10,1 L10,3"
+                                          Stretch="None"
+                                          Stroke="{DynamicResource PrimaryMidHueForegroundBrush}"
+                                          StrokeThickness="1"
+                                          Visibility="Collapsed" />
+                                </Grid>
                             </Grid>
-                            <ContentPresenter x:Name="PART_MainContentPresenter" Grid.Row="1" />
-                            <!--  Navigation Drawer  -->
-                            <controls:NavigationDrawer x:Name="PART_NavigationDrawer"
-                                                       Grid.Row="1"
-                                                       HorizontalAlignment="Left"
-                                                       HorizontalContentAlignment="Stretch"
-                                                       Background="{DynamicResource MaterialDesignPaper}"
-                                                       CollapsedWidth="0"
-                                                       Content="{TemplateBinding NavigationDrawerContent}"
-                                                       DrawerWidth="{TemplateBinding NavigationDrawerWidth}"
-                                                       HeaderContent="{TemplateBinding NavigationDrawerHeaderContent}"
-                                                       HeaderText="{TemplateBinding NavigationDrawerHeaderText}"
-                                                       HeaderTextFontColor="{TemplateBinding NavigationDrawerHeaderTextFontColor}"
-                                                       HeaderTextFontSize="{TemplateBinding NavigationDrawerHeaderTextFontSize}" />
-                            <!--  Color Selection  -->
-                            <ContentControl x:Name="PART_ColorSelectorContentControl"
-                                            Grid.Row="1"
-                                            MaxWidth="800"
-                                            MaxHeight="800"
-                                            HorizontalAlignment="Stretch"
-                                            VerticalAlignment="Stretch"
-                                            Background="#7A212121"
-                                            Visibility="{TemplateBinding ThemeSelectionVisibility}">
-                                <panels:Card Margin="50">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                        <StackPanel Grid.Row="0"
-                                                    HorizontalAlignment="Right"
-                                                    Orientation="Horizontal">
-                                            <Button x:Name="PART_CancelThemeChangeButton"
-                                                    Content="Cancel"
-                                                    Style="{DynamicResource MaterialDesignFlatButton}" />
-                                            <Button x:Name="PART_CloseThemeButton"
-                                                    Content="Close"
-                                                    Style="{DynamicResource MaterialDesignFlatButton}" />
-                                        </StackPanel>
-                                        <controls:MaterialColorWheel x:Name="PART_MaterialColorWheel"
-                                                                     Grid.Row="1"
-                                                                     Stretch="Uniform" />
-                                    </Grid>
-                                </panels:Card>
-                            </ContentControl>
-                            <!--  Status Bar  -->
-                            <Grid x:Name="PART_StatusBarGrid"
-                                  Grid.Row="2"
-                                  Background="{DynamicResource PrimaryHueMidBrush}">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="20" />
-                                </Grid.ColumnDefinitions>
-                                <controls:MaterialStatusBar x:Name="PART_StatusBar"
-                                                            Grid.Column="0"
-                                                            Grid.ColumnSpan="2"
-                                                            MinHeight="30"
-                                                            Margin="1,1,1,1"
-                                                            HorizontalAlignment="Left"
-                                                            VerticalAlignment="Bottom"
-                                                            VerticalContentAlignment="Center"
-                                                            Content="{Binding StatusBarItems, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" />
-                                <Path x:Name="ResizeGrip"
-                                      Grid.Column="1"
-                                      Width="12"
-                                      Height="12"
-                                      Margin="1"
-                                      HorizontalAlignment="Right"
-                                      VerticalAlignment="Bottom"
-                                      Data="F1 M1,10 L3,10 M5,10 L7,10 M9,10 L11,10 M2,9 L2,11 M6,9 L6,11 M10,9 L10,11 M5,6 L7,6 M9,6 L11,6 M6,5 L6,7 M10,5 L10,7 M9,2 L11,2 M10,1 L10,3"
-                                      Stretch="None"
-                                      Stroke="{DynamicResource PrimaryMidHueForegroundBrush}"
-                                      StrokeThickness="1"
-                                      Visibility="Collapsed" />
-                            </Grid>
-                        </Grid>
+                        </dialogs:DialogHost>
                     </Border>
                 </AdornerDecorator>
             </Grid>

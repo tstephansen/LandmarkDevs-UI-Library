@@ -8,7 +8,7 @@
     <OutputType>library</OutputType>
     <RootNamespace>LandmarkDevs.UI.Material</RootNamespace>
     <AssemblyName>LandmarkDevs.UI.Material</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -22,8 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>AnalysisRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -125,10 +124,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\AppDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Themes\BaseDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,10 +144,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\DialogBase.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Themes\DialogHost.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
@@ -167,12 +158,6 @@
     <Compile Include="Behaviors\HeightWidthBehavior.cs" />
     <Compile Include="Behaviors\PasswordBoxBindingBehavior.cs" />
     <Compile Include="Controls\CellEditPopupBox.cs" />
-    <Compile Include="Controls\Dialogs\AppDialog.cs" />
-    <Compile Include="Controls\Dialogs\DialogBase.cs" />
-    <Compile Include="Controls\Dialogs\DialogCoordinator.cs" />
-    <Compile Include="Controls\Dialogs\DialogManager.cs" />
-    <Compile Include="Controls\Dialogs\DialogParticipation.cs" />
-    <Compile Include="Controls\Dialogs\DialogSettings.cs" />
     <Compile Include="Controls\IdentityCard.cs" />
     <Compile Include="Controls\IdentityCardViewer.cs" />
     <Compile Include="Controls\Kanban\KanbanBoard.cs" />
@@ -291,14 +276,11 @@
     <Compile Include="Converters\TextAlignmentConverter.cs" />
     <Compile Include="Converters\TextForegroundColorConverter.cs" />
     <Compile Include="Converters\ViewModelBaseTitleConverter.cs" />
-    <Compile Include="Dialogs\ButtonDialog.cs" />
-    <Compile Include="Dialogs\BaseDialog.cs" />
-    <Compile Include="Dialogs\DialogHost.cs" />
-    <Compile Include="Dialogs\DialogManager.cs" />
-    <Compile Include="Dialogs\DialogResult.cs" />
-    <Compile Include="Dialogs\DialogSettings.cs" />
-    <Compile Include="Dialogs\DialogStateChangedEventArgs.cs" />
-    <Compile Include="Dialogs\DialogStyle.cs" />
+    <Compile Include="Controls\Dialogs\ButtonDialog.cs" />
+    <Compile Include="Controls\Dialogs\BaseDialog.cs" />
+    <Compile Include="Controls\Dialogs\DialogHost.cs" />
+    <Compile Include="Controls\Dialogs\DialogManager.cs" />
+    <Compile Include="Controls\Dialogs\DialogStateChangedEventArgs.cs" />
     <Compile Include="Helpers\AnimationHelper.cs" />
     <Compile Include="Helpers\AutoSizeHelper.cs" />
     <Compile Include="Helpers\DirectoryHelper.cs" />
@@ -313,16 +295,8 @@
     <Compile Include="Helpers\SystemToControlImageHelper.cs" />
     <Compile Include="Helpers\UpdatingCollection.cs" />
     <Compile Include="Helpers\VisualTreeHelper.cs" />
-    <Compile Include="Models\DialogModel.cs" />
-    <Compile Include="Models\IdentityCardModel.cs" />
     <Compile Include="Models\IViewModel.cs" />
-    <Compile Include="Models\KanbanBoardModel.cs" />
-    <Compile Include="Models\KanbanItemModel.cs" />
-    <Compile Include="Models\KanbanNote.cs" />
-    <Compile Include="Models\KanbanPriority.cs" />
     <Compile Include="Models\PubSubEvents.cs" />
-    <Compile Include="Models\RoleModel.cs" />
-    <Compile Include="Models\ShellDialog.cs" />
     <Compile Include="Models\ThemeSettingsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -350,6 +324,7 @@
     <Resource Include="Fonts\NotoSerif-BoldItalic.ttf" />
     <Resource Include="Fonts\NotoSerif-Italic.ttf" />
     <Resource Include="Fonts\NotoSerif-Regular.ttf" />
+    <None Include="AnalysisRules.ruleset" />
     <None Include="LandmarkDevs.UI.Material.nuspec" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -359,6 +334,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\YokoGridMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LandmarkDevs.UI.Models\LandmarkDevs.UI.Models.csproj">
+      <Project>{cef95627-2aea-45d4-9ccb-c0d4adfcbec7}</Project>
+      <Name>LandmarkDevs.UI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

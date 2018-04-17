@@ -1,56 +1,13 @@
-﻿#region
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using LandmarkDevs.UI.Material.Controls.Windows;
-#endregion
+using System.Windows.Controls;
 
-namespace LandmarkDevs.UI.Material.Controls.Dialogs
+namespace LandmarkDevs.UI.Material.Dialogs
 {
-    /// <summary>
-    ///     Interface IDialogCoordinator
-    /// </summary>
-    public interface IDialogCoordinator
-    {
-        /// <summary>
-        ///     Shows the dialog asynchronously.
-        /// </summary>
-        /// <param name="context">The context.</param>
-        /// <param name="title">The title.</param>
-        /// <param name="message">The message.</param>
-        /// <param name="style">The style.</param>
-        /// <returns>Task&lt;DialogResult&gt;.</returns>
-        Task<DialogResult> ShowDialogAsync(object context, string title, string message,
-                                           DialogStyle style);
-
-        /// <summary>
-        ///     Shows the dialog asynchronously.
-        /// </summary>
-        /// <param name="context">The context.</param>
-        /// <param name="title">The title.</param>
-        /// <param name="message">The message.</param>
-        /// <param name="settings">The settings.</param>
-        /// <returns>Task&lt;DialogResult&gt;.</returns>
-        Task<DialogResult> ShowDialogAsync(object context, string title, string message, DialogSettings settings);
-
-        /// <summary>
-        ///     Shows the dialog asynchronously.
-        /// </summary>
-        /// <param name="context">The context.</param>
-        /// <param name="title">The title.</param>
-        /// <param name="message">The message.</param>
-        /// <returns>Task&lt;DialogResult&gt;.</returns>
-        Task<DialogResult> ShowDialogAsync(object context, string title, string message);
-
-        /// <summary>
-        ///     Shows the dialog.
-        /// </summary>
-        /// <param name="context">The context.</param>
-        /// <param name="title">The title.</param>
-        /// <param name="message">The message.</param>
-        void ShowDialog(object context, string title, string message);
-    }
-
     /// <summary>
     ///     Class DialogCoordinator.
     /// </summary>
@@ -71,8 +28,8 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         /// <returns>Task&lt;DialogResult&gt;.</returns>
         public Task<DialogResult> ShowDialogAsync(object context, string title, string message)
         {
-            var window = GetWindow(context);
-            return window.ShowDialogAsync(title, message);
+            var host = GetHost(context);
+            return host.ShowDialogAsync(title, message);
         }
 
         /// <summary>
@@ -85,8 +42,8 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         /// <returns>Task&lt;DialogResult&gt;.</returns>
         public Task<DialogResult> ShowDialogAsync(object context, string title, string message, DialogSettings settings)
         {
-            var window = GetWindow(context);
-            return window.ShowDialogAsync(title, message, DialogStyle.Ok, settings);
+            var host = GetHost(context);
+            return host.ShowDialogAsync(title, message, DialogStyle.Ok, settings);
         }
 
         /// <summary>
@@ -99,8 +56,8 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         /// <returns>Task&lt;DialogResult&gt;.</returns>
         public Task<DialogResult> ShowDialogAsync(object context, string title, string message, DialogStyle style)
         {
-            var window = GetWindow(context);
-            return window.ShowDialogAsync(title, message, style);
+            var host = GetHost(context);
+            return host.ShowDialogAsync(title, message, style);
         }
 
         /// <summary>
@@ -111,8 +68,8 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         /// <param name="message">The message.</param>
         public void ShowDialog(object context, string title, string message)
         {
-            var window = GetWindow(context);
-            window.ShowDialog(title, message, DialogStyle.Ok);
+            var host = GetHost(context);
+            host.ShowDialog(title, message, DialogStyle.Ok);
         }
 
         /// <summary>
@@ -127,24 +84,25 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         public Task<DialogResult> ShowDialogAsync(object context, string title, string message,
                                                   DialogStyle style, DialogSettings settings)
         {
-            var window = GetWindow(context);
-            return window.ShowDialogAsync(title, message, style, settings);
+            var host = GetHost(context);
+            return host.ShowDialogAsync(title, message, style, settings);
         }
 
-        private static MaterialDesignWindow GetWindow(object context)
-        {
-            if (context == null)
-                throw new ArgumentNullException(nameof(context));
-            if (!DialogParticipation.IsRegistered(context))
-                throw new InvalidOperationException(
-                    "Context is not registered. Consider using DialogParticipation.Register in XAML to bind in the DataContext.");
+        //private static DialogHost GetHost(object context)
+        //{
+        //    if (context == null)
+        //        throw new ArgumentNullException(nameof(context));
+        //    //if (!DialogParticipation.IsRegistered(context))
+        //    //    throw new InvalidOperationException(
+        //    //        "Context is not registered. Consider using DialogParticipation.Register in XAML to bind in the DataContext.");
 
-            var association = DialogParticipation.GetAssociation(context);
-            var responsiveWindow = Window.GetWindow(association) as MaterialDesignWindow;
+        //    var association = DialogParticipation.GetAssociation(context);
+        //    var control = Window.GetWindow(association) as Window;
+        //    //var responsiveWindow = Window.GetWindow(association) as MaterialDesignWindow;
 
-            if (responsiveWindow == null)
-                throw new InvalidOperationException("Control is not inside a ResponsiveWindow.");
-            return responsiveWindow;
-        }
+        //    if (control == null)
+        //        throw new InvalidOperationException("Control is not inside a ResponsiveWindow.");
+        //    //return control;
+        //}
     }
 }

@@ -1,20 +1,29 @@
-version: 2.0.{build}
+version: 3.0.{build}
 image: Visual Studio 2017
 configuration: Release
-platform: Any CPU
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
 before_build:
 - ps: >-
     nuget sources add -Name LandmarkDevs -Source http://nuget.landmarkdevs.com/nuget/feed/
 
     nuget restore
+
+    dotnet restore
 build:
-  project: Src\LandmarkDevs.UI.Material\LandmarkDevs.UI.Material.csproj
+  project: LandmarkDevs UI Library.sln
   publish_nuget: true
   publish_nuget_symbols: true
   include_nuget_references: true

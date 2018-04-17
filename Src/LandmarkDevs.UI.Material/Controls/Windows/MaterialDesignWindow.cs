@@ -1,8 +1,7 @@
-﻿#region
-using LandmarkDevs.UI.Material.Controls.Dialogs;
-using LandmarkDevs.UI.Material.Controls.Panels;
+﻿using LandmarkDevs.UI.Material.Controls.Panels;
 using LandmarkDevs.UI.Material.Helpers;
 using LandmarkDevs.UI.Material.Models;
+using LandmarkDevs.UI.Models.Dialogs;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
@@ -18,7 +17,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Path = System.IO.Path;
 using WinInterop = System.Windows.Interop;
-#endregion
 
 // ReSharper disable InconsistentNaming
 namespace LandmarkDevs.UI.Material.Controls.Windows
@@ -28,6 +26,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
     /// </summary>
     /// <seealso cref="System.Windows.Window" />
     [TemplatePart(Name = PART_WindowBorder, Type = typeof(Border))]
+    [TemplatePart(Name = PART_DialogHost, Type = typeof(DialogHost))]
     [TemplatePart(Name = PART_LayoutRoot, Type = typeof(Grid))]
     [TemplatePart(Name = PART_WindowTitleGrid, Type = typeof(Grid))]
     [TemplatePart(Name = PART_NavigationDrawerToggleButton, Type = typeof(Button))]
@@ -83,6 +82,7 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         {
             base.OnApplyTemplate();
             _windowBorder = GetTemplateChild(PART_WindowBorder) as Border;
+            DialogHost = GetTemplateChild(PART_DialogHost) as DialogHost;
             _layoutRoot = GetTemplateChild(PART_LayoutRoot) as Grid;
             _windowTitleGrid = GetTemplateChild(PART_WindowTitleGrid) as Grid;
             _windowShadeContentControl = GetTemplateChild(PART_WindowShadeContentControl) as ContentControl;
@@ -219,8 +219,8 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
 
         #region Template Properties
         // ReSharper disable InconsistentNaming
+        private const string PART_DialogHost = "PART_DialogHost";
         private const string PART_WindowBorder = "PART_WindowBorder";
-
         private const string PART_LayoutRoot = "PART_LayoutRoot";
         private const string PART_WindowTitleGrid = "PART_WindowTitleGrid";
         private const string PART_WindowShadeContentControl = "PART_WindowShadeContentControl";
@@ -242,8 +242,9 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         private const string PART_SettingsPanelContentControl = "PART_SettingsPanelContentControl";
         private const string PART_SettingsPanel = "PART_SettingsPanel";
         // ReSharper restore InconsistentNaming
-        private Border _windowBorder;
 
+        public DialogHost DialogHost;
+        private Border _windowBorder;
         private Grid _layoutRoot;
         private Grid _windowTitleGrid;
         private ContentControl _windowShadeContentControl;

@@ -1,6 +1,4 @@
-﻿using LandmarkDevs.UI.Material.Controls.Dialogs;
-
-namespace LandmarkDevs.UI.Material.Models
+﻿namespace LandmarkDevs.UI.Models.Dialogs
 {
     /// <summary>
     /// Standard dialog model.

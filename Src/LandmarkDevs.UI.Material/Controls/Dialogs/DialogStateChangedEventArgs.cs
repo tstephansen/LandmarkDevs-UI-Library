@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LandmarkDevs.UI.Material.Dialogs
+namespace LandmarkDevs.UI.Material.Controls.Dialogs
 {
     /// <summary>
     ///     Class DialogStateChangedEventArgs.

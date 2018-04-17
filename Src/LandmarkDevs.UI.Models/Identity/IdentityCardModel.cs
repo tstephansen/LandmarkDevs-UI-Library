@@ -1,11 +1,9 @@
-﻿#region
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
-#endregion
 
-namespace LandmarkDevs.UI.Material.Models
+namespace LandmarkDevs.UI.Models.Identity
 {
     /// <summary>
     /// Class IdentityCardModel.

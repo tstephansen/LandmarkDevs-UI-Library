@@ -1,6 +1,4 @@
-﻿#region
-using LandmarkDevs.UI.Material.Models;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,8 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-
-#endregion
+using LandmarkDevs.UI.Models.Kanban;
 
 namespace LandmarkDevs.UI.Material.Controls.Kanban
 {

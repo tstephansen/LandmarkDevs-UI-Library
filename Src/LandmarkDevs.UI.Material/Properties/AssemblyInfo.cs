@@ -22,7 +22,6 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Panels")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Controls.Windows")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Converters")]
-[assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Dialogs")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Helpers")]
 [assembly: XmlnsDefinition("http://schemas.landmarkdevs.com/wpf", "LandmarkDevs.UI.Material.Models")]
 
