@@ -324,6 +324,7 @@ namespace LandmarkDevs.UI.Material.Controls.Kanban
 
         #endregion
 
+        #region Lane Properties
         /// <summary>
         ///     The lanes property
         /// </summary>
@@ -403,6 +404,7 @@ namespace LandmarkDevs.UI.Material.Controls.Kanban
             get { return (string)GetValue(LaneFourTitleProperty); }
             set { SetValue(LaneFourTitleProperty, value); }
         }
+        #endregion
 
         #region New Kanban Item
         /// <summary>

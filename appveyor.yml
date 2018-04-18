@@ -17,8 +17,6 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
 - ps: >-
-    nuget sources add -Name LandmarkDevs -Source http://nuget.landmarkdevs.com/nuget/feed/
-
     nuget restore
 
     dotnet restore

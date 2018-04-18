@@ -17,6 +17,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Path = System.IO.Path;
 using WinInterop = System.Windows.Interop;
+using DialogHost = LandmarkDevs.UI.Material.Controls.Dialogs.DialogHost;
 
 // ReSharper disable InconsistentNaming
 namespace LandmarkDevs.UI.Material.Controls.Windows
@@ -476,71 +477,81 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         #endregion
 
         #region Dialogs
-        /// <summary>
-        ///     Shows the dialog container.
-        /// </summary>
-        public void ShowDialogContainer()
-        {
-            _dialogsLayoutRoot.Visibility = Visibility.Visible;
-        }
 
-        /// <summary>
-        ///     Hides the dialog container.
-        /// </summary>
-        public void HideDialogContainer()
-        {
-            _dialogsLayoutRoot.Visibility = Visibility.Collapsed;
-        }
+        //public static readonly DependencyProperty DialogHostProperty = DependencyProperty.Register(
+        //    "DialogHost", typeof(DialogHost), typeof(MaterialDesignWindow), new PropertyMetadata(default(DialogHost)));
 
-        /// <summary>
-        ///     The dialog content property
-        /// </summary>
-        public static readonly DependencyProperty DialogContentProperty = DependencyProperty.Register(
-            "DialogContent", typeof(ContentControl), typeof(MaterialDesignWindow),
-            new PropertyMetadata(default(ContentControl)));
+        //public DialogHost DialogHost
+        //{
+        //    get => (DialogHost) GetValue(DialogHostProperty);
+        //    set => SetValue(DialogHostProperty, value);
+        //}
 
-        /// <summary>
-        ///     Gets or sets the content of the dialog.
-        /// </summary>
-        /// <value>The content of the dialog.</value>
-        public ContentControl DialogContent
-        {
-            get { return (ContentControl)GetValue(DialogContentProperty); }
-            set { SetValue(DialogContentProperty, value); }
-        }
+        ///// <summary>
+        /////     Shows the dialog container.
+        ///// </summary>
+        //public void ShowDialogContainer()
+        //{
+        //    _dialogsLayoutRoot.Visibility = Visibility.Visible;
+        //}
 
-        /// <summary>
-        ///     The dialog options property
-        /// </summary>
-        public static readonly DependencyProperty DialogOptionsProperty = DependencyProperty.Register("DialogOptions",
-                                                                                                      typeof(DialogSettings), typeof(MaterialDesignWindow),
-                                                                                                      new PropertyMetadata(new DialogSettings()));
+        ///// <summary>
+        /////     Hides the dialog container.
+        ///// </summary>
+        //public void HideDialogContainer()
+        //{
+        //    _dialogsLayoutRoot.Visibility = Visibility.Collapsed;
+        //}
 
-        /// <summary>
-        ///     Gets or sets the dialog options.
-        /// </summary>
-        /// <value>The dialog options.</value>
-        public DialogSettings DialogOptions
-        {
-            get { return (DialogSettings)GetValue(DialogOptionsProperty); }
-            set { SetValue(DialogOptionsProperty, value); }
-        }
+        ///// <summary>
+        /////     The dialog content property
+        ///// </summary>
+        //public static readonly DependencyProperty DialogContentProperty = DependencyProperty.Register(
+        //    "DialogContent", typeof(ContentControl), typeof(MaterialDesignWindow),
+        //    new PropertyMetadata(default(ContentControl)));
 
-        /// <summary>
-        ///     The is dialog visible property
-        /// </summary>
-        public static readonly DependencyProperty IsDialogVisibleProperty = DependencyProperty.Register(
-            "IsDialogVisible", typeof(bool), typeof(MaterialDesignWindow), new PropertyMetadata(default(bool)));
+        ///// <summary>
+        /////     Gets or sets the content of the dialog.
+        ///// </summary>
+        ///// <value>The content of the dialog.</value>
+        //public ContentControl DialogContent
+        //{
+        //    get { return (ContentControl)GetValue(DialogContentProperty); }
+        //    set { SetValue(DialogContentProperty, value); }
+        //}
 
-        /// <summary>
-        ///     Gets or sets a value indicating whether this instance is dialog visible.
-        /// </summary>
-        /// <value><c>true</c> if this instance is dialog visible; otherwise, <c>false</c>.</value>
-        public bool IsDialogVisible
-        {
-            get { return (bool)GetValue(IsDialogVisibleProperty); }
-            set { SetValue(IsDialogVisibleProperty, value); }
-        }
+        ///// <summary>
+        /////     The dialog options property
+        ///// </summary>
+        //public static readonly DependencyProperty DialogOptionsProperty = DependencyProperty.Register("DialogOptions",
+        //                                                                                              typeof(DialogSettings), typeof(MaterialDesignWindow),
+        //                                                                                              new PropertyMetadata(new DialogSettings()));
+
+        ///// <summary>
+        /////     Gets or sets the dialog options.
+        ///// </summary>
+        ///// <value>The dialog options.</value>
+        //public DialogSettings DialogOptions
+        //{
+        //    get { return (DialogSettings)GetValue(DialogOptionsProperty); }
+        //    set { SetValue(DialogOptionsProperty, value); }
+        //}
+
+        ///// <summary>
+        /////     The is dialog visible property
+        ///// </summary>
+        //public static readonly DependencyProperty IsDialogVisibleProperty = DependencyProperty.Register(
+        //    "IsDialogVisible", typeof(bool), typeof(MaterialDesignWindow), new PropertyMetadata(default(bool)));
+
+        ///// <summary>
+        /////     Gets or sets a value indicating whether this instance is dialog visible.
+        ///// </summary>
+        ///// <value><c>true</c> if this instance is dialog visible; otherwise, <c>false</c>.</value>
+        //public bool IsDialogVisible
+        //{
+        //    get { return (bool)GetValue(IsDialogVisibleProperty); }
+        //    set { SetValue(IsDialogVisibleProperty, value); }
+        //}
 
         #endregion
 
@@ -760,8 +771,8 @@ namespace LandmarkDevs.UI.Material.Controls.Windows
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void WindowShadeContentControl_MouseUp(object sender, RoutedEventArgs e)
         {
-            if (IsDialogVisible)
-                return;
+            //if (IsDialogVisible)
+            //    return;
             NavigationDrawerVisible = !NavigationDrawerVisible;
             NavigationDrawer.IsExpanded = NavigationDrawerVisible;
             if (NavigationDrawerVisible)

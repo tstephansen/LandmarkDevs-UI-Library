@@ -345,7 +345,8 @@ namespace LandmarkDevs.UI.Material.Controls.Dialogs
         public Task WaitForLoadAsync()
         {
             Dispatcher.VerifyAccess();
-            if (IsLoaded) return new Task(() => { });
+            //if (IsLoaded) return new Task(() => { });
+            if (IsLoaded) return Task.FromResult(0);
             var tcs = new TaskCompletionSource<object>();
             void Handler(object sender, RoutedEventArgs args)
             {
