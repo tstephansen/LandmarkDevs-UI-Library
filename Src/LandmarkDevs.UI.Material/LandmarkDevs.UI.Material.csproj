@@ -336,7 +336,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LandmarkDevs.UI.Models\LandmarkDevs.UI.Models.csproj">
-      <Project>{cef95627-2aea-45d4-9ccb-c0d4adfcbec7}</Project>
+      <Project>{176a661f-26e6-4251-b759-f4876a51ae89}</Project>
       <Name>LandmarkDevs.UI.Models</Name>
     </ProjectReference>
   </ItemGroup>
